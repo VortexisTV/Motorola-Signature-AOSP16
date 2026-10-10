@@ -1,4 +1,4 @@
-# vantage_td 2026-10-10 r2 (test image)
+# Motorola-Signature-AOSP16
 
 Android 16 system image for the **Motorola Signature** (codename `vantage`, product
 `vantage_g`, XT2603-1) running stock firmware **W2WVS36.55-95-5-1**. AOSP `android-16.0.0_r2`

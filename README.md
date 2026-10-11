@@ -57,8 +57,6 @@ layer. That is the central porting problem and is analysed file by file in
 | `patches/` | Source patches for projects of the tree, applied by `sync-to-tree.sh`: TrebleDroid's RIL audio bridge, and one entry in AOSP init's table of exported boot parameters |
 | `releases/` | Release notes per image: hashes, what was tested, known issues, install steps |
 | `reports/` | Machine-readable (JSON) and Markdown analysis/validation results |
-| `out/` | Exported build artifacts with checksums (ignored by git) |
-| `wsl/`, `work/` | Build VM disk and scratch data (ignored by git) |
 
 Names that differ from the classic vendor-tree layout:
 

@@ -6,8 +6,7 @@ TrebleDroid and keeping the complete stock vendor side.
 
 ## Images
 
-Images are not part of the repository (they are too large for git, and they contain files from
-the stock firmware). Release notes with hashes, the test status and the install steps are in
+Release notes with hashes, the test status and the install steps are in
 [releases/](releases/); the current one is
 [vantage_td-20261011-r4](releases/vantage_td-20261011-r4.md). Building one yourself needs the
 stock firmware package, from which the build takes 34 files pinned by SHA-256

@@ -1,0 +1,1140 @@
+{
+ "vendor_policy_version": "202504",
+ "seeds": {
+  "vendor_qtelephony": {
+   "declared_in": [
+    "system_ext:type",
+    "vendor_pub:type"
+   ],
+   "versioned_attribute": "vendor_qtelephony_202504",
+   "mapping": {
+    "system_ext": [
+     "vendor_qtelephony_202504"
+    ]
+   },
+   "partitions": {
+    "system_ext": {
+     "attributes": [
+      "appdomain",
+      "coredomain",
+      "domain",
+      "hal_telephony_client",
+      "halclientdomain",
+      "netdomain",
+      "vendor_hal_atfwd_client",
+      "vendor_hal_imsvthal_client"
+     ],
+     "source_rules": [
+      "type_transition vendor_qtelephony tmpfs:file appdomain_tmpfs;",
+      "allow vendor_qtelephony vendor_qtelephony_userfaultfd:anon_inode { ioctl read create };",
+      "allow vendor_qtelephony appdomain_tmpfs:file { ioctl read write getattr map execute };",
+      "allowxperm vendor_qtelephony appdomain_tmpfs:file ioctl { 0x7701-0x770b };",
+      "allow vendor_qtelephony hwservicemanager:binder { call transfer };",
+      "allow vendor_qtelephony hwservicemanager_prop:file { read getattr map open };",
+      "allow vendor_qtelephony servicemanager:binder { call transfer };",
+      "allow vendor_qtelephony audioserver_service:service_manager { find };",
+      "allow vendor_qtelephony cameraserver_service:service_manager { find };",
+      "allow vendor_qtelephony drmserver_service:service_manager { find };",
+      "allow vendor_qtelephony mediaserver_service:service_manager { find };",
+      "allow vendor_qtelephony mediametrics_service:service_manager { find };",
+      "allow vendor_qtelephony mediaextractor_service:service_manager { find };",
+      "allow vendor_qtelephony radio_service:service_manager { find };",
+      "allow vendor_qtelephony system_api_service:service_manager { find };",
+      "allow vendor_qtelephony app_api_service:service_manager { find };",
+      "allow vendor_qtelephony vendor_dpmtcm_socket:sock_file { write };",
+      "allow vendor_qtelephony vendor_dpmd:unix_stream_socket { connectto };",
+      "type_transition vendor_qtelephony vendor_qtelephony:anon_inode vendor_qtelephony_userfaultfd \"[userfaultfd]\";"
+     ],
+     "target_rules": [
+      "allow hwservicemanager vendor_qtelephony:binder { call transfer };",
+      "allow servicemanager vendor_qtelephony:binder { call transfer };"
+     ]
+    },
+    "product": {
+     "attributes": [
+      "appdomain",
+      "coredomain",
+      "domain",
+      "halclientdomain",
+      "netdomain"
+     ],
+     "source_rules": [],
+     "target_rules": []
+    },
+    "vendor_pub": {
+     "attributes": [
+      "domain"
+     ],
+     "source_rules": [],
+     "target_rules": []
+    },
+    "vendor": {
+     "attributes": [
+      "domain",
+      "halclientdomain",
+      "vendor_hal_datafactory_qti_client",
+      "vendor_hal_imsrtphal_client",
+      "vendor_hal_perf_client"
+     ],
+     "source_rules": [
+      "allow vendor_qtelephony_202504 vendor_atfwd:binder { transfer };",
+      "allow vendor_qtelephony_202504 vendor_hal_imsrtp:binder { transfer };",
+      "allow vendor_qtelephony_202504 vendor_radio_prop:file { read getattr map open };",
+      "allow vendor_qtelephony_202504 vendor_ims_prop:file { read getattr map open };",
+      "allow vendor_qtelephony_202504 vendor_persist_camera_prop_202504:file { read getattr map open };",
+      "allow vendor_qtelephony_202504 vendor_audio_prop:file { read getattr map open };",
+      "allow vendor_qtelephony_202504 vendor_video_prop:file { read getattr map open };",
+      "dontaudit vendor_qtelephony_202504 vendor_hal_qspmhal_service:service_manager { find };",
+      "allow vendor_qtelephony_202504 ims_dbg_prop_202504:file { read getattr map open };",
+      "allow vendor_qtelephony_202504 mot_radio_service_202504:service_manager { find };",
+      "allow vendor_qtelephony_202504 mot_system_service_202504:service_manager { find };"
+     ],
+     "target_rules": [
+      "allow vendor_atfwd vendor_qtelephony_202504:binder { call transfer };",
+      "allow vendor_atfwd vendor_qtelephony_202504:fd { use };",
+      "allow vendor_hal_imsrtp vendor_qtelephony_202504:binder { call transfer };",
+      "allow vendor_hal_imsrtp vendor_qtelephony_202504:fd { use };"
+     ]
+    }
+   },
+   "referenced_symbols": {
+    "app_api_service": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "appdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "appdomain_tmpfs": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "audioserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "cameraserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "coredomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "domain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "drmserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "hal_telephony_client": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "halclientdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "hwservicemanager": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "hwservicemanager_prop": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "ims_dbg_prop_202504": [
+     "vendor_pub:attribute"
+    ],
+    "mediaextractor_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mediametrics_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mediaserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mot_radio_service_202504": [
+     "vendor_pub:attribute"
+    ],
+    "mot_system_service_202504": [
+     "vendor_pub:attribute"
+    ],
+    "netdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "radio_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "servicemanager": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "system_api_service": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "tmpfs": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "vendor_atfwd": [
+     "vendor:type"
+    ],
+    "vendor_audio_prop": [
+     "vendor:type"
+    ],
+    "vendor_dpmd": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "vendor_dpmtcm_socket": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "vendor_hal_atfwd_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_datafactory_qti_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_imsrtp": [
+     "vendor:type"
+    ],
+    "vendor_hal_imsrtphal_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_imsvthal_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_perf_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_qspmhal_service": [
+     "vendor:type"
+    ],
+    "vendor_ims_prop": [
+     "vendor:type"
+    ],
+    "vendor_persist_camera_prop_202504": [
+     "vendor_pub:attribute"
+    ],
+    "vendor_qtelephony_userfaultfd": [
+     "system_ext:type"
+    ],
+    "vendor_radio_prop": [
+     "vendor:type"
+    ],
+    "vendor_video_prop": [
+     "vendor:type"
+    ]
+   }
+  },
+  "vendor_dataservice_app": {
+   "declared_in": [
+    "system_ext:type",
+    "vendor_pub:type"
+   ],
+   "versioned_attribute": "vendor_dataservice_app_202504",
+   "mapping": {
+    "system_ext": [
+     "vendor_dataservice_app_202504"
+    ]
+   },
+   "partitions": {
+    "system_ext": {
+     "attributes": [
+      "appdomain",
+      "coredomain",
+      "domain",
+      "mlstrustedsubject",
+      "netdomain"
+     ],
+     "source_rules": [
+      "type_transition vendor_dataservice_app tmpfs:file appdomain_tmpfs;",
+      "allow vendor_dataservice_app vendor_dataservice_app_userfaultfd:anon_inode { ioctl read create };",
+      "allow vendor_dataservice_app appdomain_tmpfs:file { ioctl read write getattr map execute };",
+      "allowxperm vendor_dataservice_app appdomain_tmpfs:file ioctl { 0x7701-0x770b };",
+      "allow vendor_dataservice_app vendor_cne_service:service_manager { add find };",
+      "allow vendor_dataservice_app vendor_dpmservice:service_manager { add find };",
+      "allow vendor_dataservice_app uce_service:service_manager { add find };",
+      "allow vendor_dataservice_app vendor_imsdc_service:service_manager { add find };",
+      "allow vendor_dataservice_app app_api_service:service_manager { find };",
+      "allow vendor_dataservice_app system_api_service:service_manager { find };",
+      "allow vendor_dataservice_app audioserver_service:service_manager { find };",
+      "allow vendor_dataservice_app radio_service:service_manager { find };",
+      "allow vendor_dataservice_app radio_data_file:dir { ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir };",
+      "allow vendor_dataservice_app radio_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };",
+      "allow vendor_dataservice_app radio_data_file:lnk_file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };",
+      "allow vendor_dataservice_app hwservicemanager:binder { call transfer };",
+      "allow vendor_dataservice_app system_app_data_file:dir { ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir };",
+      "allow vendor_dataservice_app vendor_dpmd_socket:sock_file { write };",
+      "allow vendor_dataservice_app vendor_dpmd_data_file:dir { ioctl read write getattr lock open watch watch_reads add_name remove_name search };",
+      "allow vendor_dataservice_app vendor_dpmd_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };",
+      "allow vendor_dataservice_app vendor_dpmd_socket:sock_file { write };",
+      "allow vendor_dataservice_app vendor_dpmd:unix_stream_socket { connectto };",
+      "allow vendor_dataservice_app vendor_persist_ntn_prop:file { read getattr map open };",
+      "allow vendor_dataservice_app property_socket:sock_file { write };",
+      "allow vendor_dataservice_app init:unix_stream_socket { connectto };",
+      "allow vendor_dataservice_app vendor_persist_ntn_prop:property_service { set };",
+      "allow vendor_dataservice_app vendor_persist_ntn_prop:file { read getattr map open };",
+      "allow vendor_dataservice_app property_socket:sock_file { write };",
+      "allow vendor_dataservice_app init:unix_stream_socket { connectto };",
+      "allow vendor_dataservice_app vendor_persist_dpm_prop:property_service { set };",
+      "allow vendor_dataservice_app vendor_persist_dpm_prop:file { read getattr map open };",
+      "allow vendor_dataservice_app property_socket:sock_file { write };",
+      "allow vendor_dataservice_app init:unix_stream_socket { connectto };",
+      "allow vendor_dataservice_app vendor_persist_rcs_prop:property_service { set };",
+      "allow vendor_dataservice_app vendor_persist_rcs_prop:file { read getattr map open };",
+      "type_transition vendor_dataservice_app vendor_dataservice_app:anon_inode vendor_dataservice_app_userfaultfd \"[userfaultfd]\";"
+     ],
+     "target_rules": [
+      "allow hwservicemanager vendor_dataservice_app:binder { call transfer };"
+     ]
+    },
+    "product": {
+     "attributes": [
+      "appdomain",
+      "coredomain",
+      "domain",
+      "mlstrustedsubject",
+      "netdomain"
+     ],
+     "source_rules": [],
+     "target_rules": []
+    },
+    "vendor_pub": {
+     "attributes": [
+      "domain"
+     ],
+     "source_rules": [],
+     "target_rules": []
+    },
+    "vendor": {
+     "attributes": [
+      "domain",
+      "halclientdomain",
+      "vendor_hal_datafactory_qti_client",
+      "vendor_hal_dcservice_qti_client",
+      "vendor_hal_dpmapiservice_qti_client",
+      "vendor_hal_imsfactory_client",
+      "vendor_hal_mwqemadapter_qti_client",
+      "vendor_hal_perf_client",
+      "vendor_hal_qms_qti_client"
+     ],
+     "source_rules": [
+      "allow vendor_dataservice_app_202504 vendor_cnd_prop:file { read getattr map open };",
+      "allow vendor_dataservice_app_202504 vendor_sysfs_data:file { ioctl read getattr lock map open watch watch_reads };",
+      "allow vendor_dataservice_app_202504 vendor_hal_slmadapter_hwservice:hwservice_manager { find };",
+      "allow vendor_dataservice_app_202504 vendor_slm_prop:file { read getattr map open };",
+      "allow vendor_dataservice_app_202504 vendor_mwqem_prop:file { read getattr map open };"
+     ],
+     "target_rules": []
+    }
+   },
+   "referenced_symbols": {
+    "app_api_service": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "appdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "appdomain_tmpfs": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "audioserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "coredomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "domain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "halclientdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "hwservicemanager": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "init": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mlstrustedsubject": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "netdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "property_socket": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "radio_data_file": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "radio_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "system_api_service": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "system_app_data_file": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "tmpfs": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "uce_service": [
+     "plat:type"
+    ],
+    "vendor_cnd_prop": [
+     "vendor:type"
+    ],
+    "vendor_cne_service": [
+     "system_ext:type"
+    ],
+    "vendor_dataservice_app_userfaultfd": [
+     "system_ext:type"
+    ],
+    "vendor_dpmd": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "vendor_dpmd_data_file": [
+     "system_ext:type"
+    ],
+    "vendor_dpmd_socket": [
+     "system_ext:type"
+    ],
+    "vendor_dpmservice": [
+     "system_ext:type"
+    ],
+    "vendor_hal_datafactory_qti_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_dcservice_qti_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_dpmapiservice_qti_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_imsfactory_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_mwqemadapter_qti_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_perf_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_qms_qti_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_slmadapter_hwservice": [
+     "vendor:type"
+    ],
+    "vendor_imsdc_service": [
+     "system_ext:type"
+    ],
+    "vendor_mwqem_prop": [
+     "vendor:type"
+    ],
+    "vendor_persist_dpm_prop": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "vendor_persist_ntn_prop": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "vendor_persist_rcs_prop": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "vendor_slm_prop": [
+     "vendor:type"
+    ],
+    "vendor_sysfs_data": [
+     "vendor:type"
+    ]
+   }
+  },
+  "moto_camera_app": {
+   "declared_in": [
+    "product:type",
+    "vendor_pub:type"
+   ],
+   "versioned_attribute": "moto_camera_app_202504",
+   "mapping": {
+    "product": [
+     "moto_camera_app_202504"
+    ]
+   },
+   "partitions": {
+    "product": {
+     "attributes": [
+      "appdomain",
+      "bluetoothdomain",
+      "coredomain",
+      "domain",
+      "moto_qcxdsp_domain",
+      "motoappdomain",
+      "netdomain"
+     ],
+     "source_rules": [
+      "type_transition moto_camera_app tmpfs:file appdomain_tmpfs;",
+      "allow moto_camera_app moto_camera_app_userfaultfd:anon_inode { ioctl read create };",
+      "allow moto_camera_app appdomain_tmpfs:file { ioctl read write getattr map execute };",
+      "allowxperm moto_camera_app appdomain_tmpfs:file ioctl { 0x7701-0x770b };",
+      "type_transition moto_camera_app moto_camera_app:anon_inode moto_camera_app_userfaultfd \"[userfaultfd]\";"
+     ],
+     "target_rules": []
+    },
+    "vendor_pub": {
+     "attributes": [
+      "domain"
+     ],
+     "source_rules": [],
+     "target_rules": []
+    },
+    "vendor": {
+     "attributes": [
+      "domain",
+      "hal_arcsoftpp_client",
+      "hal_camera_client",
+      "halclientdomain",
+      "vendor_hal_dspmanager_client",
+      "vendor_hal_perf_client"
+     ],
+     "source_rules": [
+      "allow moto_camera_app_202504 mot_core_property_type:file { read getattr map open };",
+      "allow moto_camera_app_202504 audio_config_prop_202504:file { read getattr map open };",
+      "allow moto_camera_app_202504 vendor_xdsp_device:chr_file { ioctl read getattr lock map open watch watch_reads };"
+     ],
+     "target_rules": []
+    }
+   },
+   "referenced_symbols": {
+    "appdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "appdomain_tmpfs": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "audio_config_prop_202504": [
+     "vendor_pub:attribute"
+    ],
+    "bluetoothdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "coredomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "domain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "hal_arcsoftpp_client": [
+     "vendor:attribute"
+    ],
+    "hal_camera_client": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "halclientdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "mot_core_property_type": [
+     "vendor:attribute"
+    ],
+    "moto_camera_app_userfaultfd": [
+     "product:type"
+    ],
+    "moto_qcxdsp_domain": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "motoappdomain": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "netdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "tmpfs": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "vendor_hal_dspmanager_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_perf_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_xdsp_device": [
+     "vendor:type"
+    ]
+   }
+  },
+  "moto_app": {
+   "declared_in": [
+    "system_ext:type",
+    "vendor_pub:type"
+   ],
+   "versioned_attribute": "moto_app_202504",
+   "mapping": {
+    "system_ext": [
+     "moto_app_202504"
+    ]
+   },
+   "partitions": {
+    "system_ext": {
+     "attributes": [
+      "appdomain",
+      "bluetoothdomain",
+      "coredomain",
+      "domain",
+      "moto_privileged_domain",
+      "moto_qcxdsp_domain",
+      "motoappdomain",
+      "netdomain"
+     ],
+     "source_rules": [
+      "type_transition moto_app tmpfs:file appdomain_tmpfs;",
+      "allow moto_app moto_app_userfaultfd:anon_inode { ioctl read create };",
+      "allow moto_app appdomain_tmpfs:file { ioctl read write getattr map execute };",
+      "allowxperm moto_app appdomain_tmpfs:file ioctl { 0x7701-0x770b };",
+      "allow moto_app ota_package_file:dir { ioctl read write getattr lock open watch watch_reads add_name remove_name search };",
+      "allow moto_app ota_package_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };",
+      "allow moto_app misc_ne_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };",
+      "allow moto_app misc_ne_data_file:dir { ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir };",
+      "allow moto_app update_engine:binder { call transfer };",
+      "allow moto_app update_engine:fd { use };",
+      "allow moto_app update_engine_service:service_manager { find };",
+      "allow moto_app moto_ota_prop:file { read getattr map open };",
+      "allow moto_app virtual_ab_prop:file { read getattr map open };",
+      "allow moto_app cache_file:dir { search };",
+      "allow moto_app cache_file:lnk_file { ioctl read getattr lock map open watch watch_reads };",
+      "allow moto_app update_engine_log_data_file:dir { ioctl read getattr lock open watch watch_reads search };",
+      "allow moto_app update_engine_log_data_file:file { ioctl read getattr lock map open watch watch_reads };",
+      "allow moto_app update_engine_log_data_file:lnk_file { ioctl read getattr lock map open watch watch_reads };",
+      "allow moto_app system_linker_exec:file { execute_no_trans };",
+      "allow moto_app verity_status_prop:file { read getattr map open };",
+      "allow moto_app carrier_prop:file { read getattr map open };",
+      "allow moto_app qemu_hw_prop:file { read getattr map open };",
+      "allow moto_app incremental_prop:file { read getattr map open };",
+      "allow moto_app moto_service_prop:file { read getattr map open };",
+      "allow moto_app property_socket:sock_file { write };",
+      "allow moto_app init:unix_stream_socket { connectto };",
+      "allow moto_app moto_service_prop:property_service { set };",
+      "allow moto_app moto_service_prop:file { read getattr map open };",
+      "allow moto_app shell_data_file:dir { search };",
+      "allow moto_app property_socket:sock_file { write };",
+      "allow moto_app init:unix_stream_socket { connectto };",
+      "allow moto_app mot_bt_prop:property_service { set };",
+      "allow moto_app mot_bt_prop:file { read getattr map open };",
+      "allow moto_app fb_partner_id_prop:file { read getattr map open };",
+      "allow moto_app enterprise_edition_prop:file { read getattr map open };",
+      "allow moto_app channel_id_prop:file { read getattr map open };",
+      "allow moto_app thirdparty_prop:file { read getattr map open };",
+      "allow moto_app thirdparty_persist_prop:file { read getattr map open };",
+      "allow moto_app proc_version:file { read };",
+      "type_transition moto_app moto_app:anon_inode moto_app_userfaultfd \"[userfaultfd]\";"
+     ],
+     "target_rules": [
+      "allow update_engine moto_app:binder { transfer };"
+     ]
+    },
+    "product": {
+     "attributes": [
+      "appdomain",
+      "bluetoothdomain",
+      "coredomain",
+      "domain",
+      "moto_qcxdsp_domain",
+      "motoappdomain",
+      "netdomain"
+     ],
+     "source_rules": [
+      "allow moto_app moto_ai_core_file:dir { ioctl read getattr lock open watch watch_reads search };",
+      "allow moto_app moto_ai_core_file:file { ioctl read getattr lock map open watch watch_reads };",
+      "allow moto_app moto_ai_core_file:lnk_file { ioctl read getattr lock map open watch watch_reads };",
+      "allow moto_app radio_cc_version_prop:property_service { set };",
+      "allow moto_app radio_cc_version_prop:file { read getattr map open };"
+     ],
+     "target_rules": []
+    },
+    "vendor_pub": {
+     "attributes": [
+      "domain",
+      "moto_privileged_domain"
+     ],
+     "source_rules": [],
+     "target_rules": []
+    },
+    "vendor": {
+     "attributes": [
+      "domain",
+      "hal_audio_client",
+      "hal_face_client",
+      "hal_fingerprint_client",
+      "hal_imagetuner_client",
+      "hal_panel_client",
+      "hal_paramupdater_client",
+      "halclientdomain",
+      "vendor_hal_dspmanager_client"
+     ],
+     "source_rules": [
+      "allow moto_app_202504 imager_data_file:dir { ioctl read write getattr lock open watch watch_reads add_name remove_name search };",
+      "allow moto_app_202504 imager_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };",
+      "allow moto_app_202504 imager_metadata_file:dir { ioctl read getattr lock open watch watch_reads search };",
+      "allow moto_app_202504 imager_metadata_file:file { ioctl read getattr lock map open watch watch_reads };",
+      "allow moto_app_202504 vendor_mot_ota_tuning_valid:file { read getattr map open };",
+      "allow moto_app_202504 vendor_mot_paramfile_prop:file { read getattr map open };",
+      "allow moto_app_202504 hal_audio_default:binder { call transfer };",
+      "allow moto_app_202504 hal_audio_default:fd { use };",
+      "allow moto_app_202504 sysfs_graphics:dir { ioctl read getattr lock open watch watch_reads search };",
+      "allow moto_app_202504 sysfs_graphics:file { ioctl read getattr lock map open watch watch_reads };",
+      "allow moto_app_202504 sysfs_graphics:lnk_file { ioctl read getattr lock map open watch watch_reads };",
+      "allow moto_app_202504 vendor_boot_bl_state_prop:file { read getattr map open };",
+      "allow moto_app_202504 vendor_mot_audio_fx_prop:file { read getattr map open };",
+      "allow moto_app_202504 adspd_data_file_202504:dir { ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir };",
+      "allow moto_app_202504 adspd_data_file_202504:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };",
+      "allow moto_app_202504 mot_bt_prop_202504:file { read getattr map open };",
+      "allow moto_app_202504 vendor_mot_hw_prop:file { read getattr map open };",
+      "allow moto_app_202504 vendor_radio_prop:file { read getattr map open };",
+      "allow moto_app_202504 update_engine_202504:binder { transfer };",
+      "allow moto_app_202504 vendor_mot_fingerprint_prop:file { read getattr map open };",
+      "allow moto_app_202504 hal_fingerprint_test_service:service_manager { find };",
+      "allow moto_app_202504 vendor_mot_dolby_prop:file { read getattr map open };",
+      "allow moto_app_202504 vendor_audio_prop:file { read getattr map open };"
+     ],
+     "target_rules": [
+      "allow hal_audio_default moto_app_202504:binder { transfer };",
+      "allow update_engine_202504 moto_app_202504:binder { call transfer };",
+      "allow update_engine_202504 moto_app_202504:fd { use };"
+     ]
+    }
+   },
+   "referenced_symbols": {
+    "adspd_data_file_202504": [
+     "vendor_pub:attribute"
+    ],
+    "appdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "appdomain_tmpfs": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "bluetoothdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "cache_file": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "carrier_prop": [
+     "system_ext:type"
+    ],
+    "channel_id_prop": [
+     "system_ext:type"
+    ],
+    "coredomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "domain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "enterprise_edition_prop": [
+     "system_ext:type"
+    ],
+    "fb_partner_id_prop": [
+     "system_ext:type"
+    ],
+    "hal_audio_client": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "hal_audio_default": [
+     "vendor:type"
+    ],
+    "hal_face_client": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "hal_fingerprint_client": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "hal_fingerprint_test_service": [
+     "vendor:type"
+    ],
+    "hal_imagetuner_client": [
+     "vendor:attribute"
+    ],
+    "hal_panel_client": [
+     "vendor:attribute"
+    ],
+    "hal_paramupdater_client": [
+     "vendor:attribute"
+    ],
+    "halclientdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "imager_data_file": [
+     "vendor:type"
+    ],
+    "imager_metadata_file": [
+     "vendor:type"
+    ],
+    "incremental_prop": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "init": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "misc_ne_data_file": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "mot_bt_prop": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "mot_bt_prop_202504": [
+     "vendor_pub:attribute"
+    ],
+    "moto_ai_core_file": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "moto_app_userfaultfd": [
+     "system_ext:type"
+    ],
+    "moto_ota_prop": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "moto_privileged_domain": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "moto_qcxdsp_domain": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "moto_service_prop": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "motoappdomain": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "netdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "ota_package_file": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "proc_version": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "property_socket": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "qemu_hw_prop": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "radio_cc_version_prop": [
+     "product:type",
+     "vendor_pub:type"
+    ],
+    "shell_data_file": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "sysfs_graphics": [
+     "vendor:type"
+    ],
+    "system_linker_exec": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "thirdparty_persist_prop": [
+     "system_ext:type"
+    ],
+    "thirdparty_prop": [
+     "system_ext:type"
+    ],
+    "tmpfs": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "update_engine": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "update_engine_202504": [
+     "vendor_pub:attribute"
+    ],
+    "update_engine_log_data_file": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "update_engine_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "vendor_audio_prop": [
+     "vendor:type"
+    ],
+    "vendor_boot_bl_state_prop": [
+     "vendor:type"
+    ],
+    "vendor_hal_dspmanager_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_mot_audio_fx_prop": [
+     "vendor:type"
+    ],
+    "vendor_mot_dolby_prop": [
+     "vendor:type"
+    ],
+    "vendor_mot_fingerprint_prop": [
+     "vendor:type"
+    ],
+    "vendor_mot_hw_prop": [
+     "vendor:type"
+    ],
+    "vendor_mot_ota_tuning_valid": [
+     "vendor:type"
+    ],
+    "vendor_mot_paramfile_prop": [
+     "vendor:type"
+    ],
+    "vendor_radio_prop": [
+     "vendor:type"
+    ],
+    "verity_status_prop": [
+     "plat:type"
+    ],
+    "virtual_ab_prop": [
+     "plat:type",
+     "vendor_pub:type"
+    ]
+   }
+  },
+  "vendor_qtidataservices_app": {
+   "declared_in": [
+    "vendor:type"
+   ],
+   "versioned_attribute": "vendor_qtidataservices_app_202504",
+   "mapping": {},
+   "partitions": {
+    "vendor": {
+     "attributes": [
+      "appdomain",
+      "domain",
+      "halclientdomain",
+      "netdomain",
+      "vendor_hal_cacertservice_qti",
+      "vendor_hal_cacertservice_qti_server",
+      "vendor_hal_datafactory_qti_client",
+      "vendor_hal_iwlanservice_qti_client",
+      "vendor_hal_perf_client",
+      "vendor_halserverdomain"
+     ],
+     "source_rules": [
+      "type_transition vendor_qtidataservices_app tmpfs_202504:file appdomain_tmpfs;",
+      "allow vendor_qtidataservices_app vendor_qtidataservices_app_userfaultfd:anon_inode { ioctl read create };",
+      "allow vendor_qtidataservices_app appdomain_tmpfs_202504:file { ioctl read write getattr map execute };",
+      "allowxperm vendor_qtidataservices_app appdomain_tmpfs_202504:file ioctl { 0x7701-0x770b };",
+      "allow vendor_qtidataservices_app hwservicemanager_202504:binder { call transfer };",
+      "allow vendor_qtidataservices_app system_file_202504:dir { ioctl read getattr lock open watch watch_reads search };",
+      "allow vendor_qtidataservices_app hwservicemanager_prop_202504:file { read getattr map open };",
+      "allow vendor_qtidataservices_app vendor_cnd_prop:file { read getattr map open };",
+      "allow vendor_qtidataservices_app property_socket_202504:sock_file { write };",
+      "allow vendor_qtidataservices_app init_202504:unix_stream_socket { connectto };",
+      "allow vendor_qtidataservices_app telephony_status_prop_202504:property_service { set };",
+      "allow vendor_qtidataservices_app telephony_status_prop_202504:file { read getattr map open };",
+      "allow vendor_qtidataservices_app app_api_service:service_manager { find };",
+      "allow vendor_qtidataservices_app activity_service_202504:service_manager { find };",
+      "allow vendor_qtidataservices_app self:qipcrtr_socket { read write create getattr setattr lock append map bind connect getopt setopt shutdown };",
+      "allow vendor_qtidataservices_app vendor_radio_data_file:dir { ioctl read getattr lock open watch watch_reads search };",
+      "allow vendor_qtidataservices_app radio_service_202504:service_manager { find };",
+      "allow vendor_qtidataservices_app vendor_sysfs_data:file { ioctl read getattr lock map open watch watch_reads };",
+      "allow vendor_qtidataservices_app servicemanager_202504:binder { call transfer };",
+      "allow vendor_qtidataservices_app vendor_nicmd:fd { use };",
+      "allow vendor_qtidataservices_app vendor_nicmd:udp_socket { read write getattr getopt };",
+      "allow vendor_qtidataservices_app vendor_cnd:udp_socket { read write };",
+      "type_transition vendor_qtidataservices_app vendor_qtidataservices_app:anon_inode vendor_qtidataservices_app_userfaultfd \"[userfaultfd]\";"
+     ],
+     "target_rules": [
+      "allow hwservicemanager_202504 vendor_qtidataservices_app:binder { call transfer };",
+      "allow servicemanager_202504 vendor_qtidataservices_app:binder { call transfer };"
+     ]
+    }
+   },
+   "referenced_symbols": {
+    "activity_service_202504": [
+     "vendor_pub:attribute"
+    ],
+    "app_api_service": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "appdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "appdomain_tmpfs_202504": [
+     "vendor_pub:attribute"
+    ],
+    "domain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "halclientdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "hwservicemanager_202504": [
+     "vendor_pub:attribute"
+    ],
+    "hwservicemanager_prop_202504": [
+     "vendor_pub:attribute"
+    ],
+    "init_202504": [
+     "vendor_pub:attribute"
+    ],
+    "netdomain": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "property_socket_202504": [
+     "vendor_pub:attribute"
+    ],
+    "radio_service_202504": [
+     "vendor_pub:attribute"
+    ],
+    "self": [
+     "UNDECLARED"
+    ],
+    "servicemanager_202504": [
+     "vendor_pub:attribute"
+    ],
+    "system_file_202504": [
+     "vendor_pub:attribute"
+    ],
+    "telephony_status_prop_202504": [
+     "vendor_pub:attribute"
+    ],
+    "tmpfs_202504": [
+     "vendor_pub:attribute"
+    ],
+    "vendor_cnd": [
+     "vendor:type"
+    ],
+    "vendor_cnd_prop": [
+     "vendor:type"
+    ],
+    "vendor_hal_cacertservice_qti": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_cacertservice_qti_server": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_datafactory_qti_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_iwlanservice_qti_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_perf_client": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_halserverdomain": [
+     "vendor:attribute"
+    ],
+    "vendor_nicmd": [
+     "vendor:type"
+    ],
+    "vendor_qtidataservices_app_userfaultfd": [
+     "vendor:type"
+    ],
+    "vendor_radio_data_file": [
+     "vendor:type"
+    ],
+    "vendor_sysfs_data": [
+     "vendor:type"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,762 @@
+{
+ "subjects": [
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libAncHumanSegFigureFusion-jni.so",
+   "needed": [
+    "libjnigraphics.so",
+    "liblog.so",
+    "libEGL.so",
+    "libGLESv3.so",
+    "libandroid.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 61
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libMagicClean.so",
+   "needed": [
+    "libandroid.so",
+    "liblog.so",
+    "libdl.so",
+    "libz.so",
+    "libjnigraphics.so",
+    "libtensorflowlite_gpu_jni.so",
+    "libtensorflowlite_jni.so",
+    "libc.so",
+    "libm.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 137
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libNvBeautySdkCore.so",
+   "needed": [
+    "libEGL.so",
+    "libGLESv2.so",
+    "liblog.so",
+    "libmediandk.so",
+    "libz.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 398
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libNvEffectSdkCore.so",
+   "needed": [
+    "libz.so",
+    "libEGL.so",
+    "libGLESv2.so",
+    "liblog.so",
+    "libandroid.so",
+    "libjnigraphics.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 394
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libNvLutEffect.so",
+   "needed": [
+    "libz.so",
+    "liblog.so",
+    "libandroid.so",
+    "libjnigraphics.so",
+    "libEGL.so",
+    "libGLESv2.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 245
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libaiscenedetection.arcsoft_8845.so",
+   "needed": [
+    "libmpbase.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 94
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libandroidx.graphics.path.so",
+   "needed": [
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 7
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libarcsoft_frc_8450.so",
+   "needed": [
+    "liblog.so",
+    "libdl.so",
+    "libc.so",
+    "libm.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 125
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libarcsoft_singlecam_bokeh_8845.so",
+   "needed": [
+    "libarcsoft_qnnhtp.so",
+    "libcdsprpc.so",
+    "libmpbase.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 128
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libarcsoft_turbo_hdr_detection_ev_8845.so",
+   "needed": [
+    "libmpbase.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 62
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libarcsoft_turbo_hdr_detection_simple_8845.so",
+   "needed": [
+    "libmpbase.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 132
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libarcsoft_turbo_raw_grf_8845.so",
+   "needed": [
+    "libcdsprpc.so",
+    "libmpbase.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 59
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libas-stellar-track.so",
+   "needed": [
+    "liblog.so",
+    "libmcf-base.so",
+    "libandroid.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libfoundation.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 41
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libas-super-slow-motion.so",
+   "needed": [
+    "liblog.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 22
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libas-tint-sense.so",
+   "needed": [
+    "liblog.so",
+    "libmcf-base.so",
+    "libandroid.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libfoundation.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 25
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libbarhopper_v3.so",
+   "needed": [
+    "libjnigraphics.so",
+    "liblog.so",
+    "libdl.so",
+    "libm.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 171
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libbg-postproc-jni.so",
+   "needed": [
+    "libandroid.so",
+    "liblog.so",
+    "libpostproc-transfer-data.so",
+    "libjnigraphics.so",
+    "libultrahdr.so",
+    "libmcf-base.so",
+    "libfoundation.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 397
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libc++.so",
+   "needed": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 166
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libc++_shared.so",
+   "needed": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 160
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libdoc-util.so",
+   "needed": [
+    "libmcf-base.so",
+    "libfoundation.so",
+    "liblog.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libandroid.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 17
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libdynamic_depth.so",
+   "needed": [
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 183
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libfoundation.so",
+   "needed": [
+    "liblog.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 71
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libgg-dynamic_depth.so",
+   "needed": [
+    "liblog.so",
+    "libdynamic_depth.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 37
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libgg-tensorflow-lite.so",
+   "needed": [
+    "liblog.so",
+    "libmcf-base.so",
+    "libtensorflowlite.so",
+    "libfoundation.so",
+    "libandroid.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 102
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libgif.so",
+   "needed": [
+    "liblog.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 23
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libglimageio.so",
+   "needed": [
+    "libz.so",
+    "liblog.so",
+    "libEGL.so",
+    "libGLESv2.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 217
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libjpeg.so",
+   "needed": [
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 28
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmcf-base.so",
+   "needed": [
+    "liblog.so",
+    "libandroid.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libfoundation.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 259
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmcf-jni.so",
+   "needed": [
+    "liblog.so",
+    "libandroid.so",
+    "libpostproc-transfer-data.so",
+    "libjnigraphics.so",
+    "libultrahdr.so",
+    "libmcf-base.so",
+    "libfoundation.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libnativewindow.so",
+    "libjpeg.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 658
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmcf-stand-alone-sm.so",
+   "needed": [
+    "liblog.so",
+    "libmcf-base.so",
+    "libfoundation.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libandroid.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 34
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmediapipe_tasks_vision_jni.so",
+   "needed": [
+    "libdl.so",
+    "libEGL.so",
+    "libGLESv2.so",
+    "libm.so",
+    "libz.so",
+    "libandroid.so",
+    "libjnigraphics.so",
+    "liblog.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 315
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmeishe-nv-effects-thumbnails.so",
+   "needed": [
+    "liblog.so",
+    "libjnigraphics.so",
+    "libmcf-base.so",
+    "libfoundation.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libandroid.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 72
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmoondetection.arcsoft_8845.so",
+   "needed": [
+    "libmpbase.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 95
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmorpho_panorama_gp3.so",
+   "needed": [
+    "libGLESv3.so",
+    "libEGL.so",
+    "libjnigraphics.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 69
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmorpho_panorama_gp3_core.so",
+   "needed": [
+    "libGLESv2.so",
+    "libEGL.so",
+    "liblog.so",
+    "libc.so",
+    "libdl.so",
+    "libm.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 64
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmorpho_sensor_fusion.so",
+   "needed": [
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 12
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmot-util.so",
+   "needed": [
+    "libjnigraphics.so",
+    "libmcf-base.so",
+    "libandroid.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libfoundation.so",
+    "liblog.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 47
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libmpbase.so",
+   "needed": [
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 8
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libnativebeautyrenderer.so",
+   "needed": [
+    "libNvBeautySdkCore.so",
+    "libglimageio.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 186
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libpostproc-transfer-data.so",
+   "needed": [
+    "libmcf-base.so",
+    "liblog.so",
+    "libandroid.so",
+    "libcamera2ndk.so",
+    "libmediandk.so",
+    "libfoundation.so",
+    "libjpeg.so",
+    "libnativewindow.so",
+    "libm.so",
+    "libc++_shared.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 24
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libsmart_ppt.so",
+   "needed": [
+    "liblog.so",
+    "libjnigraphics.so",
+    "libz.so",
+    "libm.so",
+    "libdl.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 195
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libtensorflowlite.so",
+   "needed": [
+    "libm.so",
+    "libdl.so",
+    "liblog.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 163
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libtensorflowlite_gpu_delegate.so",
+   "needed": [
+    "libEGL.so",
+    "libGLESv2.so",
+    "libdl.so",
+    "libm.so",
+    "liblog.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 247
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libtensorflowlite_gpu_jni.so",
+   "needed": [
+    "libGLESv3.so",
+    "libEGL.so",
+    "libdl.so",
+    "libm.so",
+    "liblog.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 163
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libtensorflowlite_jni.so",
+   "needed": [
+    "libm.so",
+    "libdl.so",
+    "liblog.so",
+    "libc.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 126
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libtintsense.arcsoft.so",
+   "needed": [
+    "libmpbase.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 140
+  },
+  {
+   "subject": "/product/priv-app/MotCamera5/MotCamera5.apk!libultrahdr.so",
+   "needed": [
+    "libjpeg.so",
+    "liblog.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 167
+  }
+ ]
+}

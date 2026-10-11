@@ -1,0 +1,261 @@
+QcRilAm: per-slot AIDL response, wait for the HAL, recover from RIL and audioserver restarts
+
+Project: packages/apps/QcRilAm (TrebleDroid, branch android-16.0)
+
+The AIDL path kept one response interface in a file-level variable. On a device whose vendor
+serves IQcRilAudio/slot1 and /slot2 the second registration overwrote it, so every response
+for slot 1 was sent to the RIL process of slot 2. The service was also looked up once at boot
+without waiting and never again: a RIL process that registered late or restarted left the
+phone without the audio parameters of voice calls until the next reboot. The vendor client
+this app replaces (com.qualcomm.qti.telephonyservice) keeps the response per slot, waits for
+the declared service, re-registers from a death recipient and reports audioserver death and
+recovery through IQcRilAudio.setError; this change does the same.
+
+- one connection object per slot with its own response interface and lock
+- ServiceManager.waitForDeclaredService on a per-slot thread, retry on failure
+- linkToDeath and re-registration
+- AudioManager.setAudioServerStateCallback -> setError(STATUS_SERVER_DIED / STATUS_OK)
+- answer the RIL instead of blocking in AudioManager while audioserver is down
+
+The HIDL paths are unchanged.
+
+Revision 2 (2026-10-10, after the first DSU boot): the registration is logged step by step
+and a warning is logged when setRequestInterface has not returned after 10 s. On that boot
+both slot threads found the HAL and then never reported success or failure.
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 68e0ee5..c9af6f9 100755
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -9,6 +9,7 @@
+     <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="26"/>
+ 
+     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
++    <uses-permission android:name="android.permission.MODIFY_AUDIO_ROUTING" />
+     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+diff --git a/src/me/phh/qcrilam/QcRilAmService.kt b/src/me/phh/qcrilam/QcRilAmService.kt
+index ba9fea4..c05abe6 100644
+--- a/src/me/phh/qcrilam/QcRilAmService.kt
++++ b/src/me/phh/qcrilam/QcRilAmService.kt
+@@ -24,17 +24,152 @@ package me.phh.qcrilam
+ import android.app.Service
+ import android.content.Intent
+ import android.media.AudioManager
++import android.os.Handler
++import android.os.HandlerThread
++import android.os.Looper
+ import android.os.IBinder
+-import android.os.RemoteException
+ import android.os.ServiceManager
+ import android.telephony.SubscriptionManager
+ import android.util.Log
++import vendor.qti.hardware.radio.am.IQcRilAudio
++import vendor.qti.hardware.radio.am.IQcRilAudioRequest
++import vendor.qti.hardware.radio.am.IQcRilAudioResponse
+ 
+ private const val TAG = "QcRilAm-Service"
+-private var qcRilAudioResponse: vendor.qti.hardware.radio.am.IQcRilAudioResponse? = null
++private const val RETRY_DELAY_MS = 2000L
++private const val STUCK_WARNING_MS = 10000L
++
++// vendor.qti.hardware.radio.am.AudioError (byte-backed in this copy of the interface)
++private const val AUDIO_STATUS_OK: Byte = 0
++private const val AUDIO_GENERIC_FAILURE: Byte = 1
++private const val AUDIO_STATUS_SERVER_DIED: Byte = 2
++
++/**
++ * One AIDL connection to vendor.qti.hardware.radio.am.IQcRilAudio/slotN.
++ *
++ * Each slot is served by its own RIL process and hands out its own response interface, so the
++ * response must be kept per slot. The HAL is waited for instead of looked up once, and the
++ * registration is repeated when the RIL process dies.
++ */
++private class AidlSlot(slot: Int, private val audioManager: AudioManager) : IBinder.DeathRecipient {
++    private val name = "vendor.qti.hardware.radio.am.IQcRilAudio/slot$slot"
++    private val lock = Any()
++    private var hal: IQcRilAudio? = null
++    private var response: IQcRilAudioResponse? = null
++    @Volatile private var audioError = AUDIO_STATUS_OK
++    private val handler = Handler(HandlerThread("QcRilAm-slot$slot").apply { start() }.looper)
++    private val mainHandler = Handler(Looper.getMainLooper())
++
++    private val request = object : IQcRilAudioRequest.Stub() {
++        override fun getInterfaceVersion() = IQcRilAudioRequest.VERSION
++
++        override fun getInterfaceHash() = IQcRilAudioRequest.HASH
++
++        override fun queryParameters(token: Int, params: String) {
++            // AudioManager blocks while audioserver is down; answer instead of stalling the RIL.
++            val value = if (audioManager.isAudioServerRunning) audioManager.getParameters(params) else ""
++            respond { it.queryParametersResponse(token, value) }
++        }
++
++        override fun setParameters(token: Int, params: String) {
++            // AudioManager.setParameters does not return the value coming from
++            // AudioSystem.setParameters. Assume there was no error if audioserver is up.
++            val status = if (audioManager.isAudioServerRunning) {
++                audioManager.setParameters(params)
++                AUDIO_STATUS_OK
++            } else {
++                AUDIO_GENERIC_FAILURE
++            }
++            respond { it.setParametersResponse(token, status) }
++        }
++    }
++
++    private fun respond(block: (IQcRilAudioResponse) -> Unit) {
++        // Taking the lock also waits for a registration that is still in progress.
++        val target = synchronized(lock) { response }
++        if (target == null) {
++            Log.e(TAG, "$name: no response interface, dropping the response")
++            return
++        }
++        try {
++            block(target)
++        } catch (e: Exception) {
++            Log.e(TAG, "$name: sending the response failed", e)
++        }
++    }
++
++    fun start() {
++        handler.post { connect() }
++    }
++
++    /** Runs on the slot's own thread: waitForDeclaredService blocks until the RIL is up. */
++    private fun connect() {
++        try {
++            if (!ServiceManager.isDeclared(name)) {
++                Log.i(TAG, "$name is not declared by the vendor, not using AIDL for it")
++                return
++            }
++            Log.i(TAG, "$name: waiting for the RIL to publish it")
++            val binder = ServiceManager.waitForDeclaredService(name)
++            if (binder == null) {
++                Log.e(TAG, "$name did not appear, trying again")
++                handler.postDelayed({ connect() }, RETRY_DELAY_MS)
++                return
++            }
++            binder.linkToDeath(this, 0)
++            val service = IQcRilAudio.Stub.asInterface(binder)
++            // The steps are logged one by one: on the first test boot this thread never got past
++            // here and there was nothing in the log to say which call it was waiting in.
++            Log.i(TAG, "$name: calling setRequestInterface")
++            val stuck = Runnable {
++                Log.e(TAG, "$name: setRequestInterface has not returned after ${STUCK_WARNING_MS / 1000} s")
++            }
++            mainHandler.postDelayed(stuck, STUCK_WARNING_MS)
++            try {
++                synchronized(lock) {
++                    hal = service
++                    response = service.setRequestInterface(request)
++                }
++            } finally {
++                mainHandler.removeCallbacks(stuck)
++            }
++            Log.i(TAG, "$name: request interface registered")
++            sendAudioError()
++        } catch (e: Exception) {
++            Log.e(TAG, "$name: registration failed, trying again", e)
++            handler.postDelayed({ connect() }, RETRY_DELAY_MS)
++        }
++    }
++
++    override fun binderDied() {
++        Log.w(TAG, "$name died, registering again when it is back")
++        synchronized(lock) {
++            hal = null
++            response = null
++        }
++        handler.post { connect() }
++    }
++
++    /** Tells the RIL whether audioserver is usable, as the vendor's own client does. */
++    fun reportAudioError(error: Byte) {
++        audioError = error
++        handler.post { sendAudioError() }
++    }
++
++    private fun sendAudioError() {
++        val service = synchronized(lock) { hal } ?: return
++        try {
++            service.setError(audioError)
++        } catch (e: Exception) {
++            Log.e(TAG, "$name: setError failed", e)
++        }
++    }
++}
+ 
+ class QcRilAmService : Service() {
+-    private fun addCallbackForSimSlot(simSlotNo: Int, audioManager: AudioManager) {
++    private val aidlSlots = ArrayList<AidlSlot>()
++
++    private fun addHidlCallbackForSimSlot(simSlotNo: Int, audioManager: AudioManager) {
+         try {
+             val qcRilAudioHidl1 = vendor.qti.hardware.radio.am.V1_0.IQcRilAudio.getService("slot$simSlotNo", true /*retry*/)
+             if (qcRilAudioHidl1 == null) {
+@@ -79,33 +214,6 @@ class QcRilAmService : Service() {
+         } catch (e: Exception) {
+             Log.e(TAG, "RemoteException while trying to add HIDL callback for slot$simSlotNo")
+         }
+-        try {
+-            val serviceName = "vendor.qti.hardware.radio.am.IQcRilAudio/slot$simSlotNo"
+-            val qcRilAudioAidl = vendor.qti.hardware.radio.am.IQcRilAudio.Stub.asInterface(ServiceManager.getService(serviceName))
+-            if (qcRilAudioAidl == null) {
+-                Log.e(TAG, "Could not get AIDL service instance for slot$simSlotNo, failing")
+-            } else {
+-                qcRilAudioResponse = qcRilAudioAidl.setRequestInterface(object : vendor.qti.hardware.radio.am.IQcRilAudioRequest.Stub() {
+-                    override fun getInterfaceVersion() = vendor.qti.hardware.radio.am.IQcRilAudioRequest.VERSION
+-
+-                    override fun getInterfaceHash() = vendor.qti.hardware.radio.am.IQcRilAudioRequest.HASH
+-
+-                    override fun queryParameters(token: Int, params: String) {
+-                        qcRilAudioResponse?.queryParametersResponse(token, audioManager.getParameters(params))
+-                    }
+-
+-                    override fun setParameters(token: Int, params: String) {
+-                        // AudioManager.setParameters does not check nor return
+-                        // the value coming from AudioSystem.setParameters.
+-                        // Assume there was no error:
+-                        audioManager.setParameters(params)
+-                        qcRilAudioResponse?.setParametersResponse(token, 0)
+-                    }
+-                })
+-            }
+-        } catch (e: Exception) {
+-            Log.e(TAG, "RemoteException while trying to add AIDL callback for slot$simSlotNo")
+-        }
+     }
+ 
+     override fun onBind(intent: Intent?) = null
+@@ -118,7 +226,28 @@ class QcRilAmService : Service() {
+             throw RuntimeException("Can't get audiomanager!")
+         }
+         for (simSlotNo in 1..simCount) {
+-            addCallbackForSimSlot(simSlotNo, audioManager)
++            addHidlCallbackForSimSlot(simSlotNo, audioManager)
++            val slot = AidlSlot(simSlotNo, audioManager)
++            aidlSlots.add(slot)
++            slot.start()
++        }
++        try {
++            audioManager.setAudioServerStateCallback(mainExecutor, object : AudioManager.AudioServerStateCallback() {
++                override fun onAudioServerDown() {
++                    Log.w(TAG, "audioserver is down")
++                    aidlSlots.forEach { it.reportAudioError(AUDIO_STATUS_SERVER_DIED) }
++                }
++
++                override fun onAudioServerUp() {
++                    Log.i(TAG, "audioserver is up")
++                    aidlSlots.forEach { it.reportAudioError(AUDIO_STATUS_OK) }
++                }
++            })
++            if (!audioManager.isAudioServerRunning) {
++                aidlSlots.forEach { it.reportAudioError(AUDIO_STATUS_SERVER_DIED) }
++            }
++        } catch (e: Exception) {
++            Log.e(TAG, "cannot watch the audioserver state", e)
+         }
+     }
+ }

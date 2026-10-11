@@ -1,0 +1,62 @@
+# Stock rules for vendor_qtelephony (rendered from CIL by sepolicy_slice.py; review before use)
+
+### from system_ext policy
+typeattribute vendor_qtelephony appdomain;
+typeattribute vendor_qtelephony coredomain;
+typeattribute vendor_qtelephony domain;
+typeattribute vendor_qtelephony hal_telephony_client;
+typeattribute vendor_qtelephony halclientdomain;
+typeattribute vendor_qtelephony netdomain;
+typeattribute vendor_qtelephony vendor_hal_atfwd_client;
+typeattribute vendor_qtelephony vendor_hal_imsvthal_client;
+type_transition vendor_qtelephony tmpfs:file appdomain_tmpfs;
+allow vendor_qtelephony vendor_qtelephony_userfaultfd:anon_inode { ioctl read create };
+allow vendor_qtelephony appdomain_tmpfs:file { ioctl read write getattr map execute };
+allowxperm vendor_qtelephony appdomain_tmpfs:file ioctl { 0x7701-0x770b };
+allow vendor_qtelephony hwservicemanager:binder { call transfer };
+allow vendor_qtelephony hwservicemanager_prop:file { read getattr map open };
+allow vendor_qtelephony servicemanager:binder { call transfer };
+allow vendor_qtelephony audioserver_service:service_manager { find };
+allow vendor_qtelephony cameraserver_service:service_manager { find };
+allow vendor_qtelephony drmserver_service:service_manager { find };
+allow vendor_qtelephony mediaserver_service:service_manager { find };
+allow vendor_qtelephony mediametrics_service:service_manager { find };
+allow vendor_qtelephony mediaextractor_service:service_manager { find };
+allow vendor_qtelephony radio_service:service_manager { find };
+allow vendor_qtelephony system_api_service:service_manager { find };
+allow vendor_qtelephony app_api_service:service_manager { find };
+allow vendor_qtelephony vendor_dpmtcm_socket:sock_file { write };
+allow vendor_qtelephony vendor_dpmd:unix_stream_socket { connectto };
+type_transition vendor_qtelephony vendor_qtelephony:anon_inode vendor_qtelephony_userfaultfd "[userfaultfd]";
+allow hwservicemanager vendor_qtelephony:binder { call transfer };
+allow servicemanager vendor_qtelephony:binder { call transfer };
+
+### from product policy
+typeattribute vendor_qtelephony appdomain;
+typeattribute vendor_qtelephony coredomain;
+typeattribute vendor_qtelephony domain;
+typeattribute vendor_qtelephony halclientdomain;
+typeattribute vendor_qtelephony netdomain;
+
+### from vendor policy
+# typeattribute vendor_qtelephony domain;
+# typeattribute vendor_qtelephony halclientdomain;
+# typeattribute vendor_qtelephony vendor_hal_datafactory_qti_client;
+# typeattribute vendor_qtelephony vendor_hal_imsrtphal_client;
+# typeattribute vendor_qtelephony vendor_hal_perf_client;
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 vendor_atfwd:binder { transfer };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 vendor_hal_imsrtp:binder { transfer };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 vendor_radio_prop:file { read getattr map open };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 vendor_ims_prop:file { read getattr map open };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 vendor_persist_camera_prop_202504:file { read getattr map open };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 vendor_audio_prop:file { read getattr map open };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 vendor_video_prop:file { read getattr map open };
+# (vendor side, applies via mapping) dontaudit vendor_qtelephony_202504 vendor_hal_qspmhal_service:service_manager { find };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 ims_dbg_prop_202504:file { read getattr map open };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 mot_radio_service_202504:service_manager { find };
+# (vendor side, applies via mapping) allow vendor_qtelephony_202504 mot_system_service_202504:service_manager { find };
+# (vendor side, applies via mapping) allow vendor_atfwd vendor_qtelephony_202504:binder { call transfer };
+# (vendor side, applies via mapping) allow vendor_atfwd vendor_qtelephony_202504:fd { use };
+# (vendor side, applies via mapping) allow vendor_hal_imsrtp vendor_qtelephony_202504:binder { call transfer };
+# (vendor side, applies via mapping) allow vendor_hal_imsrtp vendor_qtelephony_202504:fd { use };
+

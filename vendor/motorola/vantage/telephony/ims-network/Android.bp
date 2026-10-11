@@ -1,0 +1,12 @@
+// Holds the IMS network request. On stock the vendor CNE app does that, with a permission it
+// only has under the OEM platform key (see README.md).
+android_app {
+    name: "VantageImsNetwork",
+    srcs: ["src/**/*.java"],
+    sdk_version: "current",
+    certificate: "platform",
+    system_ext_specific: true,
+    optimize: {
+        enabled: false,
+    },
+}

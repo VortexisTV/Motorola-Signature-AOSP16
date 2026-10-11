@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carrier configuration that stock obtains from Google Carrier Settings (GMS), which a
+     vanilla AOSP build does not have. AOSP's CarrierConfig app appends res/xml/vendor.xml to
+     whatever it finds in its own assets, so this overlay only adds per-carrier blocks. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.carrierconfig.overlay.vantage">
+
+    <application android:hasCode="false" />
+
+    <overlay
+        android:targetPackage="com.android.carrierconfig"
+        android:isStatic="true"
+        android:priority="100" />
+</manifest>

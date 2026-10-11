@@ -1,0 +1,34 @@
+init: export ro.carrier from androidboot.carrier
+
+Project: system/core (TrebleDroid android-16.0 fork of AOSP android-16.0.0_r2)
+
+Motorola's bootloader passes the phone's sales channel as androidboot.carrier (seen in
+/proc/bootconfig on the device: androidboot.carrier = "retin"). The stock vendor image carries
+ro.carrier=unknown in /vendor/build.prop as a default and, in init.mmi.rc, tries
+"setprop ro.carrier ${ro.boot.carrier}". Motorola's own init sets ro.carrier from the boot
+parameter before the build.prop defaults are loaded (its binary names both properties). AOSP's
+init does not, so under this system the vendor default wins and the vendor's own setprop fails:
+
+    init: Unable to set property 'ro.carrier' ... Read-only property was already set
+
+(second DSU boot, 2026-10-10). The stock RIL, rmt_storage, the modem power-cutback library, the
+thermal engine and vendor init scripts read ro.carrier or ro.vendor.carrier.
+
+The change adds one entry to init's existing table of boot parameters that are exported under
+a second name. Without androidboot.carrier nothing is set and behaviour is unchanged.
+
+diff --git a/init/property_service.cpp b/init/property_service.cpp
+index 6be4643..566f1f3 100644
+--- a/init/property_service.cpp
++++ b/init/property_service.cpp
+@@ -1363,6 +1363,10 @@ static void ExportKernelBootProps() {
+         { "ro.boot.bootloader", "ro.bootloader", "unknown", },
+         { "ro.boot.hardware",   "ro.hardware",   "unknown", },
+         { "ro.boot.revision",   "ro.revision",   "0", },
++        // Motorola bootloaders pass the sales channel as androidboot.carrier. The vendor image
++        // ships ro.carrier=unknown as a build.prop default and expects init to have set the
++        // real value before that default is loaded, as the OEM init does.
++        { "ro.boot.carrier",    "ro.carrier",    UNSET, },
+             // clang-format on
+     };
+     for (const auto& prop : prop_map) {

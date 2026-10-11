@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Binds the stock Qualcomm IMS service as the MMTel ImsService.
+     On stock this value is compiled into Motorola's TeleService.apk
+     (string/config_ims_mmtel_package = "org.codeaurora.ims"); AOSP leaves it empty. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.phone.overlay.vantage">
+
+    <application android:hasCode="false" />
+
+    <overlay
+        android:targetPackage="com.android.phone"
+        android:isStatic="true"
+        android:priority="100" />
+</manifest>

@@ -1,0 +1,11 @@
+# Stock rules for vendor_hal_imsrtphal_client (rendered from CIL by sepolicy_slice.py; review before use)
+
+### from vendor policy
+# (vendor side, applies via mapping) allow vendor_hal_imsrtphal_client vendor_hal_imsrtphal_server:binder { call transfer };
+# (vendor side, applies via mapping) allow vendor_hal_imsrtphal_client vendor_hal_imsrtphal_server:fd { use };
+# (vendor side, applies via mapping) allow vendor_hal_imsrtphal_client vendor_hal_imsrtphal_server:binder { transfer };
+# (vendor side, applies via mapping) allow vendor_hal_imsrtphal_client vendor_hal_imsrtp_service:service_manager { find };
+# (vendor side, applies via mapping) allow vendor_hal_imsrtphal_server vendor_hal_imsrtphal_client:binder { transfer };
+# (vendor side, applies via mapping) allow vendor_hal_imsrtphal_server vendor_hal_imsrtphal_client:binder { call transfer };
+# (vendor side, applies via mapping) allow vendor_hal_imsrtphal_server vendor_hal_imsrtphal_client:fd { use };
+

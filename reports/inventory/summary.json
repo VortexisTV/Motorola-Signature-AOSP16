@@ -1,0 +1,1226 @@
+{
+ "firmware": "W2WVS36.55-95-5-1",
+ "partitions": {
+  "system": {
+   "present": true,
+   "mount": "/system",
+   "files": 2629,
+   "symlinks": 286,
+   "bytes": 1094424573,
+   "unreadable": 0,
+   "packages": {
+    "framework": 1,
+    "etc": 1,
+    "app": 31,
+    "apex": 37,
+    "priv-app": 51
+   },
+   "elf_objects": 999,
+   "init_services": 90,
+   "vintf_files": 19,
+   "shared_libraries": 26,
+   "privapp_allowlisted_packages": 60,
+   "fingerprint": "motorola/vantage_g/msi:16/W2WVS36M.55-95-ST2.6/79cc28:user/release-keys"
+  },
+  "system_ext": {
+   "present": true,
+   "mount": "/system_ext",
+   "files": 1400,
+   "symlinks": 7,
+   "bytes": 1169681434,
+   "unreadable": 0,
+   "packages": {
+    "etc": 1,
+    "app": 15,
+    "apex": 6,
+    "priv-app": 67,
+    "overlay": 2
+   },
+   "elf_objects": 407,
+   "init_services": 18,
+   "vintf_files": 9,
+   "shared_libraries": 49,
+   "privapp_allowlisted_packages": 63,
+   "fingerprint": "motorola/vantage_g/msi:16/W2WVS36M.55-95-ST2.6/79cc28:user/release-keys"
+  },
+  "product": {
+   "present": true,
+   "mount": "/product",
+   "files": 4648,
+   "symlinks": 2,
+   "bytes": 10746981240,
+   "unreadable": 0,
+   "packages": {
+    "app": 42,
+    "apex": 1,
+    "preinstall": 11,
+    "priv-app": 85,
+    "overlay": 127
+   },
+   "elf_objects": 62,
+   "init_services": 3,
+   "vintf_files": 2,
+   "shared_libraries": 15,
+   "privapp_allowlisted_packages": 84,
+   "fingerprint": "motorola/vantage_g/msi:16/W2WVS36M.55-95-ST2.6/79cc28:user/release-keys"
+  },
+  "vendor": {
+   "present": true,
+   "mount": "/vendor",
+   "files": 3312,
+   "symlinks": 303,
+   "bytes": 4278975750,
+   "unreadable": 0,
+   "packages": {
+    "app": 6,
+    "apex": 3,
+    "overlay": 10
+   },
+   "elf_objects": 2085,
+   "init_services": 299,
+   "vintf_files": 139,
+   "shared_libraries": 3,
+   "privapp_allowlisted_packages": 1,
+   "fingerprint": "motorola/vantage_g/vantage:16/W2WVS36V.55-95-ST2.6/160ef0:user/release-keys"
+  },
+  "odm": {
+   "present": true,
+   "mount": "/odm",
+   "files": 104,
+   "symlinks": 0,
+   "bytes": 377112694,
+   "unreadable": 0,
+   "packages": {},
+   "elf_objects": 0,
+   "init_services": 0,
+   "vintf_files": 2,
+   "shared_libraries": 0,
+   "privapp_allowlisted_packages": 0,
+   "fingerprint": "motorola/vantage_g/vantage:16/W2WVS36V.55-95-ST2.6/160ef0:user/release-keys"
+  },
+  "vendor_dlkm": {
+   "present": true,
+   "mount": "/vendor_dlkm",
+   "files": 318,
+   "symlinks": 0,
+   "bytes": 74009742,
+   "unreadable": 0,
+   "packages": {},
+   "elf_objects": 308,
+   "init_services": 0,
+   "vintf_files": 0,
+   "shared_libraries": 0,
+   "privapp_allowlisted_packages": 0,
+   "fingerprint": "motorola/vantage_g/vantage:16/W2WVS36V.55-95-ST2.6/160ef0:user/release-keys"
+  },
+  "system_dlkm": {
+   "present": true,
+   "mount": "/system_dlkm",
+   "files": 112,
+   "symlinks": 0,
+   "bytes": 14027878,
+   "unreadable": 0,
+   "packages": {},
+   "elf_objects": 104,
+   "init_services": 0,
+   "vintf_files": 0,
+   "shared_libraries": 0,
+   "privapp_allowlisted_packages": 0,
+   "fingerprint": "motorola/vantage_g/vantage:16/W2WVS36V.55-95-ST2.6/160ef0:user/release-keys"
+  }
+ },
+ "certificates": [
+  {
+   "cert_sha256": "e0a42da29676e0e729df57021312dad6f91a0508d9f3332285e552e5d0235f3b",
+   "label": "platform",
+   "count": 138,
+   "sample": [
+    "android",
+    "com.android.DeviceAsWebcam",
+    "com.android.avatarpicker",
+    "com.android.backupconfirm",
+    "com.android.bips",
+    "com.android.cameraextensions",
+    "com.android.carrierdefaultapp",
+    "com.android.cellbroadcast.overlay",
+    "com.android.cellbroadcastreceiver",
+    "com.android.cellbroadcastservice.overlay",
+    "com.android.certinstaller",
+    "com.android.companiondevicemanager"
+   ]
+  },
+  {
+   "cert_sha256": "c463fa2a0351086dd6328d9daf6218146ee1651521c1cb6b4c538f85eeec7a3c",
+   "label": "key-c463fa2a",
+   "count": 77,
+   "sample": [
+    "android.autoinstalls.config.motorola.layout",
+    "com.motorola.actions",
+    "com.motorola.android.coresettingsext.overlay.doubletap",
+    "com.motorola.android.coresettingsext.overlay.vantage",
+    "com.motorola.android.launcher.overlay.amx",
+    "com.motorola.android.launcher.overlay.applabeltwolines",
+    "com.motorola.android.launcher.overlay.retail.global",
+    "com.motorola.android.launcher.overlay.vivo",
+    "com.motorola.android.networkstack.overlay.mcc460",
+    "com.motorola.android.networkstack.tethering.overlay.motCommon",
+    "com.motorola.android.overlay.appclone",
+    "com.motorola.android.overlay.common"
+   ]
+  },
+  {
+   "cert_sha256": "127524ce62c919b78d9234daf3e3e8748b4215b337a0f403d4962960827ca62b",
+   "label": "key-127524ce",
+   "count": 66,
+   "sample": [
+    "android.auto_generated_characteristics_rro",
+    "android.auto_generated_rro_product__",
+    "android.auto_generated_rro_vendor__",
+    "com.android.bluetoothmidiservice",
+    "com.android.bookmarkprovider",
+    "com.android.companiondevicemanager.auto_generated_characteristics_rro",
+    "com.android.dreams.basic",
+    "com.android.hotwordenrollment.okgoogle",
+    "com.android.hotwordenrollment.xgoogle",
+    "com.android.htmlviewer",
+    "com.android.imsserviceentitlement",
+    "com.android.internal.display.cutout.emulation.corner"
+   ]
+  },
+  {
+   "cert_sha256": "be8804a55e9045a580d204979f6efb15c058731aa1021b78c046feab8ae76a26",
+   "label": "key-be8804a5",
+   "count": 45,
+   "sample": [
+    "com.android.dialer.overlay.imei",
+    "com.bluetooth.aptxmode",
+    "com.motorola.account",
+    "com.motorola.actioncore",
+    "com.motorola.aicore",
+    "com.motorola.aiservices",
+    "com.motorola.aitranslation",
+    "com.motorola.android.server.telecom.overlay.jp",
+    "com.motorola.audiorecorder",
+    "com.motorola.batterycare",
+    "com.motorola.camera.ai.colortone",
+    "com.motorola.camera5"
+   ]
+  },
+  {
+   "cert_sha256": "41f2959583fe8b21d32abcedf9999c291726915c94b2167e4cdcafb295e0f0e9",
+   "label": "key-41f29595",
+   "count": 20,
+   "sample": [
+    "com.android.bt",
+    "com.android.compos",
+    "com.android.crashrecovery",
+    "com.android.devicelock",
+    "com.android.hardware.cas",
+    "com.android.i18n",
+    "com.android.nfcservices",
+    "com.android.profiling",
+    "com.android.runtime",
+    "com.android.uprobestats",
+    "com.android.virt",
+    "com.android.vndk.v30"
+   ]
+  },
+  {
+   "cert_sha256": "5fa42212ad403e22dd6efe75f3f31184051fef744c0b05be5c73edf60bf62c1e",
+   "label": "key-5fa42212",
+   "count": 10,
+   "sample": [
+    "com.google.android.captiveportallogin",
+    "com.google.android.captiveportallogin",
+    "com.google.android.captiveportallogin",
+    "com.google.android.captiveportallogin",
+    "com.google.android.captiveportallogin",
+    "com.google.android.captiveportallogin",
+    "com.google.android.captiveportallogin",
+    "com.google.android.captiveportallogin",
+    "com.google.android.networkstack",
+    "com.google.android.networkstack"
+   ]
+  },
+  {
+   "cert_sha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83",
+   "label": "key-f0fd6c5b",
+   "count": 10,
+   "sample": [
+    "com.android.chrome",
+    "com.android.vending",
+    "com.google.android.apps.docs",
+    "com.google.android.configupdater",
+    "com.google.android.deskclock",
+    "com.google.android.feedback",
+    "com.google.android.onetimeinitializer",
+    "com.google.android.partnersetup",
+    "com.google.android.setupwizard",
+    "com.google.android.tag"
+   ]
+  },
+  {
+   "cert_sha256": "9a4b85344486ecf51ff805eb9d23179779beb7ec8191935aca67f0f409025297",
+   "label": "key-9a4b8534",
+   "count": 8,
+   "sample": [
+    "com.google.android.documentsui",
+    "com.google.android.documentsui",
+    "com.google.android.documentsui",
+    "com.google.android.documentsui",
+    "com.google.android.documentsui",
+    "com.google.android.documentsui",
+    "com.google.android.documentsui",
+    "com.google.android.documentsui"
+   ]
+  },
+  {
+   "cert_sha256": "7ce83c1b71f3d572fed04c8d40c5cb10ff75e6d87d9df6fbd53f0468c2905053",
+   "label": "key-7ce83c1b",
+   "count": 7,
+   "sample": [
+    "com.google.android.apps.maps",
+    "com.google.android.calendar",
+    "com.google.android.gm",
+    "com.google.android.googlequicksearchbox",
+    "com.google.android.gsf",
+    "com.google.android.inputmethod.latin",
+    "com.google.android.tts"
+   ]
+  },
+  {
+   "cert_sha256": "4b62915777096b2220d4252887b1722f775354c96bd1272d0854a49a2afc2d4e",
+   "label": "shared",
+   "count": 6,
+   "sample": [
+    "com.android.calllogbackup",
+    "com.android.providers.blockednumber",
+    "com.android.providers.contactkeys",
+    "com.android.providers.contacts",
+    "com.android.providers.userdictionary",
+    "com.motorola.contacts.preloadcontacts"
+   ]
+  },
+  {
+   "cert_sha256": "a29c347b2dd0918819fe0ca52ade73f9e1af54cfc66ed93391131f0492aa3ffc",
+   "label": "media",
+   "count": 5,
+   "sample": [
+    "com.android.mtp",
+    "com.android.providers.downloads",
+    "com.android.providers.downloads.ui",
+    "com.android.providers.media",
+    "com.android.soundpicker"
+   ]
+  },
+  {
+   "cert_sha256": "7d7226772d4f6d778fef53a36be15ad78d8d9d4bc4ce00c5f2e3216c19480fa0",
+   "label": "key-7d722677",
+   "count": 4,
+   "sample": [
+    "com.claroColombia.contenedor",
+    "com.claroColombia.contenedor",
+    "com.dti.amx",
+    "com.telcel.contenedor"
+   ]
+  },
+  {
+   "cert_sha256": "5aad2bee6db95d17e05a08d7d1e64c10a1511879154483916b6ae6c7fd9cb0c6",
+   "label": "key-5aad2bee",
+   "count": 3,
+   "sample": [
+    "com.google.android.apps.photos",
+    "com.google.android.videos",
+    "com.google.android.youtube"
+   ]
+  },
+  {
+   "cert_sha256": "b92109b59095955ccaaf5ecbcf0f153ec9640a4658c101667ad96b7e499a4092",
+   "label": "key-b92109b5",
+   "count": 3,
+   "sample": [
+    "com.facebook.appmanager",
+    "com.facebook.services",
+    "com.facebook.system"
+   ]
+  },
+  {
+   "cert_sha256": "911d604446084ca7f4760b775bfc160fa8702441240a7258645d7a72c4312d27",
+   "label": "key-911d6044",
+   "count": 2,
+   "sample": [
+    "com.facebook.katana",
+    "com.facebook.orca"
+   ]
+  },
+  {
+   "cert_sha256": "89179dd6741f7b082ccc6dd95259766ae4ef0402cc9df618a92b7f393ae13309",
+   "label": "key-89179dd6",
+   "count": 2,
+   "sample": [
+    "com.orange.aura.oobe",
+    "com.orange.update"
+   ]
+  },
+  {
+   "cert_sha256": "2808879b120c6dd2a3e0c8e3ddf03877c201bdbdff184f7a89448f873b706cf0",
+   "label": "key-2808879b",
+   "count": 2,
+   "sample": [
+    "com.android.nfc.overlay",
+    "com.android.nfc.overlay.StOverlay"
+   ]
+  },
+  {
+   "cert_sha256": "d14a5a7cea1e26b88a1ef0731c9bea61d0cf6cf30748af31edd22ec8762702c6",
+   "label": "key-d14a5a7c",
+   "count": 1,
+   "sample": [
+    "com.google.android.ext.shared"
+   ]
+  },
+  {
+   "cert_sha256": "7ef3eedb4f48ecf11e3170ce2ff42dfc0de47cdc024576133275adef34afade2",
+   "label": "key-7ef3eedb",
+   "count": 1,
+   "sample": [
+    "com.google.android.printservice.recommendation"
+   ]
+  },
+  {
+   "cert_sha256": "69ac92bfbad5854c618eabae857fab0b1a651944e919ea3c86dbd407041e22c1",
+   "label": "key-69ac92bf",
+   "count": 1,
+   "sample": [
+    "com.google.android.permission"
+   ]
+  },
+  {
+   "cert_sha256": "6e10002af3b5620e00c8800a2cacdac97984fa919c6df0ed38bcddbc777f5417",
+   "label": "key-6e10002a",
+   "count": 1,
+   "sample": [
+    "com.google.android.uwb"
+   ]
+  },
+  {
+   "cert_sha256": "643d3ea5b7bf22e5944229777c4bffc6c84414644de04be4903757de83cf048b",
+   "label": "key-643d3ea5",
+   "count": 1,
+   "sample": [
+    "com.google.android.ipsec"
+   ]
+  },
+  {
+   "cert_sha256": "0c2b13876de56ae64ed1de93422a8a3fea6f34c0fc5d7da1bdcfefc1a7b7c91d",
+   "label": "key-0c2b1387",
+   "count": 1,
+   "sample": [
+    "com.google.android.media.swcodec"
+   ]
+  },
+  {
+   "cert_sha256": "6fabd5729a90026b74e487798fdf10bbe36c9e6cb7a659043cd815616c9e6050",
+   "label": "key-6fabd572",
+   "count": 1,
+   "sample": [
+    "com.google.android.neuralnetworks"
+   ]
+  },
+  {
+   "cert_sha256": "1089f27c856a83d4026b6a4997154ca1709af69327c8ef9a2d1d56ab69de070b",
+   "label": "key-1089f27c",
+   "count": 1,
+   "sample": [
+    "com.google.android.extservices"
+   ]
+  },
+  {
+   "cert_sha256": "5a8ce3d62fa31beb3580b17decfdad26e79bb1a240b8aee2df2121a86addaa30",
+   "label": "key-5a8ce3d6",
+   "count": 1,
+   "sample": [
+    "com.google.android.adservices"
+   ]
+  },
+  {
+   "cert_sha256": "873d4e4358251a251a2d9c18e15509452188a81efe9a839d430de8d87ec2494c",
+   "label": "key-873d4e43",
+   "count": 1,
+   "sample": [
+    "com.google.android.adbd"
+   ]
+  },
+  {
+   "cert_sha256": "2d6e17a5fff75df7aadbeab7dbb5b27a2a17f42e4b04d0c8dfd4dff9f3fbeaf2",
+   "label": "key-2d6e17a5",
+   "count": 1,
+   "sample": [
+    "com.google.android.tzdata6"
+   ]
+  },
+  {
+   "cert_sha256": "5129c6193648e96e6f63afc2cdb33e2b3b71fed9c73c9254e92dfbbaeaaa44c2",
+   "label": "key-5129c619",
+   "count": 1,
+   "sample": [
+    "com.google.android.art"
+   ]
+  },
+  {
+   "cert_sha256": "b7a3db7a866d18513f976c6320bc0fe6e401ba2f2696b1c3942af0fe293198b1",
+   "label": "key-b7a3db7a",
+   "count": 1,
+   "sample": [
+    "com.google.android.wifi"
+   ]
+  },
+  {
+   "cert_sha256": "f43eb04e5fdb9799ef50efa9984a3e7d6b7e3c2672fdeffa6f3b01087d226d92",
+   "label": "key-f43eb04e",
+   "count": 1,
+   "sample": [
+    "com.google.android.configinfrastructure"
+   ]
+  },
+  {
+   "cert_sha256": "a82c847aa39dda19a56c9ed356501a764fbd5dc960986616e31d48ee27081970",
+   "label": "key-a82c847a",
+   "count": 1,
+   "sample": [
+    "com.google.android.cellbroadcast"
+   ]
+  },
+  {
+   "cert_sha256": "e53f52f414150c05bae0e4cee2073dd00fe644661d5f9a0fbe494adc07f05993",
+   "label": "key-e53f52f4",
+   "count": 1,
+   "sample": [
+    "com.google.android.tethering"
+   ]
+  },
+  {
+   "cert_sha256": "b85bb18a17c72bba0f029bbc1944d326f0235e7e46ee596f7ea83f96cd21d4e6",
+   "label": "key-b85bb18a",
+   "count": 1,
+   "sample": [
+    "com.google.android.healthfitness"
+   ]
+  },
+  {
+   "cert_sha256": "16c15cfa15d0fdd07ebecb5a766b408b05dd927e1f3addc5abf68ee8b998f9fd",
+   "label": "key-16c15cfa",
+   "count": 1,
+   "sample": [
+    "com.google.android.media"
+   ]
+  },
+  {
+   "cert_sha256": "dafed620a70c9805a9a22204556b0e94e8e34dedf416ec5892c648865339b47b",
+   "label": "key-dafed620",
+   "count": 1,
+   "sample": [
+    "com.google.android.os.statsd"
+   ]
+  },
+  {
+   "cert_sha256": "ec8221765e4f7e2c6d8d0f0ce9bd825b98bed20c072cc6c808dde4685feba6ff",
+   "label": "key-ec822176",
+   "count": 1,
+   "sample": [
+    "com.google.android.resolv"
+   ]
+  },
+  {
+   "cert_sha256": "82f50e5d3b4f8fd5437995b6981ead672510ab8058a5f52e27ae9856ab398bfc",
+   "label": "key-82f50e5d",
+   "count": 1,
+   "sample": [
+    "com.google.android.appsearch"
+   ]
+  },
+  {
+   "cert_sha256": "9990292b2211d27817bf5b1098848f68445337162b47ffd1a08e10ce65b1cc73",
+   "label": "key-9990292b",
+   "count": 1,
+   "sample": [
+    "com.google.android.sdkext"
+   ]
+  },
+  {
+   "cert_sha256": "8c5da910e61121b9d6e03b42d3206a7dad29ddc163aecd4b8ee93fd38379ca2a",
+   "label": "key-8c5da910",
+   "count": 1,
+   "sample": [
+    "com.google.android.conscrypt"
+   ]
+  },
+  {
+   "cert_sha256": "1a6193096ddc81587245ef2c0733736e8eff9de90e51274bf823acf0f74900a0",
+   "label": "key-1a619309",
+   "count": 1,
+   "sample": [
+    "com.google.android.mediaprovider"
+   ]
+  },
+  {
+   "cert_sha256": "cca1e8a2024f27b64f45ba058dd3f04b744e4a77a0a85554a2d2df3b4f23d888",
+   "label": "key-cca1e8a2",
+   "count": 1,
+   "sample": [
+    "com.google.android.scheduling"
+   ]
+  },
+  {
+   "cert_sha256": "08eba1fa0e57c3ad0bca95be53e697a8809f5ccc00d772e93dc190150e3a4e9e",
+   "label": "key-08eba1fa",
+   "count": 1,
+   "sample": [
+    "com.google.android.ondevicepersonalization"
+   ]
+  },
+  {
+   "cert_sha256": "6051498635cd3b4412ddf3e3e41f1f59296cd8263130c7f0982874a718a8b468",
+   "label": "key-60514986",
+   "count": 1,
+   "sample": [
+    "com.google.android.rkpd"
+   ]
+  },
+  {
+   "cert_sha256": "a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc",
+   "label": "key-a40da80a",
+   "count": 1,
+   "sample": [
+    "com.android.apex.cts.shim"
+   ]
+  },
+  {
+   "cert_sha256": "197f667ae126af53a8a891b5d5c81d7c0e48223b3e828e51870a4aeadd9e8d9d",
+   "label": "key-197f667a",
+   "count": 1,
+   "sample": [
+    "com.google.android.packageinstaller"
+   ]
+  },
+  {
+   "cert_sha256": "cfd16e2ca59c22dfcc8eed027356417a3ddf1765672d90464fb5d1fe741a7225",
+   "label": "key-cfd16e2c",
+   "count": 1,
+   "sample": [
+    "vendor.qti.bluetooth.qcdcktimesync"
+   ]
+  },
+  {
+   "cert_sha256": "c991989af90c73275dcd5a60304e7aa8224c5070b21c52db1046cfb6878ac77e",
+   "label": "key-c991989a",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.wallpaper"
+   ]
+  },
+  {
+   "cert_sha256": "8a2978953e4442cd719fc953e40ef899c965d71599a27ba973e884f014d74a2d",
+   "label": "key-8a297895",
+   "count": 1,
+   "sample": [
+    "com.google.android.gms.location.history"
+   ]
+  },
+  {
+   "cert_sha256": "bf62231e28f08542755cf33c9dd83c5d1d0fa3206450efbc4c3ff3d5fda0330f",
+   "label": "key-bf62231e",
+   "count": 1,
+   "sample": [
+    "com.google.android.modulemetadata"
+   ]
+  },
+  {
+   "cert_sha256": "07dd0cba5a365fb227b16d033bfd605102dfec275ebe910b617e81acad2113fe",
+   "label": "key-07dd0cba",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.tachyon"
+   ]
+  },
+  {
+   "cert_sha256": "9dacccae4f495ae6dbc58a0ec233c6e52d311433ac573c4da1c739df6403515d",
+   "label": "key-9dacccae",
+   "count": 1,
+   "sample": [
+    "com.google.mainline.telemetry"
+   ]
+  },
+  {
+   "cert_sha256": "7b5ad55180a48a1f30f35377c0f9e5f911bf942fb4cf83eba255a0ebf580beef",
+   "label": "key-7b5ad551",
+   "count": 1,
+   "sample": [
+    "com.google.android.marvin.talkback"
+   ]
+  },
+  {
+   "cert_sha256": "8d1c9c4347bbccbe0f477f803fe3c83deb6272d871332c2d62c547aead7ebc96",
+   "label": "key-8d1c9c43",
+   "count": 1,
+   "sample": [
+    "com.google.android.accessibility.switchaccess"
+   ]
+  },
+  {
+   "cert_sha256": "997c9c5d63e84a5024f308a615c4e4a87773a52073b0e1547a4d3b8b1081efa7",
+   "label": "key-997c9c5d",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.bard"
+   ]
+  },
+  {
+   "cert_sha256": "9e040c20406e1fb8b66f48009069b1301c2eca5c500268d82044782926e64c8d",
+   "label": "key-9e040c20",
+   "count": 1,
+   "sample": [
+    "com.zte.iptvclient.android.idmnc"
+   ]
+  },
+  {
+   "cert_sha256": "609c2be652b16855743e427399d3b05ff57a82b09709bbb1dc3a9890a6dad478",
+   "label": "key-609c2be6",
+   "count": 1,
+   "sample": [
+    "com.google.android.contacts"
+   ]
+  },
+  {
+   "cert_sha256": "e357f022ab8edb771e374e586808e268c914eb34dc6c7a068c0e0a05c8128953",
+   "label": "key-e357f022",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.subscriptions.red"
+   ]
+  },
+  {
+   "cert_sha256": "6faf3c4140407473400934d117815a21af1cfefc5c0bee61c858bc3d72ba6fe5",
+   "label": "key-6faf3c41",
+   "count": 1,
+   "sample": [
+    "com.google.android.webview"
+   ]
+  },
+  {
+   "cert_sha256": "3228d03417e949ba13bcd9f8750feb6443a33aca15899355b794c625f9a662ea",
+   "label": "key-3228d034",
+   "count": 1,
+   "sample": [
+    "com.signatureclub.prod"
+   ]
+  },
+  {
+   "cert_sha256": "f130f9f844b4e3cc57754b1bf8f3c32e896e1441cae030b3616ab4d1efd9f263",
+   "label": "key-f130f9f8",
+   "count": 1,
+   "sample": [
+    "com.google.android.calculator"
+   ]
+  },
+  {
+   "cert_sha256": "6a2f65ec694a6a632acdcb5080912a565f903d4b8d83f0eb8e44fbdf2660d8e1",
+   "label": "key-6a2f65ec",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.youtube.music"
+   ]
+  },
+  {
+   "cert_sha256": "69ac94db6e70ceeb6011bbfaeaf6f94fcb1891620a0d33fc1340f87dbccba5d5",
+   "label": "key-69ac94db",
+   "count": 1,
+   "sample": [
+    "com.ertanto.kompas.official"
+   ]
+  },
+  {
+   "cert_sha256": "9ccde4c2618f2cf005a8b6d8eaa28ad6108ec83c999c6bdb8651f2723ddb2e4e",
+   "label": "key-9ccde4c2",
+   "count": 1,
+   "sample": [
+    "com.google.mainline.adservices"
+   ]
+  },
+  {
+   "cert_sha256": "b6198a8d5689b62b96a0aa3829ce2cc67d59497f78c469f8792b2cd9255490a1",
+   "label": "key-b6198a8d",
+   "count": 1,
+   "sample": [
+    "com.google.android.trichromelibrary"
+   ]
+  },
+  {
+   "cert_sha256": "9d77745dde9b01ec095bfe6b99f98d68d6a4438ba072285683e635da611c2039",
+   "label": "key-9d77745d",
+   "count": 1,
+   "sample": [
+    "id.mjs.etalaseapp"
+   ]
+  },
+  {
+   "cert_sha256": "8027d96fac7948a04b4cd0fd87f3abd77aed0d50c82a153cadbf6f37938ce23b",
+   "label": "key-8027d96f",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.work.clouddpc"
+   ]
+  },
+  {
+   "cert_sha256": "6e913f65ea53321ead6932ff777e1b7f94bbba7e2b0dafdd8494b100101e3797",
+   "label": "key-6e913f65",
+   "count": 1,
+   "sample": [
+    "com.google.ar.core"
+   ]
+  },
+  {
+   "cert_sha256": "181d3d5ac0705311e3690f2e807bc909efb131a7a08c68aed0f9196211dd566d",
+   "label": "key-181d3d5a",
+   "count": 1,
+   "sample": [
+    "com.detik.haibundaapps"
+   ]
+  },
+  {
+   "cert_sha256": "a2663e4fd8309c366ec46510ed7ace931c2e067bdcbbcd42234cd22781cb4f8b",
+   "label": "key-a2663e4f",
+   "count": 1,
+   "sample": [
+    "id.co.duniagames"
+   ]
+  },
+  {
+   "cert_sha256": "31c373c335b44c5b9db955197c4fa4eb1f8893412e80cb625317d6bd16dc85ee",
+   "label": "key-31c373c3",
+   "count": 1,
+   "sample": [
+    "com.misteraladin.android"
+   ]
+  },
+  {
+   "cert_sha256": "e66e3f5d81b1ba3efa9de0bf5676483ad9a6a12da3100fa3522c3fef93a7e13d",
+   "label": "key-e66e3f5d",
+   "count": 1,
+   "sample": [
+    "com.kitalulus"
+   ]
+  },
+  {
+   "cert_sha256": "dbe99b5fe3f1fd66a6879084ba4f9773b197659a1e205113d3354cf977d40685",
+   "label": "key-dbe99b5f",
+   "count": 1,
+   "sample": [
+    "com.insertlive.news"
+   ]
+  },
+  {
+   "cert_sha256": "3a10c50c18ba937506c2875e9047be74f8fd8b86fae2ff9feaa50a81fcb4c014",
+   "label": "key-3a10c50c",
+   "count": 1,
+   "sample": [
+    "com.instagram.android"
+   ]
+  },
+  {
+   "cert_sha256": "e84608b436ea4ff181f86b7bc29404d5700cf0692d952942df42686b4625160a",
+   "label": "key-e84608b4",
+   "count": 1,
+   "sample": [
+    "com.cinematichororuniverse.dmsplus"
+   ]
+  },
+  {
+   "cert_sha256": "0b2e75e2b0ad71bac810d04ea3123e9c274ca12517e1dc03ae649b78f6e2fa8b",
+   "label": "key-0b2e75e2",
+   "count": 1,
+   "sample": [
+    "com.spin.app.latest"
+   ]
+  },
+  {
+   "cert_sha256": "fb920d381bee1b2093f27dc8f13d994da629dc91887d0529b35c9a2dc4f4a6c2",
+   "label": "key-fb920d38",
+   "count": 1,
+   "sample": [
+    "com.whatsapp"
+   ]
+  },
+  {
+   "cert_sha256": "e2d049f3a01192f620b1240615fa8c13badc553c22bc6fddfca45c84d8fc545d",
+   "label": "key-e2d049f3",
+   "count": 1,
+   "sample": [
+    "com.google.android.dialer"
+   ]
+  },
+  {
+   "cert_sha256": "071f09456bf1a8e8ad2e808ffe6a0ebc13582a7e6f9aba13e47280ad9a85d833",
+   "label": "key-071f0945",
+   "count": 1,
+   "sample": [
+    "com.google.android.as.oss"
+   ]
+  },
+  {
+   "cert_sha256": "e0c0c06c0426d5cb5d1b5bd052a2bd8c5a27a69aaa048a976b336768a03e8d0e",
+   "label": "key-e0c0c06c",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.turbo"
+   ]
+  },
+  {
+   "cert_sha256": "3d69c57e91043c1604707554a52a774673ef701e9242ad69331eee50a51b2f0f",
+   "label": "key-3d69c57e",
+   "count": 1,
+   "sample": [
+    "com.google.ambient.streaming"
+   ]
+  },
+  {
+   "cert_sha256": "f7e73d4edc2b7f55eecd3f898d3cca7da9cbbf51694eba14f816e2eccf015035",
+   "label": "key-f7e73d4e",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.messaging"
+   ]
+  },
+  {
+   "cert_sha256": "db2ec54ff14454643bdd183be65567379d062a66f89a4929964b1264a5e7be26",
+   "label": "key-db2ec54f",
+   "count": 1,
+   "sample": [
+    "com.dti.motorola"
+   ]
+  },
+  {
+   "cert_sha256": "b7971ccc10a03932e14a3557a1b4c2a84be0ecb506777f0c72dd46cf5d7093c6",
+   "label": "key-b7971ccc",
+   "count": 1,
+   "sample": [
+    "com.google.android.aicore"
+   ]
+  },
+  {
+   "cert_sha256": "dd60fe57e5738f609a5265f7d667e8d1e9dfb2de591a96defcaf80bbc8ff8717",
+   "label": "key-dd60fe57",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.setupwizard.searchselector"
+   ]
+  },
+  {
+   "cert_sha256": "207af9a133a630c4246a06c79c09946a70840f4702ee5baa53f3791b537b0f14",
+   "label": "key-207af9a1",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.nbu.files"
+   ]
+  },
+  {
+   "cert_sha256": "050f402bfa8bc473f281041a0373ce4b56556535c2cc405e2ede17975ec046e7",
+   "label": "key-050f402b",
+   "count": 1,
+   "sample": [
+    "com.google.android.verifier"
+   ]
+  },
+  {
+   "cert_sha256": "4ef08e4f1a83bcdc0a3cfced775a2dcaecc888c9f4fbf101e71d64a8f35e0ad6",
+   "label": "key-4ef08e4f",
+   "count": 1,
+   "sample": [
+    "com.google.android.wfcactivation"
+   ]
+  },
+  {
+   "cert_sha256": "e26d0e7d0bb52c98a4f6ad015b74db37b25873ce33199ebd569775e6fb14b409",
+   "label": "key-e26d0e7d",
+   "count": 1,
+   "sample": [
+    "com.aura.oobe.motorola"
+   ]
+  },
+  {
+   "cert_sha256": "a0332928e61e86f1e683c29dc6e55f5181127b9f5ed8a7c4e84f9b8718f006e3",
+   "label": "key-a0332928",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.safetyhub"
+   ]
+  },
+  {
+   "cert_sha256": "1ca8dcc0bed3cbd872d2cb791200c0292ca9975768a82d676b8b424fb65b5295",
+   "label": "key-1ca8dcc0",
+   "count": 1,
+   "sample": [
+    "com.google.android.projection.gearhead"
+   ]
+  },
+  {
+   "cert_sha256": "e4c43ce273303895c4ebd281cc8f64af74c088b7de703cd327afd984f49d9478",
+   "label": "key-e4c43ce2",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.restore"
+   ]
+  },
+  {
+   "cert_sha256": "c00409b6524658c2e8eb48975a5952959ea3707dd57bc50fd74d6249262f0e82",
+   "label": "key-c00409b6",
+   "count": 1,
+   "sample": [
+    "com.google.android.carrier"
+   ]
+  },
+  {
+   "cert_sha256": "3af39ab967aaa5d279e49b5f769cb66e40799838bc8799343ee57ae435d2455b",
+   "label": "key-3af39ab9",
+   "count": 1,
+   "sample": [
+    "com.google.android.as"
+   ]
+  },
+  {
+   "cert_sha256": "e4d6a46d54ece6ca90f4e87f67f5ec4f262fc55c2ed840adbf649de55fe49094",
+   "label": "key-e4d6a46d",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.wellbeing"
+   ]
+  },
+  {
+   "cert_sha256": "2f19adeb284eb36f7f07786152b9a1d14b21653203ad0b04ebbf9c73ab6d7625",
+   "label": "key-2f19adeb",
+   "count": 1,
+   "sample": [
+    "com.amazon.appmanager"
+   ]
+  },
+  {
+   "cert_sha256": "da080a2e8b9a6a519adb89658be3e117e7ab4cc2d4870325a13bc278bbb649ad",
+   "label": "key-da080a2e",
+   "count": 1,
+   "sample": [
+    "de.telekom.tsc"
+   ]
+  },
+  {
+   "cert_sha256": "7e26b6d5802a16799448ad635868f0345d6730310634684c0ae44e7e9f7ea764",
+   "label": "key-7e26b6d5",
+   "count": 1,
+   "sample": [
+    "com.google.android.euicc"
+   ]
+  },
+  {
+   "cert_sha256": "63ce24d1e9a00eb276bd38afec96afbb76fdce1e9063478668f23a6eb2d692ad",
+   "label": "key-63ce24d1",
+   "count": 1,
+   "sample": [
+    "com.google.android.apps.carrier.carrierwifi"
+   ]
+  },
+  {
+   "cert_sha256": "84ce21fa4f621e838cbc8c4d2cd6010fec19afdcb4978926a3f1fd37a3ae1676",
+   "label": "key-84ce21fa",
+   "count": 1,
+   "sample": [
+    "com.google.android.gms.supervision"
+   ]
+  },
+  {
+   "cert_sha256": "2333f4065b9f054363ca63d1866cc168f45d641645b31131b14e173b9c922d15",
+   "label": "key-2333f406",
+   "count": 1,
+   "sample": [
+    "co.sitic.pp"
+   ]
+  },
+  {
+   "cert_sha256": "5f2391277b1dbd489000467e4c2fa6af802430080457dce2f618992e9dfb5402",
+   "label": "key-5f239127",
+   "count": 1,
+   "sample": [
+    "com.google.android.gms"
+   ]
+  },
+  {
+   "cert_sha256": "afee62fb653c9d863d1a6d6046b35225bf6380dd4657b105e8331a1de49f9f91",
+   "label": "key-afee62fb",
+   "count": 1,
+   "sample": [
+    "com.google.android.gms.policy_sidecar_aps"
+   ]
+  },
+  {
+   "cert_sha256": "bca0accf31c3c7ceda24246ffb22220545e98912d8a748110bfd460c05684f94",
+   "label": "key-bca0accf",
+   "count": 1,
+   "sample": [
+    "com.payjoy.access"
+   ]
+  },
+  {
+   "cert_sha256": "027ffb81d19c9ebb26373c084728e2457c490a8a9619cb1fc631e51010f64565",
+   "label": "key-027ffb81",
+   "count": 1,
+   "sample": [
+    "com.qualcomm.qti.gpudrivers.canoe.api36"
+   ]
+  },
+  {
+   "cert_sha256": "da57b4a35460c33bfbb9946567bd101eaf618d5d7dfbc8b43f47b5e85050f728",
+   "label": "key-da57b4a3",
+   "count": 1,
+   "sample": [
+    "com.google.android.widevine.nonupdatable"
+   ]
+  }
+ ],
+ "package_parse_errors": [],
+ "super": {
+  "size": 31138512896,
+  "lp_version": "10.2",
+  "header_flags": 1,
+  "metadata_slots": 3,
+  "groups": [
+   {
+    "name": "default",
+    "flags": 0,
+    "maximum_size": 0
+   },
+   {
+    "name": "mot_dp_group_a",
+    "flags": 0,
+    "maximum_size": 31134318592
+   },
+   {
+    "name": "mot_dp_group_b",
+    "flags": 0,
+    "maximum_size": 31134318592
+   }
+  ],
+  "partitions": [
+   {
+    "name": "odm_a",
+    "size": 291786752,
+    "group": "mot_dp_group_a",
+    "attributes": 1,
+    "filesystem": "erofs",
+    "sha256": "43ea41a525ca26d804ba335972e6c89fc1fbf46843cc0d872f4b1ff3ba31f0db"
+   },
+   {
+    "name": "odm_b",
+    "size": 0,
+    "group": "mot_dp_group_b",
+    "attributes": 1,
+    "filesystem": null,
+    "sha256": null
+   },
+   {
+    "name": "product_a",
+    "size": 8855392256,
+    "group": "mot_dp_group_a",
+    "attributes": 1,
+    "filesystem": "erofs",
+    "sha256": "b029f22100f02deaad08919106a6b39be7ee63eaa4d4815943c5414029998a4a"
+   },
+   {
+    "name": "product_b",
+    "size": 0,
+    "group": "mot_dp_group_b",
+    "attributes": 1,
+    "filesystem": null,
+    "sha256": null
+   },
+   {
+    "name": "system_a",
+    "size": 711045120,
+    "group": "mot_dp_group_a",
+    "attributes": 1,
+    "filesystem": "erofs",
+    "sha256": "191aefcc956b9a8952a0a2f24f70722a1d89d1e10a2c63611c57e8fd4f9a936e"
+   },
+   {
+    "name": "system_b",
+    "size": 543883264,
+    "group": "mot_dp_group_b",
+    "attributes": 1,
+    "filesystem": null,
+    "sha256": null
+   },
+   {
+    "name": "system_dlkm_a",
+    "size": 8495104,
+    "group": "mot_dp_group_a",
+    "attributes": 1,
+    "filesystem": "erofs",
+    "sha256": "850a2d684419bd6e161596cecdf5639e950543a2c849bd5ddbf766d597e3e39d"
+   },
+   {
+    "name": "system_dlkm_b",
+    "size": 0,
+    "group": "mot_dp_group_b",
+    "attributes": 1,
+    "filesystem": null,
+    "sha256": null
+   },
+   {
+    "name": "system_ext_a",
+    "size": 702656512,
+    "group": "mot_dp_group_a",
+    "attributes": 1,
+    "filesystem": "erofs",
+    "sha256": "39eff061ca1fad345d1c837aa28acd7b0e15ae69146777ffd6acf6e7bfa9b978"
+   },
+   {
+    "name": "system_ext_b",
+    "size": 0,
+    "group": "mot_dp_group_b",
+    "attributes": 1,
+    "filesystem": null,
+    "sha256": null
+   },
+   {
+    "name": "vendor_a",
+    "size": 3215228928,
+    "group": "mot_dp_group_a",
+    "attributes": 1,
+    "filesystem": "erofs",
+    "sha256": "997d3fbe0a66c4acc6f37f07ae4ecca507feb3bc486e495f9b9b2af64e9f64c9"
+   },
+   {
+    "name": "vendor_b",
+    "size": 0,
+    "group": "mot_dp_group_b",
+    "attributes": 1,
+    "filesystem": null,
+    "sha256": null
+   },
+   {
+    "name": "vendor_dlkm_a",
+    "size": 27996160,
+    "group": "mot_dp_group_a",
+    "attributes": 1,
+    "filesystem": "erofs",
+    "sha256": "69e5d47cccc36d426adaee269b6f642c52b4eb921c1f2f80c324758c5cdcb5f7"
+   },
+   {
+    "name": "vendor_dlkm_b",
+    "size": 0,
+    "group": "mot_dp_group_b",
+    "attributes": 1,
+    "filesystem": null,
+    "sha256": null
+   }
+  ]
+ },
+ "elapsed_seconds": 160.6
+}

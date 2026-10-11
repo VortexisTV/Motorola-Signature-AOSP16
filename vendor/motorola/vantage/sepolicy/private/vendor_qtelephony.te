@@ -1,0 +1,33 @@
+# Domain of the stock Qualcomm IMS service (org.codeaurora.ims).
+# Ported from the stock system_ext policy; see reports/sepolicy-slice/vendor_qtelephony.te.txt.
+# Vendor-side grants (IMS radio HAL, IMS RTP HAL, vendor radio/ims properties) are already in
+# the stock vendor policy and attach through the vendor_qtelephony_202504 mapping.
+
+typeattribute vendor_qtelephony coredomain;
+
+app_domain(vendor_qtelephony)
+net_domain(vendor_qtelephony)
+
+# The vendor policy labels IImsRadio, IQcRilAudio, IQtiRadioStable, IQtiOemHook and
+# IQtiRadioConfig as vendor_hal_telephony_service2 and grants `find` to hal_telephony_client;
+# the server side (qcrilNrd) is in hal_telephony_server.
+hal_client_domain(vendor_qtelephony, hal_telephony)
+
+typeattribute vendor_qtelephony vendor_hal_atfwd_client;
+typeattribute vendor_qtelephony vendor_hal_imsvthal_client;
+
+binder_use(vendor_qtelephony)
+hwbinder_use(vendor_qtelephony)
+get_prop(vendor_qtelephony, hwservicemanager_prop)
+
+allow vendor_qtelephony {
+    app_api_service
+    system_api_service
+    audioserver_service
+    cameraserver_service
+    drmserver_service
+    mediaserver_service
+    mediametrics_service
+    mediaextractor_service
+    radio_service
+}:service_manager find;

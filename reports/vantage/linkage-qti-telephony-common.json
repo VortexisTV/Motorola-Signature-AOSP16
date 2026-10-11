@@ -1,0 +1,411 @@
+{
+ "bootclasspath": [
+  "/system/framework/framework.jar",
+  "/system/framework/framework-graphics.jar",
+  "/system/framework/framework-location.jar",
+  "/system/framework/ext.jar",
+  "/system/framework/telephony-common.jar",
+  "/system/framework/voip-common.jar",
+  "/system/framework/ims-common.jar",
+  "/system/framework/framework-ondeviceintelligence-platform.jar",
+  "/apex/com.android.i18n/javalib/core-icu4j.jar",
+  "/apex/com.android.adservices/javalib/framework-adservices.jar",
+  "/apex/com.android.adservices/javalib/framework-sdksandbox.jar",
+  "/apex/com.android.appsearch/javalib/framework-appsearch.jar",
+  "/apex/com.android.art/javalib/core-oj.jar",
+  "/apex/com.android.art/javalib/core-libart.jar",
+  "/apex/com.android.art/javalib/okhttp.jar",
+  "/apex/com.android.art/javalib/bouncycastle.jar",
+  "/apex/com.android.art/javalib/apache-xml.jar",
+  "/apex/com.android.bt/javalib/framework-bluetooth.jar",
+  "/apex/com.android.configinfrastructure/javalib/framework-configinfrastructure.jar",
+  "/apex/com.android.conscrypt/javalib/conscrypt.jar",
+  "/apex/com.android.crashrecovery/javalib/framework-crashrecovery.jar",
+  "/apex/com.android.devicelock/javalib/framework-devicelock.jar",
+  "/apex/com.android.healthfitness/javalib/framework-healthfitness.jar",
+  "/apex/com.android.ipsec/javalib/android.net.ipsec.ike.jar",
+  "/apex/com.android.media/javalib/updatable-media.jar",
+  "/apex/com.android.mediaprovider/javalib/framework-mediaprovider.jar",
+  "/apex/com.android.mediaprovider/javalib/framework-pdf.jar",
+  "/apex/com.android.mediaprovider/javalib/framework-pdf-v.jar",
+  "/apex/com.android.mediaprovider/javalib/framework-photopicker.jar",
+  "/apex/com.android.nfcservices/javalib/framework-nfc.jar",
+  "/apex/com.android.ondevicepersonalization/javalib/framework-ondevicepersonalization.jar",
+  "/apex/com.android.os.statsd/javalib/framework-statsd.jar",
+  "/apex/com.android.permission/javalib/framework-permission.jar",
+  "/apex/com.android.permission/javalib/framework-permission-s.jar",
+  "/apex/com.android.profiling/javalib/framework-profiling.jar",
+  "/apex/com.android.scheduling/javalib/framework-scheduling.jar",
+  "/apex/com.android.sdkext/javalib/framework-sdkextensions.jar",
+  "/apex/com.android.tethering/javalib/framework-connectivity.jar",
+  "/apex/com.android.tethering/javalib/framework-connectivity-b.jar",
+  "/apex/com.android.tethering/javalib/framework-connectivity-t.jar",
+  "/apex/com.android.tethering/javalib/framework-tethering.jar",
+  "/apex/com.android.uwb/javalib/framework-ranging.jar",
+  "/apex/com.android.uwb/javalib/framework-uwb.jar",
+  "/apex/com.android.virt/javalib/framework-virtualization.jar",
+  "/apex/com.android.wifi/javalib/framework-wifi.jar"
+ ],
+ "bootclasspath_missing_files": [],
+ "boot_classes": 60309,
+ "shared_libraries_known": 30,
+ "results": [
+  {
+   "subject": "/work/fw/W2WVS36.55-95-5-1/root/system_ext/framework/qti-telephony-common.jar",
+   "tests": [],
+   "package": null,
+   "shared_libraries": [
+    {
+     "name": "qti-telephony-hidl-wrapper",
+     "file": "/system_ext/framework/qti-telephony-hidl-wrapper.jar",
+     "state": "ok",
+     "required": true
+    },
+    {
+     "name": "qti-telephony-utils",
+     "file": "/system_ext/framework/qti-telephony-utils.jar",
+     "state": "ok",
+     "required": true
+    },
+    {
+     "name": "moto-telephony",
+     "file": "/system/framework/moto-telephony.jar",
+     "state": "ok",
+     "required": true
+    },
+    {
+     "name": "ims-ext-common",
+     "file": "/product/framework/ims-ext-common.jar",
+     "state": "ok",
+     "required": true
+    },
+    {
+     "name": "moto-ims-ext",
+     "file": "/system/framework/moto-ims-ext.jar",
+     "state": "ok",
+     "required": true
+    }
+   ],
+   "counts": {
+    "missing_classes": 35,
+    "missing_methods": 34,
+    "missing_fields": 4,
+    "unknown_hierarchy": 14
+   },
+   "providers": {
+    "/system/framework/framework.jar": 5234,
+    "/apex/com.android.art/javalib/core-oj.jar": 3789,
+    "/system/framework/telephony-common.jar": 565,
+    "/system_ext/framework/qti-telephony-hidl-wrapper.jar": 243,
+    "/system/framework/moto-telephony.jar": 44,
+    "/system_ext/framework/qti-telephony-utils.jar": 29,
+    "/apex/com.android.tethering/javalib/framework-connectivity.jar": 10,
+    "/product/framework/ims-ext-common.jar": 6,
+    "/system/framework/ims-common.jar": 6,
+    "array": 3,
+    "/apex/com.android.tethering/javalib/framework-connectivity-t.jar": 2
+   },
+   "classes_defined": 500,
+   "shadowed_by_platform": 201,
+   "missing_classes": {
+    "Landroid/telephony/CagInfo;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils;"
+    ],
+    "Landroid/telephony/SnpnInfo;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtils$CsgInfo;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtils$LteRachInfo;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper$SatModeDiagnosisTelephonyCallbackWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtils$NrRrcInfo;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper$SatModeDiagnosisTelephonyCallbackWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtils$TOEInfo;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper$2;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/QcomMotoExtImsService;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiTelephonyComponentFactory;"
+    ],
+    "Lcom/motorola/android/internal/telephony/QcomMotoExtTelephonyService;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiTelephonyComponentFactory;"
+    ],
+    "Lcom/motorola/android/internal/telephony/echolocate/QcomSatelliteModeBroadcaster$SatModeDiagnosisTelephonyCallbackImpl;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper$SatModeDiagnosisTelephonyCallbackWrapper;"
+    ],
+    "Lcom/motorola/android/provider/MotorolaSettings$Global;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/provider/MotorolaSettings$Secure;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/provider/MotorolaSettings$System;": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/qti/extphone/CiwlanConfig;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiSmsDispatchersController;"
+    ],
+    "Lcom/qti/extphone/DualDataRecommendation;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataSettingsManager;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher$2;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiTelephonyNetworkProvider$QtiTelephonyNetworkProviderInternalHandler;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiTelephonyNetworkProvider;"
+    ],
+    "Lcom/qti/extphone/EpsQos;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QosParametersUtils;"
+    ],
+    "Lcom/qti/extphone/ExtPhoneCallbackListener;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone$2;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils$2;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiSmsDispatchersController$3;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController$PhoneExtPhoneEventObserver;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher$QtiPhoneSwitcherExtPhoneCallbackListener;",
+     "Lcom/qualcomm/qti/internal/telephony/data/SmartTempDdsSwitchController$MyExtPhoneCallbackListener;"
+    ],
+    "Lcom/qti/extphone/ExtTelephonyManager;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiEmergencyCallHelper;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone$1;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils$1;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiSmsDispatchersController$2;"
+    ],
+    "Lcom/qti/extphone/NetworkSelectionMode;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;"
+    ],
+    "Lcom/qti/extphone/NrQos;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QosParametersUtils;"
+    ],
+    "Lcom/qti/extphone/Qos$QosBandwidth;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QosParametersUtils;"
+    ],
+    "Lcom/qti/extphone/Qos;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QosParametersUtils;"
+    ],
+    "Lcom/qti/extphone/QosBearerFilter$PortRange;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QosParametersUtils;"
+    ],
+    "Lcom/qti/extphone/QosBearerFilter;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QosParametersUtils;"
+    ],
+    "Lcom/qti/extphone/QosBearerSession;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QosParametersUtils;"
+    ],
+    "Lcom/qti/extphone/QosParametersResult;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/FrameworkQosParameters;"
+    ],
+    "Lcom/qti/extphone/QtiImeiInfo;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;"
+    ],
+    "Lcom/qti/extphone/QtiSetNetworkSelectionMode;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils;"
+    ],
+    "Lcom/qti/extphone/ServiceCallback;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone$1;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils$1;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiSmsDispatchersController$2;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController$1;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher$1;",
+     "Lcom/qualcomm/qti/internal/telephony/data/SmartTempDdsSwitchController$1;"
+    ],
+    "Lcom/qti/extphone/SmsResult;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils$2;"
+    ],
+    "Lcom/qti/extphone/Status;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils$2;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher$QtiPhoneSwitcherExtPhoneCallbackListener;"
+    ],
+    "Lcom/qti/extphone/Token;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone$2;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils$2;",
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils;"
+    ],
+    "Lorg/codeaurora/internal/IDepersoResCallback;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiRilInterface$DepersoCallback;"
+    ],
+    "Lorg/codeaurora/internal/IExtTelephony$Stub;": [
+     "Lcom/qualcomm/qti/internal/telephony/ExtTelephonyServiceImpl;"
+    ],
+    "Lorg/codeaurora/internal/NrConfig;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiRIL;"
+    ]
+   },
+   "missing_methods": {
+    "Landroid/hardware/radio/V1_0/IRadio$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_0/IRadio$Stub;"
+    ],
+    "Landroid/hardware/radio/V1_0/IRadioIndication$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_0/IRadioIndication$Stub;"
+    ],
+    "Landroid/hardware/radio/V1_0/IRadioResponse$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_0/IRadioResponse$Stub;"
+    ],
+    "Landroid/hardware/radio/V1_0/ISap$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_0/ISap$Stub;"
+    ],
+    "Landroid/hardware/radio/V1_0/ISapCallback$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_0/ISapCallback$Stub;"
+    ],
+    "Landroid/hardware/radio/V1_1/IRadio$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_1/IRadio$Stub;"
+    ],
+    "Landroid/hardware/radio/V1_1/IRadioIndication$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_1/IRadioIndication$Stub;"
+    ],
+    "Landroid/hardware/radio/V1_1/IRadioResponse$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_1/IRadioResponse$Stub;"
+    ],
+    "Landroid/hardware/radio/V1_1/ISap$Stub;->getDebugInfo()Landroid/hidl/base/V1_0/DebugInfo;": [
+     "Landroid/hardware/radio/V1_1/ISap$Stub;"
+    ],
+    "Landroid/telephony/data/ApnSetting;->setProtocol(I)V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataProfileManager;"
+    ],
+    "Lcom/android/internal/telephony/CellularNetworkService$CellularNetworkServiceProvider;-><init>(Lcom/android/internal/telephony/CellularNetworkService;IZ)V": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiCellularNetworkService$QtiCellularNetworkProvider;"
+    ],
+    "Lcom/android/internal/telephony/OperatorInfo;->getAccessMode()I": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils;"
+    ],
+    "Lcom/android/internal/telephony/OperatorInfo;->getCagInfo()Landroid/telephony/CagInfo;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils;"
+    ],
+    "Lcom/android/internal/telephony/OperatorInfo;->getSnpnInfo()Landroid/telephony/SnpnInfo;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiPhoneUtils;"
+    ],
+    "Lcom/android/internal/telephony/Phone;->getCiwlanTimerToDealayDeactivateDataCall()J": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController;"
+    ],
+    "Lcom/android/internal/telephony/Phone;->getSmartTempDdsSwitchSupported()Z": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher;"
+    ],
+    "Lcom/android/internal/telephony/Phone;->getSubscriberUriNumber()Ljava/lang/String;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;"
+    ],
+    "Lcom/android/internal/telephony/Phone;->getTelephonyTempDdsSwitch()Z": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher;"
+    ],
+    "Lcom/android/internal/telephony/Phone;->setCiwlanTimerToDealayDeactivateDataCall(J)V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController$PhoneExtPhoneEventObserver;"
+    ],
+    "Lcom/android/internal/telephony/Phone;->setSmartTempDdsSwitchSupported(Z)V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController$PhoneExtPhoneEventObserver;"
+    ],
+    "Lcom/android/internal/telephony/Phone;->setTelephonyTempDdsSwitch(Z)V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher$QtiPhoneSwitcherExtPhoneCallbackListener;"
+    ],
+    "Lcom/android/internal/telephony/ServiceStateTracker;->issuePollCommands()V": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiServiceStateTracker;"
+    ],
+    "Lcom/android/internal/telephony/data/DataConfigManager;->isOverrideIpProtocolEnabled()Z": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController$2;",
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataProfileManager;"
+    ],
+    "Lcom/android/internal/telephony/data/DataNetwork;->updateQosBearerSessions(Ljava/util/List;)V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController;"
+    ],
+    "Lcom/android/internal/telephony/data/DataNetworkController;->onDataEnabledChanged(ZI)V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController;"
+    ],
+    "Lcom/android/internal/telephony/data/DataNetworkController;->onDataRoamingEnabledChanged(Z)V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController;"
+    ],
+    "Lcom/android/internal/telephony/data/DataRetryManager;->handlePdpRejectCauseSuccess()V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/QtiRIL;->getMessageFromRequest(Ljava/lang/Object;)Landroid/os/Message;": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiRIL;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/QtiRIL;->processResponseDone(Ljava/lang/Object;Landroid/hardware/radio/V1_0/RadioResponseInfo;Ljava/lang/Object;)V": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiRIL;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/QtiRIL;->resetProxyAndRequestList()V": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiRIL;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController;->addDataDisallowedReasonWhenInSecureMode(Lcom/android/internal/telephony/data/DataEvaluation;)V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/data/QtiDataServiceManager;->getTransportType()I": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataServiceManager;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher;->countAutoDataSwitch()V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher;->registerForImsRadioTechChange()V": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiPhoneSwitcher;"
+    ]
+   },
+   "missing_fields": {
+    "Lcom/android/internal/telephony/data/DataEvaluation$DataEvaluationReason;->SECURE_MODE_STATE_CHANGED:Lcom/android/internal/telephony/data/DataEvaluation$DataEvaluationReason;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataNetworkController$PhoneExtPhoneEventObserver;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;->mSmartTempDdsSwitchSupported:Z": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;->mTelephonyTempDdsSwitch:Z": [
+     "Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;"
+    ],
+    "Lcom/qualcomm/qti/internal/telephony/data/QtiDataRetryManager;->mDataNetworkController:Lcom/android/internal/telephony/data/DataNetworkController;": [
+     "Lcom/qualcomm/qti/internal/telephony/data/QtiDataRetryManager;"
+    ]
+   },
+   "unknown_hierarchy": {
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->DBGZ (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->getCurrentDSSDefaultValue(I)I (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->getCurrentNRModeDefaultValue(I)I (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->getLastDSSDefaultValue(I)I (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->getLastNRModeDisabledDefaultValue(I)I (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->getSubId()I (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->isValidNRModeDisabledValue(I)Z (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->logd(Ljava/lang/String;)V (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper$1;",
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper$2;",
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->loge(Ljava/lang/String;)V (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper$2;",
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->logv(Ljava/lang/String;)V (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->mContextLandroid/content/Context; (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->persistLastDSSDefaultValue(II)V (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;->persistLastNRModeDisabledDefaultValue(II)V (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/ExtTelephonyUtilsWrapper;"
+    ],
+    "Lcom/motorola/android/internal/telephony/QtiExtTelephonyUtilsWrapper;->logd(Ljava/lang/String;)V (needs Lcom/motorola/android/internal/telephony/ExtTelephonyUtils;)": [
+     "Lcom/motorola/android/internal/telephony/QtiExtTelephonyUtilsWrapper;"
+    ]
+   },
+   "status": "WARNING"
+  }
+ ]
+}

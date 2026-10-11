@@ -1,0 +1,53 @@
+{
+  "_comment": "Seed components for the Motorola Signature (vantage) integration layer. resolve_components.py expands each seed into the smallest closure of stock files and writes proprietary-files.txt.",
+  "telephony-ims": {
+    "description": "Qualcomm IMS service (VoLTE / VoWiFi / ViLTE / SMS over IMS) as shipped by Motorola. Bound as the MMTel ImsService through a com.android.phone overlay.",
+    "apps": [
+      {
+        "path": "/system_ext/priv-app/ims/ims.apk",
+        "sign": "platform"
+      }
+    ],
+    "config": []
+  },
+  "telephony-carrier": {
+    "description": "Motorola APN database. Stock keeps it at /product/etc/apns-conf.xml; AOSP's TelephonyProvider prefers that path over /system/etc/apns-conf.xml.",
+    "apps": [],
+    "config": [
+      "/product/etc/apns-conf.xml"
+    ]
+  },
+  "camera": {
+    "description": "Motorola Camera (com.motorola.camera5) with the Motorola signature-permission host it depends on.",
+    "apps": [
+      {
+        "path": "/product/priv-app/MotCamera5/MotCamera5.apk",
+        "sign": "presigned"
+      },
+      {
+        "path": "/system/app/MotoSignatureApp/MotoSignatureApp.apk",
+        "sign": "presigned"
+      }
+    ],
+    "skip_optional_libraries": [
+      "moto-core_services",
+      "moto-settings",
+      "moto-active-stylus"
+    ],
+    "config": [
+      "/product/etc/permissions/com.motorola.camera5.xml",
+      "/product/etc/permissions/com.motorola.camera5.vantage.xml",
+      "/product/etc/permissions/com.motorola.camera5.lens.xml",
+      "/product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera5.xml"
+    ],
+    "_native_note": "The camera manifest lists ~95 optional native libraries for several SoCs. On this firmware they are either AOSP system libraries, vendor libraries (reachable only when listed in /vendor/etc/public.libraries.txt) or absent; none has to be ported. validate-camera.py reports the split."
+  },
+  "audio-call-parameters": {
+    "description": "Qualcomm/Motorola implementation of android.media.audio.IHalAdapterVendorExtension. With this phone's AIDL audio HAL, key=value parameters such as vsid and call_state reach the HAL only through it; stock audioserver loads it, here AOSP's audio parameter parser service does (audio/vendorext/README.md).",
+    "apps": [],
+    "native": [
+      "/system_ext/lib64/libaudiohalvendorextn.so"
+    ],
+    "config": []
+  }
+}

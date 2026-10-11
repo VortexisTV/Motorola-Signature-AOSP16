@@ -1,0 +1,30 @@
+# Stock rules for motoappdomain (rendered from CIL by sepolicy_slice.py; review before use)
+
+### from system_ext policy
+allow motoappdomain app_api_service:service_manager { find };
+allow motoappdomain system_api_service:service_manager { find };
+allow motoappdomain audioserver_service:service_manager { find };
+allow motoappdomain cameraserver_service:service_manager { find };
+allow motoappdomain drmserver_service:service_manager { find };
+allow motoappdomain mediadrmserver_service:service_manager { find };
+allow motoappdomain mediaextractor_service:service_manager { find };
+allow motoappdomain mediametrics_service:service_manager { find };
+allow motoappdomain mediaserver_service:service_manager { find };
+allow motoappdomain network_watchlist_service:service_manager { find };
+allow motoappdomain nfc_service:service_manager { find };
+allow motoappdomain oem_lock_service:service_manager { find };
+allow motoappdomain persistent_data_block_service:service_manager { find };
+allow motoappdomain radio_service:service_manager { find };
+allow motoappdomain recovery_service:service_manager { find };
+allow motoappdomain thermal_service:service_manager { find };
+allow motoappdomain vr_manager_service:service_manager { find };
+allow motoappdomain gpu_service:service_manager { find };
+allow motoappdomain mot_radio_service:service_manager { find };
+allow motoappdomain mot_system_service:service_manager { find };
+allow motoappdomain system_app_data_file:file { read write getattr };
+allow motoappdomain gpuservice:binder { call transfer };
+allow motoappdomain gpuservice:fd { use };
+allow motoappdomain privapp_data_file:file { execute };
+allow motoappdomain moto_df_prop:file { read getattr map open };
+allow gpuservice motoappdomain:binder { transfer };
+

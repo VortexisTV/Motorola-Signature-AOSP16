@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Framework values this device needs to differ from TrebleDroid's generic overlays.
+     Priority 9500: above me.phh.treble.overlay.highpriomisc (8998), which replaces the
+     WebView provider list with one whose default is Google WebView. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.overlay.vantage.framework">
+    <application android:hasCode="false" />
+    <overlay
+        android:targetPackage="android"
+        android:isStatic="true"
+        android:priority="9500" />
+</manifest>

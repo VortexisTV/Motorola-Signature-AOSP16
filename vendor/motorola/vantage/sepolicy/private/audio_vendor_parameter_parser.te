@@ -1,0 +1,19 @@
+# AOSP's audio parameter parser service (frameworks/av/services/audioparameterparser), which
+# hosts android.media.audio.IHalAdapterVendorExtension for audioserver. AOSP ships no policy
+# for it; these are the types and rules of its reference device
+# (device/google/cuttlefish/shared/sepolicy/system_ext/private). audio/vendorext/README.md.
+type audio_vendor_parameter_parser, coredomain, domain;
+type audio_vendor_parameter_parser_exec, system_file_type, file_type, exec_type;
+init_daemon_domain(audio_vendor_parameter_parser)
+
+binder_service(audio_vendor_parameter_parser)
+
+add_service(audio_vendor_parameter_parser, audio_vendor_parameter_parser_service);
+
+binder_call(audioserver, audio_vendor_parameter_parser)
+binder_call(audio_vendor_parameter_parser, servicemanager)
+
+# ro.audio.ihaladaptervendorextension_libname
+get_prop(audio_vendor_parameter_parser, system_audio_config_prop)
+
+allow audioserver audio_vendor_parameter_parser_service:service_manager find;

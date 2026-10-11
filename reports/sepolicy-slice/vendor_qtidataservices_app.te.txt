@@ -1,0 +1,39 @@
+# Stock rules for vendor_qtidataservices_app (rendered from CIL by sepolicy_slice.py; review before use)
+
+### from vendor policy
+# typeattribute vendor_qtidataservices_app appdomain;
+# typeattribute vendor_qtidataservices_app domain;
+# typeattribute vendor_qtidataservices_app halclientdomain;
+# typeattribute vendor_qtidataservices_app netdomain;
+# typeattribute vendor_qtidataservices_app vendor_hal_cacertservice_qti;
+# typeattribute vendor_qtidataservices_app vendor_hal_cacertservice_qti_server;
+# typeattribute vendor_qtidataservices_app vendor_hal_datafactory_qti_client;
+# typeattribute vendor_qtidataservices_app vendor_hal_iwlanservice_qti_client;
+# typeattribute vendor_qtidataservices_app vendor_hal_perf_client;
+# typeattribute vendor_qtidataservices_app vendor_halserverdomain;
+# (vendor side, applies via mapping) type_transition vendor_qtidataservices_app tmpfs_202504:file appdomain_tmpfs;
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app vendor_qtidataservices_app_userfaultfd:anon_inode { ioctl read create };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app appdomain_tmpfs_202504:file { ioctl read write getattr map execute };
+# (vendor side, applies via mapping) allowxperm vendor_qtidataservices_app appdomain_tmpfs_202504:file ioctl { 0x7701-0x770b };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app hwservicemanager_202504:binder { call transfer };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app system_file_202504:dir { ioctl read getattr lock open watch watch_reads search };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app hwservicemanager_prop_202504:file { read getattr map open };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app vendor_cnd_prop:file { read getattr map open };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app property_socket_202504:sock_file { write };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app init_202504:unix_stream_socket { connectto };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app telephony_status_prop_202504:property_service { set };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app telephony_status_prop_202504:file { read getattr map open };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app app_api_service:service_manager { find };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app activity_service_202504:service_manager { find };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app self:qipcrtr_socket { read write create getattr setattr lock append map bind connect getopt setopt shutdown };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app vendor_radio_data_file:dir { ioctl read getattr lock open watch watch_reads search };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app radio_service_202504:service_manager { find };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app vendor_sysfs_data:file { ioctl read getattr lock map open watch watch_reads };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app servicemanager_202504:binder { call transfer };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app vendor_nicmd:fd { use };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app vendor_nicmd:udp_socket { read write getattr getopt };
+# (vendor side, applies via mapping) allow vendor_qtidataservices_app vendor_cnd:udp_socket { read write };
+# (vendor side, applies via mapping) type_transition vendor_qtidataservices_app vendor_qtidataservices_app:anon_inode vendor_qtidataservices_app_userfaultfd "[userfaultfd]";
+# (vendor side, applies via mapping) allow hwservicemanager_202504 vendor_qtidataservices_app:binder { call transfer };
+# (vendor side, applies via mapping) allow servicemanager_202504 vendor_qtidataservices_app:binder { call transfer };
+

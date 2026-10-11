@@ -1,0 +1,16 @@
+// Loader that lets AOSP's audio parameter parser service host the stock implementation of
+// android.media.audio.IHalAdapterVendorExtension. See README.md.
+cc_library_shared {
+    name: "libvantage_audiohalvendorext",
+    system_ext_specific: true,
+    srcs: ["loader.cpp"],
+    shared_libs: [
+        "libbinder_ndk",
+        "liblog",
+    ],
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wextra",
+    ],
+}

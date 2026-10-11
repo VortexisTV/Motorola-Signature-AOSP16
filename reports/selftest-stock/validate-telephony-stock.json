@@ -1,0 +1,175 @@
+{
+ "title": "Telephony validation: validate-telephony-stock",
+ "generated": "2026-10-09T21:29:11",
+ "context": {
+  "maps": "/system=/work/fw/W2WVS36.55-95-5-1/root/system/system /system_ext=/work/fw/W2WVS36.55-95-5-1/root/system_ext /product=/work/fw/W2WVS36.55-95-5-1/root/product /apex=/work/fw/W2WVS36.55-95-5-1/apex /vendor=/work/fw/W2WVS36.55-95-5-1/root/vendor /odm=/work/fw/W2WVS36.55-95-5-1/root/odm",
+  "sim": "313390"
+ },
+ "counts": {
+  "FAIL": 1,
+  "WARNING": 2,
+  "UNKNOWN": 7,
+  "PASS": 9
+ },
+ "results": [
+  {
+   "id": "radio.hal.standard",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "vendor declares all 7 android.hardware.radio.* AIDL HALs",
+   "details": [
+    "android.hardware.radio.config V4: ['IRadioConfig/default']",
+    "android.hardware.radio.data V4: ['IRadioData/slot1', 'IRadioData/slot2']",
+    "android.hardware.radio.messaging V4: ['IRadioMessaging/slot1', 'IRadioMessaging/slot2']",
+    "android.hardware.radio.modem V4: ['IRadioModem/slot1', 'IRadioModem/slot2']",
+    "android.hardware.radio.network V4: ['IRadioNetwork/slot1', 'IRadioNetwork/slot2']",
+    "android.hardware.radio.sim V4: ['IRadioSim/slot1', 'IRadioSim/slot2']",
+    "android.hardware.radio.voice V4: ['IRadioVoice/slot1', 'IRadioVoice/slot2']"
+   ]
+  },
+  {
+   "id": "radio.hal.aosp_ims",
+   "area": "telephony",
+   "status": "WARNING",
+   "summary": "vendor does not implement android.hardware.radio.ims; IMS is only available through vendor.qti.hardware.radio.ims and Qualcomm's IMS service",
+   "details": []
+  },
+  {
+   "id": "radio.vendor_daemons",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "vendor RIL/IMS daemons are defined and present",
+   "details": [
+    "vendor.qcrild: /vendor/bin/hw/qcrilNrd (present)",
+    "vendor.qcrild2: /vendor/bin/hw/qcrilNrd (present)",
+    "vendor.imsdaemon: /vendor/bin/imsdaemon (present)",
+    "vendor.ims_rtp_daemon: /vendor/bin/ims_rtp_daemon (present)"
+   ]
+  },
+  {
+   "id": "qti.client:ims",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "IMS radio (VoLTE/VoWiFi signalling): vendor serves ['IImsRadio/imsradio0', 'IImsRadio/imsradio1']; system-side client present",
+   "details": [
+    "org.codeaurora.ims (/work/fw/W2WVS36.55-95-5-1/root/system_ext/priv-app/ims/ims.apk)"
+   ]
+  },
+  {
+   "id": "qti.client:am",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "RIL audio bridge (voice-session audio): vendor serves ['IQcRilAudio/slot1', 'IQcRilAudio/slot2']; system-side client present",
+   "details": [
+    "com.qualcomm.qti.telephonyservice (/work/fw/W2WVS36.55-95-5-1/root/system_ext/app/QtiTelephonyService/QtiTelephonyService.apk)"
+   ]
+  },
+  {
+   "id": "ims.package",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "org.codeaurora.ims is installed with its ImsService and all required libraries",
+   "details": [
+    "path /work/fw/W2WVS36.55-95-5-1/root/system_ext/priv-app/ims/ims.apk",
+    "persistent=True",
+    "required libraries ['qti-telephony-hidl-wrapper', 'qti-telephony-utils', 'ims-ext-common', 'moto-telephony', 'moto-ims-ext']"
+   ]
+  },
+  {
+   "id": "features.telephony",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "android.hardware.telephony and .ims features are declared",
+   "details": []
+  },
+  {
+   "id": "carrier.apn",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "APN database has default, ims and mms APNs for 313/390",
+   "details": [
+    "/work/fw/W2WVS36.55-95-5-1/root/product/etc/apns-conf.xml: 8560 APNs; types for 313/390: ['default', 'dun', 'emergency', 'ia', 'ims', 'mms']"
+   ]
+  },
+  {
+   "id": "carrier.config_keys",
+   "area": "telephony",
+   "status": "WARNING",
+   "summary": "2 overlay keys are not string constants of this framework (they would be ignored)",
+   "details": [
+    "allow_video_call_in_low_battery",
+    "display_in_call_notification_wifi_icon_bool"
+   ]
+  },
+  {
+   "id": "carrier.volte_flag",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "carrier_volte_available_bool is set for 313/390",
+   "details": []
+  },
+  {
+   "id": "carrier.config_overlay",
+   "area": "telephony",
+   "status": "FAIL",
+   "summary": "VantageCarrierConfigOverlay is not installed in the image",
+   "details": []
+  },
+  {
+   "id": "vendor.oem_signed_apps",
+   "area": "telephony",
+   "status": "PASS",
+   "summary": "image platform certificate equals the vendor's (stock system)",
+   "details": []
+  },
+  {
+   "id": "hw.registration",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "SIM detection and network registration (LTE/NR): requires the device, a SIM and a network",
+   "details": []
+  },
+  {
+   "id": "hw.data",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "mobile data on the default APN: requires the device, a SIM and a network",
+   "details": []
+  },
+  {
+   "id": "hw.sms",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "SMS send and receive: requires the device, a SIM and a network",
+   "details": []
+  },
+  {
+   "id": "hw.voice",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "outgoing and incoming voice calls: requires the device, a SIM and a network",
+   "details": []
+  },
+  {
+   "id": "hw.ims_registration",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "IMS registration / VoLTE with the carrier: requires the device, a SIM and a network",
+   "details": []
+  },
+  {
+   "id": "hw.call_audio",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "microphone, earpiece, speaker and Bluetooth audio during a call: requires the device, a SIM and a network",
+   "details": []
+  },
+  {
+   "id": "hw.dual_sim",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "dual-SIM behaviour: requires the device, a SIM and a network",
+   "details": []
+  }
+ ]
+}

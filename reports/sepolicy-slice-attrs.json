@@ -1,0 +1,345 @@
+{
+ "vendor_policy_version": "202504",
+ "seeds": {
+  "motoappdomain": {
+   "declared_in": [
+    "system_ext:attribute",
+    "vendor_pub:attribute"
+   ],
+   "versioned_attribute": "motoappdomain_202504",
+   "mapping": {},
+   "partitions": {
+    "system_ext": {
+     "attributes": [],
+     "source_rules": [
+      "allow motoappdomain app_api_service:service_manager { find };",
+      "allow motoappdomain system_api_service:service_manager { find };",
+      "allow motoappdomain audioserver_service:service_manager { find };",
+      "allow motoappdomain cameraserver_service:service_manager { find };",
+      "allow motoappdomain drmserver_service:service_manager { find };",
+      "allow motoappdomain mediadrmserver_service:service_manager { find };",
+      "allow motoappdomain mediaextractor_service:service_manager { find };",
+      "allow motoappdomain mediametrics_service:service_manager { find };",
+      "allow motoappdomain mediaserver_service:service_manager { find };",
+      "allow motoappdomain network_watchlist_service:service_manager { find };",
+      "allow motoappdomain nfc_service:service_manager { find };",
+      "allow motoappdomain oem_lock_service:service_manager { find };",
+      "allow motoappdomain persistent_data_block_service:service_manager { find };",
+      "allow motoappdomain radio_service:service_manager { find };",
+      "allow motoappdomain recovery_service:service_manager { find };",
+      "allow motoappdomain thermal_service:service_manager { find };",
+      "allow motoappdomain vr_manager_service:service_manager { find };",
+      "allow motoappdomain gpu_service:service_manager { find };",
+      "allow motoappdomain mot_radio_service:service_manager { find };",
+      "allow motoappdomain mot_system_service:service_manager { find };",
+      "allow motoappdomain system_app_data_file:file { read write getattr };",
+      "allow motoappdomain gpuservice:binder { call transfer };",
+      "allow motoappdomain gpuservice:fd { use };",
+      "allow motoappdomain privapp_data_file:file { execute };",
+      "allow motoappdomain moto_df_prop:file { read getattr map open };"
+     ],
+     "target_rules": [
+      "allow gpuservice motoappdomain:binder { transfer };"
+     ]
+    }
+   },
+   "referenced_symbols": {
+    "app_api_service": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "audioserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "cameraserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "drmserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "gpu_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "gpuservice": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mediadrmserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mediaextractor_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mediametrics_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mediaserver_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "mot_radio_service": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "mot_system_service": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "moto_df_prop": [
+     "system_ext:type",
+     "vendor_pub:type"
+    ],
+    "network_watchlist_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "nfc_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "oem_lock_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "persistent_data_block_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "privapp_data_file": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "radio_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "recovery_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "system_api_service": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "system_app_data_file": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "thermal_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "vr_manager_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ]
+   }
+  },
+  "moto_qcxdsp_domain": {
+   "declared_in": [
+    "system_ext:attribute",
+    "vendor_pub:attribute"
+   ],
+   "versioned_attribute": "moto_qcxdsp_domain_202504",
+   "mapping": {},
+   "partitions": {},
+   "referenced_symbols": {}
+  },
+  "vendor_hal_imsvthal_client": {
+   "declared_in": [
+    "system_ext:attribute",
+    "vendor_pub:attribute"
+   ],
+   "versioned_attribute": "vendor_hal_imsvthal_client_202504",
+   "mapping": {},
+   "partitions": {
+    "system_ext": {
+     "attributes": [],
+     "source_rules": [
+      "allow vendor_hal_imsvthal_client vendor_hal_imsvthal_server:binder { call transfer };",
+      "allow vendor_hal_imsvthal_client vendor_hal_imsvthal_server:fd { use };",
+      "allow vendor_hal_imsvthal_client vendor_hal_imsvthal_server:binder { transfer };",
+      "allow vendor_hal_imsvthal_client vendor_hal_imsvt_service:service_manager { find };"
+     ],
+     "target_rules": [
+      "allow vendor_hal_imsvthal_server vendor_hal_imsvthal_client:binder { transfer };",
+      "allow vendor_hal_imsvthal_server vendor_hal_imsvthal_client:binder { call transfer };",
+      "allow vendor_hal_imsvthal_server vendor_hal_imsvthal_client:fd { use };"
+     ]
+    }
+   },
+   "referenced_symbols": {
+    "vendor_hal_imsvt_service": [
+     "system_ext:type"
+    ],
+    "vendor_hal_imsvthal_server": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ]
+   }
+  },
+  "vendor_hal_atfwd_client": {
+   "declared_in": [
+    "system_ext:attribute",
+    "vendor_pub:attribute"
+   ],
+   "versioned_attribute": "vendor_hal_atfwd_client_202504",
+   "mapping": {},
+   "partitions": {
+    "vendor": {
+     "attributes": [],
+     "source_rules": [
+      "allow vendor_hal_atfwd_client vendor_hal_atfwd_server:binder { call transfer };",
+      "allow vendor_hal_atfwd_client vendor_hal_atfwd_server:fd { use };",
+      "allow vendor_hal_atfwd_client vendor_hal_atfwd_server:binder { transfer };",
+      "allow vendor_hal_atfwd_client vendor_hal_atfwd_service:service_manager { find };"
+     ],
+     "target_rules": [
+      "allow vendor_hal_atfwd_server vendor_hal_atfwd_client:binder { transfer };",
+      "allow vendor_hal_atfwd_server vendor_hal_atfwd_client:binder { call transfer };",
+      "allow vendor_hal_atfwd_server vendor_hal_atfwd_client:fd { use };"
+     ]
+    }
+   },
+   "referenced_symbols": {
+    "vendor_hal_atfwd_server": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_atfwd_service": [
+     "vendor:type"
+    ]
+   }
+  },
+  "vendor_hal_imsrtphal_client": {
+   "declared_in": [
+    "system_ext:attribute",
+    "vendor_pub:attribute"
+   ],
+   "versioned_attribute": "vendor_hal_imsrtphal_client_202504",
+   "mapping": {},
+   "partitions": {
+    "vendor": {
+     "attributes": [],
+     "source_rules": [
+      "allow vendor_hal_imsrtphal_client vendor_hal_imsrtphal_server:binder { call transfer };",
+      "allow vendor_hal_imsrtphal_client vendor_hal_imsrtphal_server:fd { use };",
+      "allow vendor_hal_imsrtphal_client vendor_hal_imsrtphal_server:binder { transfer };",
+      "allow vendor_hal_imsrtphal_client vendor_hal_imsrtp_service:service_manager { find };"
+     ],
+     "target_rules": [
+      "allow vendor_hal_imsrtphal_server vendor_hal_imsrtphal_client:binder { transfer };",
+      "allow vendor_hal_imsrtphal_server vendor_hal_imsrtphal_client:binder { call transfer };",
+      "allow vendor_hal_imsrtphal_server vendor_hal_imsrtphal_client:fd { use };"
+     ]
+    }
+   },
+   "referenced_symbols": {
+    "vendor_hal_imsrtp_service": [
+     "vendor:type"
+    ],
+    "vendor_hal_imsrtphal_server": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ]
+   }
+  },
+  "vendor_hal_datafactory_qti_client": {
+   "declared_in": [
+    "system_ext:attribute",
+    "vendor_pub:attribute"
+   ],
+   "versioned_attribute": "vendor_hal_datafactory_qti_client_202504",
+   "mapping": {},
+   "partitions": {
+    "vendor": {
+     "attributes": [],
+     "source_rules": [
+      "allow vendor_hal_datafactory_qti_client vendor_hal_datafactory_qti_server:binder { call transfer };",
+      "allow vendor_hal_datafactory_qti_client vendor_hal_datafactory_qti_server:fd { use };",
+      "allow vendor_hal_datafactory_qti_client vendor_hal_datafactory_qti_server:binder { transfer };",
+      "allow vendor_hal_datafactory_qti_client vendor_hal_datafactory_hwservice:hwservice_manager { find };",
+      "allow vendor_hal_datafactory_qti_client vendor_hal_factory_aidlservice:service_manager { find };"
+     ],
+     "target_rules": [
+      "allow vendor_hal_datafactory_qti_server vendor_hal_datafactory_qti_client:binder { transfer };",
+      "allow vendor_hal_datafactory_qti_server vendor_hal_datafactory_qti_client:binder { call transfer };",
+      "allow vendor_hal_datafactory_qti_server vendor_hal_datafactory_qti_client:fd { use };"
+     ]
+    }
+   },
+   "referenced_symbols": {
+    "vendor_hal_datafactory_hwservice": [
+     "vendor:type"
+    ],
+    "vendor_hal_datafactory_qti_server": [
+     "system_ext:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_factory_aidlservice": [
+     "vendor:type"
+    ]
+   }
+  },
+  "hal_telephony_client": {
+   "declared_in": [
+    "plat:attribute",
+    "vendor_pub:attribute"
+   ],
+   "versioned_attribute": "hal_telephony_client_202504",
+   "mapping": {},
+   "partitions": {
+    "plat": {
+     "attributes": [],
+     "source_rules": [
+      "allow hal_telephony_client hal_telephony_server:binder { call transfer };",
+      "allow hal_telephony_client hal_telephony_server:fd { use };",
+      "allow hal_telephony_client hal_telephony_server:binder { transfer };",
+      "allow hal_telephony_client hal_telephony_hwservice:hwservice_manager { find };",
+      "allow hal_telephony_client hal_radio_service:service_manager { find };"
+     ],
+     "target_rules": [
+      "allow hal_telephony_server hal_telephony_client:binder { transfer };",
+      "allow hal_telephony_server hal_telephony_client:binder { call transfer };",
+      "allow hal_telephony_server hal_telephony_client:fd { use };"
+     ]
+    },
+    "vendor": {
+     "attributes": [],
+     "source_rules": [
+      "allow hal_telephony_client vendor_hal_telephony_service_202504:service_manager { find };",
+      "allow hal_telephony_client vendor_hal_telephony_service2:service_manager { find };"
+     ],
+     "target_rules": []
+    }
+   },
+   "referenced_symbols": {
+    "hal_radio_service": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "hal_telephony_hwservice": [
+     "plat:type",
+     "vendor_pub:type"
+    ],
+    "hal_telephony_server": [
+     "plat:attribute",
+     "vendor_pub:attribute"
+    ],
+    "vendor_hal_telephony_service2": [
+     "vendor:type"
+    ],
+    "vendor_hal_telephony_service_202504": [
+     "vendor_pub:attribute"
+    ]
+   }
+  }
+ }
+}

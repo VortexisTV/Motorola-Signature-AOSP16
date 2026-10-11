@@ -1,0 +1,302 @@
+[
+{
+"caller": "Lcom/motorola/camera/Camera$$ExternalSyntheticLambda3;->run",
+"target": "Lmotorola/core_services/perf/MotoPerfManagerWrapper;->getInstance",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/Camera$$ExternalSyntheticLambda3;->run",
+"target": "Lmotorola/core_services/perf/MotoPerfManagerWrapper;->perfHintEnd",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/utility/ColorUtil;->getDefaultDpiAndScreenSizeOverrideConfiguration",
+"target": "Lmotorola/wrap/android/view/WindowManager_wrap;->getInitialDisplayDensity",
+"guarded": true,
+"catches": [
+"<any>"
+]
+},
+{
+"caller": "Lcom/motorola/camera/Camera;->onCreate",
+"target": "Lcom/motorola/stylussdk/touchhal/TouchHalStylusManager;->getInstance",
+"guarded": true,
+"catches": [
+"Ljava/lang/Exception;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/Camera;->onCreate",
+"target": "Lmotorola/core_services/cli/CLIManager;->getInstance",
+"guarded": false,
+"catches": [
+"Ljava/lang/NoSuchMethodError;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/Camera;->onCreate",
+"target": "Lmotorola/core_services/cli/CLIManager;->hasFeature",
+"guarded": false,
+"catches": [
+"Ljava/lang/NoSuchMethodError;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/Camera;->onResumeTasks",
+"target": "Lcom/motorola/stylussdk/touchhal/TouchHalStylusManager;->enableStylusButtonGlobalActions",
+"guarded": true,
+"catches": [
+"Ljava/lang/NoClassDefFoundError;",
+"Ljava/lang/NoSuchMethodError;",
+"Ljava/lang/RuntimeException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/Camera;->onStart",
+"target": "Lcom/motorola/android/provider/MotorolaSettings$Global;->getUriFor",
+"guarded": true,
+"catches": [
+"Ljava/lang/Exception;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/Camera;->onStop",
+"target": "Lmotorola/core_services/perf/MotoPerfManagerWrapper;->getInstance",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/Camera;->onStop",
+"target": "Lmotorola/core_services/perf/MotoPerfManagerWrapper;->perfHintStart",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/cli/camera/CliCameraActivity;->onCreate",
+"target": "Lmotorola/core_services/cli/CLIManager;->getInstance",
+"guarded": false,
+"catches": [
+"Ljava/lang/NoSuchMethodError;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/cli/camera/CliCameraActivity;->onCreate",
+"target": "Lmotorola/core_services/cli/CLIManager;->hasFeature",
+"guarded": false,
+"catches": [
+"Ljava/lang/NoSuchMethodError;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/Util;->isCLIState",
+"target": "Lmotorola/core_services/cli/CLIManager;->getInstance",
+"guarded": false,
+"catches": [
+"Ljava/lang/NullPointerException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/Util;->isCLIState",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": [
+"Ljava/lang/NullPointerException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/cli/util/LidStateHelper;->getLidState",
+"target": "Lcom/motorola/android/provider/MotorolaSettings$Global;->getInt",
+"guarded": true,
+"catches": [
+"Ljava/lang/Exception;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/launch/LaunchManager$flipObserver$1;->onChange",
+"target": "Lmotorola/core_services/cli/CLIManager;->getInstance",
+"guarded": false,
+"catches": [
+"Ljava/lang/NoSuchMethodError;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/launch/LaunchManager$flipObserver$1;->onChange",
+"target": "Lmotorola/core_services/cli/CLIManager;->queryCliTransition",
+"guarded": false,
+"catches": [
+"Ljava/lang/NoSuchMethodError;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/reflect/MotorolaSettingsSecure;->getInt",
+"target": "Lcom/motorola/android/provider/MotorolaSettings$Secure;->getInt",
+"guarded": true,
+"catches": [
+"Ljava/lang/Exception;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/reflect/MotorolaSettingsSecure;->shouldRespectExifPrivacy",
+"target": "Lcom/motorola/android/provider/MotorolaSettings$Secure;->getInt",
+"guarded": true,
+"catches": [
+"Ljava/lang/Exception;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/settings/SettingsManager;->set",
+"target": "Lcom/motorola/android/provider/MotorolaSettings$Secure;->putInt",
+"guarded": true,
+"catches": [
+"Ljava/lang/Exception;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent$1$$ExternalSyntheticLambda0;->run",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;-><init>",
+"target": "Lmotorola/core_services/cli/CLIManager;->getInstance",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;-><init>",
+"target": "Lmotorola/core_services/cli/CLIManager;->hasFeature",
+"guarded": true,
+"catches": [
+"Ljava/lang/NoSuchMethodError;",
+"Ljava/lang/RuntimeException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;-><init>",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;-><init>",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->getCliDisplayRotation",
+"target": "Lmotorola/core_services/cli/CLIManager;->getInstance",
+"guarded": true,
+"catches": [
+"Ljava/lang/NoSuchMethodError;",
+"Ljava/lang/RuntimeException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->getCliDisplayRotation",
+"target": "Lmotorola/core_services/cli/CLIManager;->getCliRealRotation",
+"guarded": true,
+"catches": [
+"Ljava/lang/NoSuchMethodError;",
+"Ljava/lang/RuntimeException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->enable",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->enable",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->enable",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->getDisplayRotation",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->getDisplayRotation",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->onOrientationChanged",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->updateDeviceState",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/shared/OrientationEvent;->updateDeviceState",
+"target": "Lmotorola/core_services/cli/CLIManager;->getDeviceState",
+"guarded": false,
+"catches": []
+},
+{
+"caller": "Lcom/motorola/camera/storage/StorageUtils;->getMediaRecorderMaxFileSize",
+"target": "Lmotorola/core_services/storage/MotoStorageManager;->getInstance",
+"guarded": true,
+"catches": [
+"Landroid/os/RemoteException;",
+"Ljava/lang/NoSuchMethodError;",
+"Ljava/lang/RuntimeException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/storage/StorageUtils;->getMediaRecorderMaxFileSize",
+"target": "Lmotorola/core_services/storage/MotoStorageManager;->getSdCardType",
+"guarded": true,
+"catches": [
+"Landroid/os/RemoteException;",
+"Ljava/lang/NoSuchMethodError;",
+"Ljava/lang/RuntimeException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/ui/layoutmanager/CliLayoutManager;->updateDisplayCutout",
+"target": "Lmotorola/core_services/cli/CLIManager;->getInstance",
+"guarded": true,
+"catches": [
+"Ljava/lang/NoSuchMethodError;",
+"Ljava/lang/RuntimeException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/ui/layoutmanager/CliLayoutManager;->updateDisplayCutout",
+"target": "Lmotorola/core_services/cli/CLIManager;->getCliDisplayCutout",
+"guarded": true,
+"catches": [
+"Ljava/lang/NoSuchMethodError;",
+"Ljava/lang/RuntimeException;"
+]
+},
+{
+"caller": "Lcom/motorola/camera/ui/uicomponents/CameraSurfaceViewComponent;->setFrameworkForceHdrLayerPresent",
+"target": "Lmotorola/wrap/android/hardware/display/DisplayManager_wrap;->setForceHdrLayerPresent",
+"guarded": true,
+"catches": [
+"Ljava/lang/Error;",
+"Ljava/lang/Exception;"
+]
+}
+]

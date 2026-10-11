@@ -1,0 +1,2 @@
+# See property.te.
+ro.vendor.qti.va_aosp.support    u:object_r:vantage_vendor_framework_prop:s0 exact bool

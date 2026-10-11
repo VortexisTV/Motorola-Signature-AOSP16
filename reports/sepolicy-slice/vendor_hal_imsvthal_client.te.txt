@@ -1,0 +1,11 @@
+# Stock rules for vendor_hal_imsvthal_client (rendered from CIL by sepolicy_slice.py; review before use)
+
+### from system_ext policy
+allow vendor_hal_imsvthal_client vendor_hal_imsvthal_server:binder { call transfer };
+allow vendor_hal_imsvthal_client vendor_hal_imsvthal_server:fd { use };
+allow vendor_hal_imsvthal_client vendor_hal_imsvthal_server:binder { transfer };
+allow vendor_hal_imsvthal_client vendor_hal_imsvt_service:service_manager { find };
+allow vendor_hal_imsvthal_server vendor_hal_imsvthal_client:binder { transfer };
+allow vendor_hal_imsvthal_server vendor_hal_imsvthal_client:binder { call transfer };
+allow vendor_hal_imsvthal_server vendor_hal_imsvthal_client:fd { use };
+

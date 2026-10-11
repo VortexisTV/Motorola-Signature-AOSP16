@@ -1,0 +1,32 @@
+[
+ {
+  "status": "PASS",
+  "check": "patch.tree:frameworks/native",
+  "summary": "0001-surfaceflinger-keep-the-layer-lut-descriptor-open-in-screenshots.patch is applied in the source tree"
+ },
+ {
+  "status": "PASS",
+  "check": "patch.tree:packages/apps/QcRilAm",
+  "summary": "0001-per-slot-aidl-response-and-recovery.patch is applied in the source tree"
+ },
+ {
+  "status": "PASS",
+  "check": "patch.tree:system/core",
+  "summary": "0001-init-export-ro.carrier-from-the-boot-parameters.patch is applied in the source tree"
+ },
+ {
+  "status": "PASS",
+  "check": "patch.image:frameworks/native",
+  "summary": "surfaceflinger in the image (Build ID 23d2a2ef2204baf22eda42970ed19706): ScreenCaptureOutput::generateClientCompositionRequests has 30 calls, none to dup(); the LUT descriptor is moved, not copied into a temporary"
+ },
+ {
+  "status": "PASS",
+  "check": "patch.image:packages/apps/QcRilAm",
+  "summary": "QcRilAm.apk contains \"setRequestInterface has not returned after 10 s\""
+ },
+ {
+  "status": "PASS",
+  "check": "patch.image:system/core",
+  "summary": "/system/bin/init contains \"ro.boot.carrier\""
+ }
+]

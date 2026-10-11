@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vantage.telephony.imsnetwork">
+
+    <!-- NET_CAPABILITY_IMS is a restricted capability: ConnectivityService only accepts the
+         request from a holder of this signature|privileged permission. -->
+    <uses-permission android:name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Active subscription list (one request per SIM, like stock). -->
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+
+    <!-- Persistent and direct-boot aware: the request exists from boot, before the first
+         unlock, for as long as the system runs. No UI, no exported component. -->
+    <application
+        android:name=".ImsNetworkApp"
+        android:label="IMS network request"
+        android:persistent="true"
+        android:directBootAware="true"
+        android:defaultToDeviceProtectedStorage="true"
+        android:allowBackup="false" />
+</manifest>

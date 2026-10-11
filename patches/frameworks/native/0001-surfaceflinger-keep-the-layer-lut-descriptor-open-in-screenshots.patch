@@ -1,0 +1,48 @@
+SurfaceFlinger: keep the layer LUT descriptor open in screenshots
+
+Project: frameworks/native (TrebleDroid android-16.0 fork of AOSP android-16.0.0_r2)
+
+When a screenshot contains an HDR layer, ScreenCaptureOutput asks the display HAL for the
+tone-mapping LUT of that layer (IComposerClient.getLuts) and hands it to the renderer. In
+android-16.0.0_r2 the descriptor is taken from a temporary:
+
+    base::unique_fd(aidlLuts.pfd.dup().get())
+
+dup() returns a ScopedFileDescriptor that owns the new descriptor, get() only reads its number,
+and unique_fd then claims the same number. At the end of the statement the temporary closes
+it. fdsan aborts the process there, and the render thread fails to map what is left:
+
+    Abort message: attempted to close file descriptor 737, expected to be unowned,
+                   actually owned by unique_fd 0x745d470790
+      ndk::internal::closeWithError
+      android::ScreenCaptureOutput::generateClientCompositionRequests
+      ...
+      android::SurfaceFlinger::captureDisplay
+    Abort message: mmap failed
+      android::renderengine::skia::LutShader::lutShader
+
+Seen on the device on 2026-10-10 (third DSU session): a screenshot of the Motorola Camera
+viewfinder in video mode, which is an HDR layer, killed surfaceflinger and with it the whole
+framework. The display HAL of this phone implements getLuts; a HAL that returns nothing never
+reaches the line. Task snapshots and the rotation animation use the same code.
+
+Upstream has the fix: android-16.0.0_r3, android-16.0.0_r4 and android16-qpr2-release read
+
+    base::unique_fd(aidlLuts.pfd.release())
+
+This patch changes the one expression to exactly that. It can be dropped when the tree moves
+to android-16.0.0_r3 or later.
+
+diff --git a/services/surfaceflinger/ScreenCaptureOutput.cpp b/services/surfaceflinger/ScreenCaptureOutput.cpp
+index 2906bbd..22c3e48 100644
+--- a/services/surfaceflinger/ScreenCaptureOutput.cpp
++++ b/services/surfaceflinger/ScreenCaptureOutput.cpp
+@@ -183,7 +183,7 @@ ScreenCaptureOutput::generateClientCompositionRequests(
+                             static_cast<int32_t>(aidlLuts.lutProperties[j].samplingKeys[0]));
+                 }
+                 layer.luts = std::make_shared<gui::DisplayLuts>(base::unique_fd(
+-                                                                        aidlLuts.pfd.dup().get()),
++                                                                        aidlLuts.pfd.release()),
+                                                                 offsets, dimensions, sizes, keys);
+             }
+         }

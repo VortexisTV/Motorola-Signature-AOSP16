@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Framework telephony values that stock supplies from /product overlays
+     (MotoFrameworkResOverlayQcomCommon, framework-res auto_generated_rro_product).
+     A TrebleDroid/GSI system does not mount the stock /product, so they are restated here.
+     Values already provided by the stock /vendor overlay are intentionally not repeated. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.overlay.vantage.telephony">
+
+    <application android:hasCode="false" />
+
+    <overlay
+        android:targetPackage="android"
+        android:isStatic="true"
+        android:priority="100" />
+</manifest>

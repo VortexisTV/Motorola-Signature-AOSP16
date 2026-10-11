@@ -1,0 +1,4501 @@
+{
+ "vendor_qtelephony": {
+  "stock_permissions": 8585,
+  "missing_permissions": 869,
+  "only_here": 132,
+  "missing": [
+   {
+    "target": "arcore_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "arcore_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "arcore_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "arcore_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "attiqi_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "attiqi_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "attiqi_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "attiqi_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "attiqi_app_devpts",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "attiqi_app_devpts",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "camera_cfa_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "ccci_dev",
+    "class": "lnk_file",
+    "perms": [
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads"
+    ]
+   },
+   {
+    "target": "cct_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "cct_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "cct_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "cct_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "framework_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "ims_dbg_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "iqi_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "log_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "log_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "log_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "log_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "mot_radio_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "mot_system_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "moto_ai_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_ai_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_ai_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_ai_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_audiorecorder_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_audiorecorder_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_audiorecorder_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_audiorecorder_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_cqa_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_cqa_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_cqa_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_cqa_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_dci_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_dci_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_dci_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_dci_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_devicemanagement_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_devicemanagement_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_devicemanagement_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_devicemanagement_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_dolby_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_dolby_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_dolby_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_dolby_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_gamemode_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_gamemode_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_gamemode_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_gamemode_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_pkb_service_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_pkb_service_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_pkb_service_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_pkb_service_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_secure_vault_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_secure_vault_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_secure_vault_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_secure_vault_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_setup_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_setup_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_setup_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_setup_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_slpc_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_slpc_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_slpc_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_slpc_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_smart5g_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_smart5g_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_smart5g_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_smart5g_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_smartconnect_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_smartconnect_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_smartconnect_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_smartconnect_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_spaces_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_spaces_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_spaces_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_spaces_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_stylus_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_stylus_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_stylus_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_stylus_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_tfrsu_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_tfrsu_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_tfrsu_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_tfrsu_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_think_uem_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_think_uem_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_think_uem_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_think_uem_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "motsecure_sandbox_state_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "msft_ltw_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "msft_ltw_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "msft_ltw_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "msft_ltw_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "paks_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "paks_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "paks_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "paks_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "payjoy_access_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "proc_kpagecount",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_kpagecount",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_moto_binder",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_moto_binder",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_moto_sched",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_moto_sched",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_fs_dentry_state",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_fs_dentry_state",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_fs_inode_nr",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_fs_inode_nr",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_vm_compact_memory",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_vm_compact_memory",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_vm_vfs_cache_pressure",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_vm_vfs_cache_pressure",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "sysfs_wlan_con_mode",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "sysfs_wlan_con_mode",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "vendor_MinkBinderSvc",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_afp_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_dataservice_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_dataservice_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_dataservice_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_dataservice_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_dpmd",
+    "class": "unix_stream_socket",
+    "perms": [
+     "connectto"
+    ]
+   },
+   {
+    "target": "vendor_dpmtcm_socket",
+    "class": "sock_file",
+    "perms": [
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_exported_odm_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_exported_system_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_fm_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_fm_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_fm_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_fm_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_gpp_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_gppservice",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_gppservice",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_hal_imsvt_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_hal_telephony_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_imsvtdaemon",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_imsvtdaemon",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_izat_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_location_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_location_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_location_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_location_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_medsrv_set_64b",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_mstatservice_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_mstatservice_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_mstatservice_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_mstatservice_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_perf_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_perfservice",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_perfservice",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_persist_camera_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_persist_dpm_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_persist_ntn_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_persist_rcs_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_qcc_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qcc_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qcc_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_authmgr_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qcc_authmgr_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qcc_authmgr_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_authmgr_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_netstat_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qcc_netstat_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qcc_netstat_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_netstat_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_utils_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qcc_utils_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qcc_utils_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_utils_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qdt_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_qdtservice",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qdtservice",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qesdk_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qesdk_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qesdk_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qesdk_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qspmsvc",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qspmsvc",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qspmsvc_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_seccam_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_seccam_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_seccam_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_seccam_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_seempd",
+    "class": "binder",
+    "perms": [
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_smcinvoke_device",
+    "class": "lnk_file",
+    "perms": [
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads"
+    ]
+   },
+   {
+    "target": "vendor_smd7_device",
+    "class": "lnk_file",
+    "perms": [
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads"
+    ]
+   },
+   {
+    "target": "vendor_sys_gpp_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_systemhelper_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_systemhelper_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_systemhelper_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_systemhelper_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_usta_app_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_voiceui_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_voiceui_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_voiceui_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_voiceui_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_vps_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_vpsservice",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_vpsservice",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_wfd_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_wfd_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_wfd_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_wfd_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_wigig_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_wigigp2p_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_wlc_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_wlc_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_wlc_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_wlc_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_xpanprovider_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_xpanprovider_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_xpanprovider_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_xpanprovider_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_xrcb_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_xrcb_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_xrcb_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_xrcb_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "zui_sdac_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "zui_sdac_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "zui_sdac_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "zui_sdac_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   }
+  ],
+  "target_type_absent": 75,
+  "target_label_unused": 154,
+  "relevant": []
+ },
+ "moto_camera_app": {
+  "stock_permissions": 8657,
+  "missing_permissions": 865,
+  "only_here": 132,
+  "missing": [
+   {
+    "target": "arcore_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "arcore_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "arcore_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "arcore_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "attiqi_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "attiqi_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "attiqi_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "attiqi_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "attiqi_app_devpts",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "attiqi_app_devpts",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "camera_cfa_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "ccci_dev",
+    "class": "lnk_file",
+    "perms": [
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads"
+    ]
+   },
+   {
+    "target": "cct_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "cct_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "cct_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "cct_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "framework_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "iqi_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "log_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "log_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "log_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "log_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "mot_radio_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "mot_system_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "moto_ai_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_ai_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_ai_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_ai_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_audiorecorder_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_audiorecorder_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_audiorecorder_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_audiorecorder_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_cqa_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_cqa_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_cqa_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_cqa_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_dci_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_dci_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_dci_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_dci_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_devicemanagement_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_devicemanagement_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_devicemanagement_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_devicemanagement_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_df_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "moto_dolby_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_dolby_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_dolby_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_dolby_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_gamemode_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_gamemode_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_gamemode_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_gamemode_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_pkb_service_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_pkb_service_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_pkb_service_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_pkb_service_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_secure_vault_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_secure_vault_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_secure_vault_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_secure_vault_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_setup_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_setup_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_setup_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_setup_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_slpc_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_slpc_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_slpc_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_slpc_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_smart5g_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_smart5g_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_smart5g_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_smart5g_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_smartconnect_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_smartconnect_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_smartconnect_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_smartconnect_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_spaces_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_spaces_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_spaces_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_spaces_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_stylus_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_stylus_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_stylus_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_stylus_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_tfrsu_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_tfrsu_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_tfrsu_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_tfrsu_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_think_uem_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "moto_think_uem_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "moto_think_uem_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "moto_think_uem_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "motsecure_sandbox_state_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "msft_ltw_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "msft_ltw_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "msft_ltw_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "msft_ltw_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "paks_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "paks_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "paks_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "paks_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "payjoy_access_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "privapp_data_file",
+    "class": "file",
+    "perms": [
+     "execute"
+    ]
+   },
+   {
+    "target": "proc_kpagecount",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_kpagecount",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_moto_binder",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_moto_binder",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_moto_sched",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_moto_sched",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_fs_dentry_state",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_fs_dentry_state",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_fs_inode_nr",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_fs_inode_nr",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_vm_compact_memory",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_vm_compact_memory",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_vm_vfs_cache_pressure",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "proc_sys_vm_vfs_cache_pressure",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "recovery_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "sysfs_wlan_con_mode",
+    "class": "dir",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "sysfs_wlan_con_mode",
+    "class": "filesystem",
+    "perms": [
+     "getattr"
+    ]
+   },
+   {
+    "target": "vendor_MinkBinderSvc",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_afp_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_dataservice_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_dataservice_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_dataservice_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_dataservice_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_exported_odm_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_exported_system_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_fm_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_fm_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_fm_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_fm_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_gpp_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_gppservice",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_gppservice",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_izat_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_location_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_location_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_location_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_location_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_medsrv_set_64b",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_mstatservice_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_mstatservice_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_mstatservice_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_mstatservice_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_perf_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_perfservice",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_perfservice",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_persist_camera_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_persist_dpm_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_persist_ntn_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_persist_rcs_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_qcc_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qcc_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qcc_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_authmgr_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qcc_authmgr_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qcc_authmgr_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_authmgr_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_netstat_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qcc_netstat_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qcc_netstat_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_netstat_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_utils_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qcc_utils_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qcc_utils_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qcc_utils_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qdt_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_qdtservice",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qdtservice",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qesdk_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qesdk_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qesdk_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qesdk_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_qspmsvc",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_qspmsvc",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_qspmsvc_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_seccam_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_seccam_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_seccam_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_seccam_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_seempd",
+    "class": "binder",
+    "perms": [
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_smcinvoke_device",
+    "class": "lnk_file",
+    "perms": [
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads"
+    ]
+   },
+   {
+    "target": "vendor_smd7_device",
+    "class": "lnk_file",
+    "perms": [
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads"
+    ]
+   },
+   {
+    "target": "vendor_sys_gpp_prop",
+    "class": "file",
+    "perms": [
+     "getattr",
+     "map",
+     "open",
+     "read"
+    ]
+   },
+   {
+    "target": "vendor_systemhelper_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_systemhelper_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_systemhelper_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_systemhelper_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_usta_app_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_voiceui_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_voiceui_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_voiceui_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_voiceui_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_vps_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_vpsservice",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_vpsservice",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_wfd_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_wfd_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_wfd_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_wfd_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_wigig_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_wigigp2p_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vendor_wlc_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_wlc_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_wlc_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_wlc_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_xpanprovider_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_xpanprovider_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_xpanprovider_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_xpanprovider_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_xrcb_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "vendor_xrcb_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "vendor_xrcb_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "vendor_xrcb_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   },
+   {
+    "target": "vr_manager_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "zui_sdac_app",
+    "class": "binder",
+    "perms": [
+     "call",
+     "transfer"
+    ]
+   },
+   {
+    "target": "zui_sdac_app",
+    "class": "fd",
+    "perms": [
+     "use"
+    ]
+   },
+   {
+    "target": "zui_sdac_app",
+    "class": "fifo_file",
+    "perms": [
+     "append",
+     "getattr",
+     "ioctl",
+     "lock",
+     "map",
+     "open",
+     "read",
+     "watch",
+     "watch_reads",
+     "write"
+    ]
+   },
+   {
+    "target": "zui_sdac_app",
+    "class": "unix_stream_socket",
+    "perms": [
+     "getattr",
+     "getopt",
+     "read",
+     "shutdown",
+     "write"
+    ]
+   }
+  ],
+  "target_type_absent": 72,
+  "target_label_unused": 152,
+  "relevant": [
+   {
+    "target": "recovery_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   },
+   {
+    "target": "vr_manager_service",
+    "class": "service_manager",
+    "perms": [
+     "find"
+    ]
+   }
+  ]
+ }
+}

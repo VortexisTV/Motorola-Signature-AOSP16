@@ -1,0 +1,12 @@
+# Stock rules for vendor_hal_datafactory_qti_client (rendered from CIL by sepolicy_slice.py; review before use)
+
+### from vendor policy
+# (vendor side, applies via mapping) allow vendor_hal_datafactory_qti_client vendor_hal_datafactory_qti_server:binder { call transfer };
+# (vendor side, applies via mapping) allow vendor_hal_datafactory_qti_client vendor_hal_datafactory_qti_server:fd { use };
+# (vendor side, applies via mapping) allow vendor_hal_datafactory_qti_client vendor_hal_datafactory_qti_server:binder { transfer };
+# (vendor side, applies via mapping) allow vendor_hal_datafactory_qti_client vendor_hal_datafactory_hwservice:hwservice_manager { find };
+# (vendor side, applies via mapping) allow vendor_hal_datafactory_qti_client vendor_hal_factory_aidlservice:service_manager { find };
+# (vendor side, applies via mapping) allow vendor_hal_datafactory_qti_server vendor_hal_datafactory_qti_client:binder { transfer };
+# (vendor side, applies via mapping) allow vendor_hal_datafactory_qti_server vendor_hal_datafactory_qti_client:binder { call transfer };
+# (vendor side, applies via mapping) allow vendor_hal_datafactory_qti_server vendor_hal_datafactory_qti_client:fd { use };
+

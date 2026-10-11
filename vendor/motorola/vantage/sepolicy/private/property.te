@@ -1,0 +1,28 @@
+# ro.vendor.qti.va_aosp.support: the Qualcomm "vendor-enhanced framework" flag, visible to the
+# camera HAL only.
+#
+# Stock sets the property to 1 in /system/build.prop and labels it vendor_exported_system_prop,
+# which every vendor process may read. Under this system it has no label of its own and would
+# fall under the ro.vendor. prefix (vendor_default_prop), again readable by all of them.
+#
+# The camera HAL needs the value 1: without it the stock HAL loads its reduced GSI camera
+# configuration (2 of 6 cameras). The other readers take it as a statement that Qualcomm's
+# system-side services exist, and those are not part of an AOSP system. With the flag set
+# for everyone (third DSU session, 2026-10-10) the GNSS XTRA daemon waited a minute for the
+# Qualcomm QCC service, exited with status 255, and init only starts it again every 20
+# minutes (restart_period 1200): it was down nearly all the time. The audio HAL, the
+# Bluetooth HAL, CNE, the IMS and RTP daemons and qcc-vendor read the flag too; call audio
+# was only confirmed by ear in the session where it was absent (the second one).
+#
+# So the property gets a type of its own. A process that may not read a property finds no
+# property, which is exactly the state those components were tested in.
+system_restricted_prop(vantage_vendor_framework_prop)
+
+get_prop(hal_camera_server, vantage_vendor_framework_prop)
+
+# "adb shell getprop" for the evidence scripts.
+get_prop(shell, vantage_vendor_framework_prop)
+
+# The refusal is the intended result for the remaining vendor processes that link
+# libqti_vndfwk_detect; it is not worth a log line at every process start.
+dontaudit { domain -coredomain } vantage_vendor_framework_prop:file r_file_perms;

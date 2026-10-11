@@ -1,0 +1,7599 @@
+{
+ "system": [
+  {
+   "name": "system_aconfigd_mainline_init",
+   "exec": "/system/bin/aconfigd-system",
+   "args": "mainline-init",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/aconfigd.rc"
+  },
+  {
+   "name": "system_aconfigd_platform_init",
+   "exec": "/system/bin/aconfigd-system",
+   "args": "platform-init",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/aconfigd.rc"
+  },
+  {
+   "name": "system_aconfigd_socket_service",
+   "exec": "/system/bin/aconfigd-system",
+   "args": "start-socket",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/aconfigd.rc"
+  },
+  {
+   "name": "system_suspend",
+   "exec": "/system/bin/hw/android.system.suspend-service",
+   "args": "",
+   "class": [
+    "early_hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wakelock"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.system.suspend-service.rc"
+  },
+  {
+   "name": "apexd",
+   "exec": "/system/bin/apexd",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl apexservice"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/apexd.rc"
+  },
+  {
+   "name": "apexd-bootstrap",
+   "exec": "/system/bin/apexd",
+   "args": "--bootstrap",
+   "class": [],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/apexd.rc"
+  },
+  {
+   "name": "apexd-snapshotde",
+   "exec": "/system/bin/apexd",
+   "args": "--snapshotde",
+   "class": [],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/apexd.rc"
+  },
+  {
+   "name": "boottrace",
+   "exec": "/system/bin/atrace",
+   "args": "--async_start -f /data/misc/boottrace/categories",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/atrace.rc"
+  },
+  {
+   "name": "audioserver",
+   "exec": "/system/bin/audioserver",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "audioserver",
+   "group": [
+    "audio",
+    "camera",
+    "drmrpc",
+    "media",
+    "mediadrm",
+    "net_bt",
+    "net_bt_admin",
+    "net_bw_acct",
+    "wakelock"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/audioserver.rc"
+  },
+  {
+   "name": "blank_screen",
+   "exec": "/system/bin/blank_screen",
+   "args": "",
+   "class": [],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/blank_screen.rc"
+  },
+  {
+   "name": "bootanim",
+   "exec": "/system/bin/bootanimation",
+   "args": "",
+   "class": [
+    "core",
+    "animation"
+   ],
+   "user": "graphics",
+   "group": [
+    "graphics",
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/bootanim.rc"
+  },
+  {
+   "name": "bootanim-cli",
+   "exec": "/system/bin/bootanimation",
+   "args": "--cli",
+   "class": [
+    "core",
+    "animation"
+   ],
+   "user": "graphics",
+   "group": [
+    "graphics",
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/bootanim.rc"
+  },
+  {
+   "name": "bootanim-readyfor",
+   "exec": "/system/bin/bootanimation",
+   "args": "--readyfor",
+   "class": [
+    "core",
+    "animation"
+   ],
+   "user": "graphics",
+   "group": [
+    "graphics",
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/bootanim.rc"
+  },
+  {
+   "name": "cameraserver",
+   "exec": "/system/bin/cameraserver",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "cameraserver",
+   "group": [
+    "audio",
+    "camera",
+    "input",
+    "drmrpc"
+   ],
+   "interfaces": [
+    "aidl android.frameworks.cameraservice.service.ICameraService/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/cameraserver.rc"
+  },
+  {
+   "name": "cppreopts",
+   "exec": "/system/bin/cppreopts.sh",
+   "args": "/postinstall",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/cppreopts.rc"
+  },
+  {
+   "name": "dmesgd",
+   "exec": "/system/bin/dmesgd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "dmesgd",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/dmesgd.rc"
+  },
+  {
+   "name": "drm",
+   "exec": "/system/bin/drmserver",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "drm",
+   "group": [
+    "drm",
+    "system",
+    "inet",
+    "drmrpc",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/drmserver.rc"
+  },
+  {
+   "name": "dumpstate",
+   "exec": "/system/bin/dumpstate",
+   "args": "-s",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/dumpstate.rc"
+  },
+  {
+   "name": "dumpstatez",
+   "exec": "/system/bin/dumpstate",
+   "args": "-S",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/dumpstate.rc"
+  },
+  {
+   "name": "bugreportd",
+   "exec": "/system/bin/dumpstate",
+   "args": "-w",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/dumpstate.rc"
+  },
+  {
+   "name": "gatekeeperd",
+   "exec": "/system/bin/gatekeeperd",
+   "args": "/data/misc/gatekeeper",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/gatekeeperd.rc"
+  },
+  {
+   "name": "gpu",
+   "exec": "/system/bin/gpuservice",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "gpu_service",
+   "group": [
+    "graphics",
+    "readtracefs"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/gpuservice.rc"
+  },
+  {
+   "name": "gsid",
+   "exec": "/system/bin/gsid",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "media_rw"
+   ],
+   "interfaces": [
+    "aidl gsiservice"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/gsid.rc"
+  },
+  {
+   "name": "heapprofd",
+   "exec": "/system/bin/heapprofd",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "nobody",
+   "group": [
+    "nobody",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/heapprofd.rc"
+  },
+  {
+   "name": "heapprofd_secondary",
+   "exec": "/system/bin/heapprofd",
+   "args": "",
+   "class": [],
+   "user": "nobody",
+   "group": [
+    "nobody",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/heapprofd.rc"
+  },
+  {
+   "name": "boringssl_self_test32",
+   "exec": "/system/bin/boringssl_self_test32",
+   "args": "",
+   "class": [],
+   "user": "nobody",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.rc"
+  },
+  {
+   "name": "boringssl_self_test64",
+   "exec": "/system/bin/boringssl_self_test64",
+   "args": "",
+   "class": [],
+   "user": "nobody",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.rc"
+  },
+  {
+   "name": "boringssl_self_test_apex32",
+   "exec": "/apex/com.android.conscrypt/bin/boringssl_self_test32",
+   "args": "",
+   "class": [],
+   "user": "nobody",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.rc"
+  },
+  {
+   "name": "boringssl_self_test_apex64",
+   "exec": "/apex/com.android.conscrypt/bin/boringssl_self_test64",
+   "args": "",
+   "class": [],
+   "user": "nobody",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.rc"
+  },
+  {
+   "name": "emmc_ffu_start",
+   "exec": "/system/bin/emmc_ffu_start.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.rc"
+  },
+  {
+   "name": "ufs_ffu",
+   "exec": "/system/bin/ufs_ffu.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.rc"
+  },
+  {
+   "name": "ueventd",
+   "exec": "/system/bin/ueventd",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "critical"
+   ],
+   "seclabel": "u:r:ueventd:s0",
+   "rc": "init/hw/init.rc"
+  },
+  {
+   "name": "console",
+   "exec": "/system/bin/sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "shell",
+   "group": [
+    "shell",
+    "log",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": "u:r:shell:s0",
+   "rc": "init/hw/init.rc"
+  },
+  {
+   "name": "adbd",
+   "exec": "/system/bin/adbd",
+   "args": "--root_seclabel=u:r:su:s0",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "updatable"
+   ],
+   "seclabel": "u:r:adbd:s0",
+   "rc": "init/hw/init.usb.rc"
+  },
+  {
+   "name": "zygote",
+   "exec": "/system/bin/app_process",
+   "args": "-Xzygote /system/bin --zygote --start-system-server",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "readproc",
+    "reserved_disk"
+   ],
+   "interfaces": [],
+   "flags": [
+    "critical"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.zygote32.rc"
+  },
+  {
+   "name": "zygote",
+   "exec": "/system/bin/app_process64",
+   "args": "-Xzygote /system/bin --zygote --start-system-server --socket-name=zygote",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "readproc",
+    "reserved_disk"
+   ],
+   "interfaces": [],
+   "flags": [
+    "critical"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.zygote64.rc"
+  },
+  {
+   "name": "idmap2d",
+   "exec": "/system/bin/idmap2d",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/idmap2d.rc"
+  },
+  {
+   "name": "incidentd",
+   "exec": "/system/bin/incidentd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "incidentd",
+   "group": [
+    "incidentd",
+    "log",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/incidentd.rc"
+  },
+  {
+   "name": "mmi-system-tuning-sh",
+   "exec": "/system/bin/init.mmi.system_tuning.sh",
+   "args": "${persist.sys.mmi_system_tuning}",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.mmi.system_tuning.rc"
+  },
+  {
+   "name": "setup_shutdown",
+   "exec": "/system/bin/setup_shutdown.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/init.system.mmi.rc"
+  },
+  {
+   "name": "move_elabel_data",
+   "exec": "/system/bin/move_elabel_data.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/init.system.mmi.rc"
+  },
+  {
+   "name": "ufs_ffu_device",
+   "exec": "/system/bin/ufs_ffu_device.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.system.mmi.rc"
+  },
+  {
+   "name": "installd",
+   "exec": "/system/bin/installd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/installd.rc"
+  },
+  {
+   "name": "keystore2",
+   "exec": "/system/bin/keystore2",
+   "args": "/data/misc/keystore",
+   "class": [
+    "early_hal"
+   ],
+   "user": "keystore",
+   "group": [
+    "keystore",
+    "readproc",
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "critical"
+   ],
+   "seclabel": null,
+   "rc": "init/keystore2.rc"
+  },
+  {
+   "name": "lmkd",
+   "exec": "/system/bin/lmkd",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "lmkd",
+   "group": [
+    "lmkd",
+    "system",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "critical"
+   ],
+   "seclabel": null,
+   "rc": "init/lmkd.rc"
+  },
+  {
+   "name": "logd",
+   "exec": "/system/bin/logd",
+   "args": "",
+   "class": [],
+   "user": "logd",
+   "group": [
+    "logd",
+    "system",
+    "package_info",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/logd.rc"
+  },
+  {
+   "name": "logd-reinit",
+   "exec": "/system/bin/logd",
+   "args": "--reinit",
+   "class": [],
+   "user": "logd",
+   "group": [
+    "logd"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/logd.rc"
+  },
+  {
+   "name": "logd-auditctl",
+   "exec": "/system/bin/auditctl",
+   "args": "-r ${persist.logd.audit.rate:-5}",
+   "class": [],
+   "user": "logd",
+   "group": [
+    "logd"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/logd.rc"
+  },
+  {
+   "name": "lpdumpd",
+   "exec": "/system/bin/lpdumpd",
+   "args": "",
+   "class": [],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/lpdumpd.rc"
+  },
+  {
+   "name": "mdnsd",
+   "exec": "/system/bin/mdnsd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "mdnsr",
+   "group": [
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/mdnsd.rc"
+  },
+  {
+   "name": "mediaextractor",
+   "exec": "/system/bin/mediaextractor",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "mediaex",
+   "group": [
+    "drmrpc",
+    "mediadrm"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/mediaextractor.rc"
+  },
+  {
+   "name": "mediametrics",
+   "exec": "/system/bin/mediametrics",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "media",
+   "group": [
+    "media"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/mediametrics.rc"
+  },
+  {
+   "name": "media",
+   "exec": "/system/bin/mediaserver",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "media",
+   "group": [
+    "audio",
+    "camera",
+    "inet",
+    "net_bt",
+    "net_bt_admin",
+    "net_bw_acct",
+    "drmrpc",
+    "mediadrm"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/mediaserver.rc"
+  },
+  {
+   "name": "misctrl",
+   "exec": "/system/bin/misctrl",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root # for misc partition access",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/misctrl.rc"
+  },
+  {
+   "name": "mmi-carrier-sh",
+   "exec": "/system/bin/init.mmi.carrier.sh",
+   "args": "-i",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/mmi.carrier.rc"
+  },
+  {
+   "name": "post-mmi-carrier-sh",
+   "exec": "/system/bin/init.mmi.carrier.sh",
+   "args": "-o",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/mmi.carrier.rc"
+  },
+  {
+   "name": "post-mmi-sprint-sh",
+   "exec": "/system/bin/init.mmi.carrier.sh",
+   "args": "-s",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/mmi.carrier.rc"
+  },
+  {
+   "name": "data-mmi-carrier-sh",
+   "exec": "/system/bin/init.mmi.carrier.sh",
+   "args": "-d",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/mmi.carrier.rc"
+  },
+  {
+   "name": "demo-mmi-carrier-sh",
+   "exec": "/system/bin/init.mmi.carrier.sh",
+   "args": "-e",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/mmi.carrier.rc"
+  },
+  {
+   "name": "mmi-carrier-language-sh",
+   "exec": "/system/bin/init.mmi.carrier_language.sh",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/mmi.carrier.rc"
+  },
+  {
+   "name": "motoproxyd",
+   "exec": "/apex/com.motorola.enterprise/bin/motoproxyd",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": "u:r:motoproxyd:s0",
+   "rc": "init/motoproxyd.rc"
+  },
+  {
+   "name": "bpfloader",
+   "exec": "/system/bin/false",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "updatable"
+   ],
+   "seclabel": null,
+   "rc": "init/netbpfload.rc"
+  },
+  {
+   "name": "netd",
+   "exec": "/system/bin/netd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "net_admin"
+   ],
+   "interfaces": [],
+   "flags": [
+    "updatable"
+   ],
+   "seclabel": null,
+   "rc": "init/netd.rc"
+  },
+  {
+   "name": "odsign",
+   "exec": "/system/bin/odsign",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/odsign.rc"
+  },
+  {
+   "name": "traced",
+   "exec": "/system/bin/traced",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "nobody",
+   "group": [
+    "nobody"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/perfetto.rc"
+  },
+  {
+   "name": "traced_relay",
+   "exec": "/system/bin/traced_relay",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "nobody",
+   "group": [
+    "nobody"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/perfetto.rc"
+  },
+  {
+   "name": "traced_probes",
+   "exec": "/system/bin/traced_probes",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "nobody",
+   "group": [
+    "nobody",
+    "readproc",
+    "log",
+    "readtracefs"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/perfetto.rc"
+  },
+  {
+   "name": "perfetto_trace_on_boot",
+   "exec": "/system/bin/perfetto",
+   "args": "-c /data/misc/perfetto-configs/boottrace.pbtxt --txt -o /data/misc/perfetto-traces/boottrace.perfetto-trace",
+   "class": [],
+   "user": "shell",
+   "group": [
+    "nobody"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/perfetto.rc"
+  },
+  {
+   "name": "perfetto_persistent_sysui_tracing_for_bugreport",
+   "exec": "/system/bin/perfetto",
+   "args": "-c /system/etc/perfetto/persistent_cfg.pbtxt --txt -o /dev/null",
+   "class": [],
+   "user": "nobody",
+   "group": [
+    "nobody"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/perfetto.rc"
+  },
+  {
+   "name": "perfetto_trace_capture",
+   "exec": "/system/bin/perfetto",
+   "args": "--save-for-bugreport",
+   "class": [],
+   "user": "shell",
+   "group": [
+    "shell"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/perfetto.rc"
+  },
+  {
+   "name": "prefetch_record",
+   "exec": "/system/bin/prefetch",
+   "args": "record --duration ${ro.prefetch_boot.duration_s:-0}",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/prefetch.rc"
+  },
+  {
+   "name": "prefetch_replay",
+   "exec": "/system/bin/prefetch",
+   "args": "replay --io-depth ${ro.prefetch_boot.io_depth:-2} --max-fds ${ro.prefetch_boot.max_fds:-1024}",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/prefetch.rc"
+  },
+  {
+   "name": "prng_seeder",
+   "exec": "/system/bin/prng_seeder",
+   "args": "",
+   "class": [],
+   "user": "prng_seeder",
+   "group": [
+    "prng_seeder"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/prng_seeder.rc"
+  },
+  {
+   "name": "rss_hwm_reset",
+   "exec": "/system/bin/rss_hwm_reset",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "nobody",
+   "group": [
+    "nobody",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/rss_hwm_reset.rc"
+  },
+  {
+   "name": "servicemanager",
+   "exec": "/system/bin/servicemanager",
+   "args": "",
+   "class": [
+    "core",
+    "animation"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "critical"
+   ],
+   "seclabel": null,
+   "rc": "init/servicemanager.rc"
+  },
+  {
+   "name": "snapuserd",
+   "exec": "/system/bin/snapuserd",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": "u:r:snapuserd:s0",
+   "rc": "init/snapuserd.rc"
+  },
+  {
+   "name": "snapuserd_proxy",
+   "exec": "/system/bin/snapuserd",
+   "args": "-socket-handoff",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": "u:r:snapuserd:s0",
+   "rc": "init/snapuserd.rc"
+  },
+  {
+   "name": "storaged",
+   "exec": "/system/bin/storaged",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "package_info"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/storaged.rc"
+  },
+  {
+   "name": "surfaceflinger",
+   "exec": "/system/bin/surfaceflinger",
+   "args": "",
+   "class": [
+    "core",
+    "animation"
+   ],
+   "user": "system",
+   "group": [
+    "graphics",
+    "drmrpc",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/surfaceflinger.rc"
+  },
+  {
+   "name": "tombstoned",
+   "exec": "/system/bin/tombstoned",
+   "args": "",
+   "class": [],
+   "user": "tombstoned",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/tombstoned.rc"
+  },
+  {
+   "name": "traced_perf",
+   "exec": "/system/bin/traced_perf",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "nobody",
+   "group": [
+    "nobody",
+    "readproc",
+    "readtracefs"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/traced_perf.rc"
+  },
+  {
+   "name": "uncrypt",
+   "exec": "/system/bin/uncrypt",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/uncrypt.rc"
+  },
+  {
+   "name": "setup-bcb",
+   "exec": "/system/bin/uncrypt",
+   "args": "--setup-bcb",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/uncrypt.rc"
+  },
+  {
+   "name": "clear-bcb",
+   "exec": "/system/bin/uncrypt",
+   "args": "--clear-bcb",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/uncrypt.rc"
+  },
+  {
+   "name": "update_engine",
+   "exec": "/system/bin/update_engine",
+   "args": "--logtostderr --logtofile --foreground",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "wakelock",
+    "inet",
+    "cache",
+    "media_rw"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/update_engine.rc"
+  },
+  {
+   "name": "update_verifier",
+   "exec": "/system/bin/update_verifier",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [
+    "cache",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/update_verifier.rc"
+  },
+  {
+   "name": "usbd",
+   "exec": "/system/bin/usbd",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "usb",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/usbd.rc"
+  },
+  {
+   "name": "virtual_camera",
+   "exec": "/system/bin/virtual_camera",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl virtual_camera",
+    "aidl android.hardware.camera.provider.ICameraProvider/virtual/0"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/virtual_camera.hal.rc"
+  },
+  {
+   "name": "vold",
+   "exec": "/system/bin/vold",
+   "args": "\\",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "reserved_disk"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vold.rc"
+  },
+  {
+   "name": "wificond",
+   "exec": "/system/bin/wificond",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "wifi",
+   "group": [
+    "wifi",
+    "net_raw",
+    "net_admin"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/wificond.rc"
+  }
+ ],
+ "system_ext": [
+  {
+   "name": "hidl_memory",
+   "exec": "/system/system_ext/bin/hw/android.hidl.allocator@1.0-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hidl.allocator@1.0-service.rc"
+  },
+  {
+   "name": "sigmahal",
+   "exec": "/system_ext/bin/sigma_miracasthalservice",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [
+    "vendor.qti.hardware.sigma_miracast@1.0::Isigma_miracast sigmahal"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/com.qualcomm.qti.sigma_miracast@1.0-service.rc"
+  },
+  {
+   "name": "sigmahal64",
+   "exec": "/system_ext/bin/sigma_miracasthalservice64",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [
+    "vendor.qti.hardware.sigma_miracast@1.0::Isigma_miracast sigmahal64"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/com.qualcomm.qti.sigma_miracast@1.0-service.rc"
+  },
+  {
+   "name": "sigmahal_aidl",
+   "exec": "/system_ext/bin/sigma_miracasthalservice_aidl",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/com.qualcomm.qti.sigma_miracast_aidl-service.rc"
+  },
+  {
+   "name": "dpmd",
+   "exec": "/system/system_ext/bin/dpmd",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "system",
+    "readproc",
+    "inet",
+    "radio",
+    "wakelock",
+    "oem_2901"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/dpmd.rc"
+  },
+  {
+   "name": "hwservicemanager",
+   "exec": "/system/system_ext/bin/hwservicemanager",
+   "args": "",
+   "class": [
+    "animation"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "critical"
+   ],
+   "seclabel": null,
+   "rc": "init/hwservicemanager.rc"
+  },
+  {
+   "name": "mmi-bootlog-dmesg",
+   "exec": "/system_ext/bin/init.mmi.bootlog-dmesg.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.mmi.system_ext.bootlog.rc"
+  },
+  {
+   "name": "mmi-bootlog-logcat",
+   "exec": "/system_ext/bin/init.mmi.bootlog-logcat.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.mmi.system_ext.bootlog.rc"
+  },
+  {
+   "name": "mmi-bootlog",
+   "exec": "/system_ext/bin/init.mmi.bootlog.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.mmi.system_ext.bootlog.rc"
+  },
+  {
+   "name": "mot.tcmd-hal-1-0",
+   "exec": "/system_ext/bin/hw/motorola.hardware.tcmd@1.0-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "vendor_prod_persist"
+   ],
+   "interfaces": [
+    "motorola.hardware.tcmd@1.0::IMotTcmd default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.tcmd@1.0-service.rc"
+  },
+  {
+   "name": "mot.tcmd-aidl",
+   "exec": "/system_ext/bin/hw/motorola.hardware.tcmdaidl-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "vendor_prod_persist"
+   ],
+   "interfaces": [
+    "aidl motorola.hardware.tcmdaidl.IMotTcmd/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.tcmdaidl-service.rc"
+  },
+  {
+   "name": "vendor.perfservice",
+   "exec": "/system_ext/bin/perfservice",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/perfservice.rc"
+  },
+  {
+   "name": "vendor.qspmsvc",
+   "exec": "/system_ext/bin/qspmsvc",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/qspmsvc.rc"
+  },
+  {
+   "name": "vendor.sxrauxd",
+   "exec": "/system_ext/bin/qxrsplitauxservice",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/sxrauxd_ext.rc"
+  },
+  {
+   "name": "qccsyshal@1.2-service",
+   "exec": "/system/system_ext/bin/qccsyshal@1.2-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "misc",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.qccsyshal@1.2-service.rc"
+  },
+  {
+   "name": "qccsyshal_aidl-service",
+   "exec": "/system_ext/bin/qccsyshal_aidl-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "misc",
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.qccsyshal_aidl"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.qccsyshal_aidl-service.rc"
+  },
+  {
+   "name": "wfdservice",
+   "exec": "/system_ext/bin/wfdservice",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/wfdservice.rc"
+  },
+  {
+   "name": "wfdservice64",
+   "exec": "/system_ext/bin/wfdservice64",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/wfdservice.rc"
+  }
+ ],
+ "product": [
+  {
+   "name": "vendor_sys_qti_display",
+   "exec": "/product/bin/init.qti.display.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": "u:r:vendor_sys_qti_display:s0",
+   "rc": "init/init.qti.display.rc"
+  },
+  {
+   "name": "vendor.qvirtservice",
+   "exec": "/product/bin/vendor.qti.qvirt-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.qvirt-service.rc"
+  },
+  {
+   "name": "vendor.qvirtservice_rs",
+   "exec": "/product/bin/vendor.qti.qvirt-service_rs",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.qvirt-service_rs.rc"
+  }
+ ],
+ "vendor": [
+  {
+   "name": "biometrics-face-hal",
+   "exec": "/vendor/bin/hw/android.hardware.biometrics.face-service.face-isv",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "camera",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.biometrics.face-service.face.rc"
+  },
+  {
+   "name": "vendor.bluetooth-aidl-qti",
+   "exec": "/vendor/bin/hw/android.hardware.bluetooth@aidl-service-qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "bluetooth",
+   "group": [
+    "bluetooth",
+    "system",
+    "wakelock",
+    "oem_2901",
+    "net_raw",
+    "oem_2912",
+    "diag"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.bluetooth@aidl-service-qti.rc"
+  },
+  {
+   "name": "vendor.boot-qti",
+   "exec": "/vendor/bin/hw/android.hardware.boot-service.qti",
+   "args": "",
+   "class": [
+    "early_hal"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.boot-service.qti.rc"
+  },
+  {
+   "name": "vendor.contexthub-default",
+   "exec": "/vendor/bin/hw/android.hardware.contexthub-service.qmi",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "context_hub",
+   "group": [
+    "context_hub"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.contexthub-service.qmi.rc"
+  },
+  {
+   "name": "vendor.drm-clearkey-service",
+   "exec": "/vendor/bin/hw/android.hardware.drm-service.clearkey",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "media",
+   "group": [
+    "mediadrm",
+    "drmrpc"
+   ],
+   "interfaces": [
+    "aidl android.hardware.drm.IDrmFactory/clearkey"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.drm-service.clearkey.rc"
+  },
+  {
+   "name": "wfdhdcphalservice",
+   "exec": "/vendor/bin/wfdhdcphalservice",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [],
+   "interfaces": [
+    "aidl android.hardware.drm.IDrmFactory/wfdhdcp"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/android.hardware.drm@1.1-service.wfdhdcp.rc"
+  },
+  {
+   "name": "vendor.gatekeeper_default",
+   "exec": "/vendor/bin/hw/android.hardware.gatekeeper-rust-service-qti",
+   "args": "",
+   "class": [
+    "early_hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.gatekeeper-service-qti.rc"
+  },
+  {
+   "name": "gnss_service",
+   "exec": "/vendor/bin/hw/android.hardware.gnss-aidl-service-qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "gps",
+   "group": [
+    "system",
+    "gps",
+    "radio",
+    "vendor_qti_diag",
+    "vendor_ssgtzd",
+    "wakelock"
+   ],
+   "interfaces": [
+    "aidl android.hardware.gnss.IGnss/default",
+    "aidl vendor.qti.gnss.ILocAidlGnss/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.gnss-aidl-service-qti.rc"
+  },
+  {
+   "name": "vendor.health-default",
+   "exec": "/vendor/bin/hw/android.hardware.health-service.qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.health-service.qti.rc"
+  },
+  {
+   "name": "vendor.power",
+   "exec": "/vendor/bin/hw/android.hardware.power-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.power-service.rc"
+  },
+  {
+   "name": "vendor.powerstats-hal",
+   "exec": "/vendor/bin/hw/android.hardware.powerstats-service.qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.powerstats-service.rc"
+  },
+  {
+   "name": "vendor.secure_element",
+   "exec": "/vendor/bin/hw/android.hardware.secure_element-service.qti",
+   "args": "",
+   "class": [
+    "early_hal"
+   ],
+   "user": "system",
+   "group": [
+    "nfc",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.secure_element-service.qti.rc"
+  },
+  {
+   "name": "vendor.keymint-strongbox_thales",
+   "exec": "/vendor/bin/hw/android.hardware.security.keymint-service.strongbox-thales",
+   "args": "",
+   "class": [
+    "early_hal"
+   ],
+   "user": "vendor_thales_strongbox",
+   "group": [
+    "vendor_thales_strongbox"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/android.hardware.security.keymint-service.strongbox-thales.rc"
+  },
+  {
+   "name": "vendor.keymint",
+   "exec": "/vendor/bin/hw/android.hardware.security.onekeymint-service-qti",
+   "args": "",
+   "class": [
+    "early_hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.security.onekeymint-service-qti.rc"
+  },
+  {
+   "name": "vendor.secretkeeper",
+   "exec": "/vendor/bin/hw/android.hardware.security.secretkeeper-service-qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "nobody",
+   "group": [
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.security.secretkeeper-service-qti.rc"
+  },
+  {
+   "name": "vendor.sensors-hal-multihal",
+   "exec": "/vendor/bin/hw/android.hardware.sensors-service.multihal",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wakelock",
+    "context_hub",
+    "input",
+    "uhid"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.sensors-service-multihal.rc"
+  },
+  {
+   "name": "vendor.thermal-hal",
+   "exec": "/vendor/bin/hw/android.hardware.thermal-service.qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [
+    "aidl android.hardware.thermal.IThermal/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.thermal-service.qti.rc"
+  },
+  {
+   "name": "vendor.usb-hal",
+   "exec": "/vendor/bin/hw/android.hardware.usb-service.qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "mtp",
+    "usb"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.usb-service.qti.rc"
+  },
+  {
+   "name": "vendor.uwb-qti",
+   "exec": "/vendor/bin/hw/android.hardware.uwb@service-qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "uwb",
+   "group": [
+    "uwb",
+    "system",
+    "net_bt",
+    "wakelock",
+    "oem_2912"
+   ],
+   "interfaces": [
+    "aidl android.hardware.uwb.IUwb/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/android.hardware.uwbhal-qti.rc"
+  },
+  {
+   "name": "vendor.weaver_thales",
+   "exec": "/vendor/bin/hw/android.hardware.weaver-service.thales",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "vendor_thales_weaver",
+   "group": [
+    "vendor_thales_weaver"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/android.hardware.weaver-service.thales.rc"
+  },
+  {
+   "name": "vendor.wifi_hal_legacy",
+   "exec": "/vendor/bin/hw/android.hardware.wifi-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "wifi",
+   "group": [
+    "wifi",
+    "gps"
+   ],
+   "interfaces": [
+    "aidl android.hardware.wifi.IWifi/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/android.hardware.wifi-service.rc"
+  },
+  {
+   "name": "wpa_supplicant",
+   "exec": "/vendor/bin/hw/wpa_supplicant",
+   "args": "\\",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [
+    "aidl android.hardware.wifi.supplicant.ISupplicant/default",
+    "aidl vendor.qti.hardware.wifi.supplicant.ISupplicantVendor/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/android.hardware.wifi.supplicant-service.rc"
+  },
+  {
+   "name": "vendor.audio-hal-aidl",
+   "exec": "/vendor/bin/hw/audiohalservice.qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "audioserver",
+   "group": [
+    "audio",
+    "media",
+    "mediadrm",
+    "drmrpc",
+    "inet",
+    "net_bt",
+    "net_bt_admin",
+    "net_bw_acct",
+    "wakelock",
+    "context_hub",
+    "oem_2901",
+    "oem_2912"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/audiohalservice_qti.rc"
+  },
+  {
+   "name": "vendor.qti.AvfQcvmManager",
+   "exec": "/vendor/bin/avf_qcvm_manager",
+   "args": "",
+   "class": [
+    "early_hal"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "virtualmachine"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/avf_qcvm_manager.rc"
+  },
+  {
+   "name": "boringssl_self_test32_vendor",
+   "exec": "/vendor/bin/boringssl_self_test32",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/boringssl_self_test.rc"
+  },
+  {
+   "name": "boringssl_self_test64_vendor",
+   "exec": "/vendor/bin/boringssl_self_test64",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/boringssl_self_test.rc"
+  },
+  {
+   "name": "vendor.C2PAInternetService",
+   "exec": "/vendor/bin/C2PAInternetService",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/c2painternetservice.rc"
+  },
+  {
+   "name": "vendor.cnd",
+   "exec": "/system/vendor/bin/cnd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wifi",
+    "inet",
+    "radio",
+    "wakelock",
+    "net_admin",
+    "oem_2912"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/cnd.rc"
+  },
+  {
+   "name": "panel-aidl-service",
+   "exec": "/vendor/bin/hw/com.motorola.hardware.display.panel-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/com.motorola.hardware.display.panel-service.rc"
+  },
+  {
+   "name": "vendor.mot.stylus-hal",
+   "exec": "/vendor/bin/hw/com.motorola.hardware.display.stylus-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/com.motorola.hardware.display.stylus-service.rc"
+  },
+  {
+   "name": "vendor.mot.touch-hal",
+   "exec": "/vendor/bin/hw/com.motorola.hardware.display.touch-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/com.motorola.hardware.display.touch-service.rc"
+  },
+  {
+   "name": "ifaa-1-0",
+   "exec": "/vendor/bin/hw/com.motorola.hardware.ifaa-V1-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/com.motorola.hardware.ifaa-V1-service.rc"
+  },
+  {
+   "name": "vendor.mot.motqms-hal",
+   "exec": "/vendor/bin/hw/com.motorola.motqms-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/com.motorola.motqms-service.rc"
+  },
+  {
+   "name": "wifidisplayhalservice",
+   "exec": "/vendor/bin/wifidisplayhalservice",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "inet",
+    "input",
+    "audio",
+    "media",
+    "uhid"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySession/default",
+    "aidl vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionAudioTrack/default",
+    "aidl vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionImageTrack/default",
+    "aidl vendor.qti.hardware.wifidisplaysession_aidl.IWifiDisplaySessionVideoTrack/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc"
+  },
+  {
+   "name": "vendor.dataadpl",
+   "exec": "/system/vendor/bin/adpl",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "oem_2901",
+    "diag",
+    "usb",
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/dataadpl.rc"
+  },
+  {
+   "name": "vendor.dataqti",
+   "exec": "/system/vendor/bin/qti",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "oem_2901",
+    "diag",
+    "usb",
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/dataqti.rc"
+  },
+  {
+   "name": "vendor.qsap.dcfd",
+   "exec": "/vendor/bin/qsap_dcfd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/dcfd.rc"
+  },
+  {
+   "name": "vendor.dlsc",
+   "exec": "/system/vendor/bin/dlsc",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/dlsc.rc"
+  },
+  {
+   "name": "dms-hal",
+   "exec": "/vendor/bin/hw/vendor.dolby.dms.service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "media",
+   "group": [
+    "audio",
+    "media"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/dms-service.rc"
+  },
+  {
+   "name": "dvs-aidl-service",
+   "exec": "/vendor/bin/hw/dvs-aidl-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "mediacodec",
+   "group": [
+    "camera",
+    "mediadrm",
+    "drmrpc"
+   ],
+   "interfaces": [
+    "aidl vendor.dolby.dvs.IDvs/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/dvs-aidl-service.rc"
+  },
+  {
+   "name": "feature_enabler_client",
+   "exec": "/vendor/bin/feature_enabler_client",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "graphics"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/feature_enabler_client.rc"
+  },
+  {
+   "name": "vendor.hexlpservice",
+   "exec": "/vendor/bin/hexlpservice",
+   "args": "-domain signed",
+   "class": [
+    "hal"
+   ],
+   "user": "media",
+   "group": [
+    "camera",
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.hexlp.IHexlpService/default"
+   ],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hexlpservice.rc"
+  },
+  {
+   "name": "vendor.unsignedhexlpservice",
+   "exec": "/vendor/bin/hexlpservice",
+   "args": "-domain unsigned",
+   "class": [
+    "hal"
+   ],
+   "user": "media",
+   "group": [
+    "camera",
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.hexlp.IHexlpService/unsigned"
+   ],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": "u:r:vendor_unsignedhexlpservice:s0",
+   "rc": "init/hexlpservice.rc"
+  },
+  {
+   "name": "vendor.minkdaemon",
+   "exec": "/vendor/bin/hlosminkdaemon",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "oem_2912",
+    "wakelock"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hlosminkdaemon.rc"
+  },
+  {
+   "name": "hostapd",
+   "exec": "/vendor/bin/hw/hostapd",
+   "args": "-dd -g /data/vendor/wifi/hostapd/global",
+   "class": [
+    "main"
+   ],
+   "user": "wifi",
+   "group": [
+    "wifi",
+    "net_raw",
+    "net_admin"
+   ],
+   "interfaces": [
+    "aidl android.hardware.wifi.hostapd.IHostapd/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hostapd.android.rc"
+  },
+  {
+   "name": "vendor.apanic_get_pmic_reg",
+   "exec": "/vendor/bin/apanic_get_pmic_reg.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.chipset.rc"
+  },
+  {
+   "name": "vendor.diag_mdlog",
+   "exec": "/vendor/bin/diag_mdlog-wrap",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "log",
+   "group": [
+    "log",
+    "sdcard_rw",
+    "sdcard_r",
+    "media_rw",
+    "oem_2901",
+    "oem_2902",
+    "mount",
+    "vendor_qdss",
+    "vendor_adpl_odl"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.diag_mdlog.rc"
+  },
+  {
+   "name": "vendor.safe_stop_mdlog",
+   "exec": "/vendor/bin/diag_mdlog-getlogs",
+   "args": "-s",
+   "class": [
+    "late_start"
+   ],
+   "user": "log",
+   "group": [
+    "log",
+    "sdcard_rw",
+    "sdcard_r",
+    "media_rw",
+    "oem_2901",
+    "oem_2902"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.diag_mdlog.rc"
+  },
+  {
+   "name": "vendor.mdlog-getlogs",
+   "exec": "/vendor/bin/init.mmi.mdlog-getlogs.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "log",
+   "group": [
+    "log",
+    "sdcard_rw",
+    "sdcard_r",
+    "media_rw",
+    "oem_2901",
+    "oem_2902"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.diag_mdlog.rc"
+  },
+  {
+   "name": "vendor.mbm_health",
+   "exec": "/vendor/bin/mbm_spy",
+   "args": "--health ${vendor.mot.health.stage}",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.health.rc"
+  },
+  {
+   "name": "vendor.netconfig",
+   "exec": "/vendor/bin/vendor_netconfig",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "odm_tsc",
+   "exec": "/vendor/bin/odm_tsc",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "vendor.mmi-wls-sh",
+   "exec": "/vendor/bin/init.mmi.wls.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "vendor.pon_log_save",
+   "exec": "/vendor/bin/pon_log_save.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "vendor.capsense_reset",
+   "exec": "/vendor/bin/capsense_reset",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "input"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "vendor.mot_vsync_psd",
+   "exec": "/vendor/bin/mot_vsync_psd",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "vendor.copy_qc_cert",
+   "exec": "/vendor/bin/copy_qc_cert.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "vendor.mot.ftmduwb",
+   "exec": "/vendor/bin/ftmdaemon",
+   "args": "-nw",
+   "class": [
+    "late_start"
+   ],
+   "user": "uwb",
+   "group": [
+    "oem_2901",
+    "misc",
+    "diag",
+    "uwb",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "vendor.sys_monitor",
+   "exec": "/vendor/bin/sys_monitor",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "log",
+    "diag"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.overlay.rc"
+  },
+  {
+   "name": "vendor.mmi-block-perm",
+   "exec": "/vendor/bin/init.mmi.block_perm.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.pstore_annotate",
+   "exec": "/vendor/bin/pstore_annotate.sh",
+   "args": "build",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.apanic_copy",
+   "exec": "/vendor/bin/apanic_copy.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.mmi_watchdogd",
+   "exec": "/vendor/bin/mmi_watchdogd",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.bl_logs_copy",
+   "exec": "/vendor/bin/apanic_copy.sh",
+   "args": "-i",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.apanic_annotate",
+   "exec": "/vendor/bin/apanic_save.sh",
+   "args": "build",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.batt_health",
+   "exec": "/vendor/bin/batt_health",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "vendor_pwric",
+   "group": [
+    "vendor_pwric",
+    "cache",
+    "net_admin",
+    "log",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.aplogd",
+   "exec": "/vendor/bin/aplogd",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.mmi-boot-sh",
+   "exec": "/vendor/bin/init.mmi.boot.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.mmi-shutdown-sh",
+   "exec": "/vendor/bin/init.mmi.shutdown.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.mbm_spy",
+   "exec": "/vendor/bin/mbm_spy",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.utag_spy.ship_dirty",
+   "exec": "/vendor/bin/utag_spy",
+   "args": "ship_dirty ${mot.oobe.rubbish.screenshot}",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.hw_revs",
+   "exec": "/vendor/bin/hardware_revisions.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.mmi-touch-sh",
+   "exec": "/vendor/bin/init.mmi.touch.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.touchUpg",
+   "exec": "/vendor/bin/touchUpg",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.mmi-display-sh",
+   "exec": "/vendor/bin/init.mmi.display.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.oem-hw-sh",
+   "exec": "/vendor/bin/init.oem.hw.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.oem-super-image-detector-sh",
+   "exec": "/vendor/bin/init.oem.hw.sh",
+   "args": "-M",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.ident-fps-sh",
+   "exec": "/vendor/bin/init.oem.fingerprint.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "drmrpc",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.hal-fps-sh",
+   "exec": "/vendor/bin/init.oem.fingerprint2.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "fpc_ident",
+   "exec": "/vendor/bin/hw/fpc_ident",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "egis_ident",
+   "exec": "/vendor/bin/hw/egis_ident",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.touch-dead-sh",
+   "exec": "/vendor/bin/init.oem.hw.sh",
+   "args": "-f",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.touch-ready-sh",
+   "exec": "/vendor/bin/init.oem.hw.sh",
+   "args": "-r",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.oem-hw-config-sh",
+   "exec": "/vendor/bin/init.oem.hw.sh",
+   "args": "-p",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.charge_only_mode",
+   "exec": "/vendor/bin/charge_only_mode",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [
+    "graphics",
+    "system",
+    "input",
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.thermal-com",
+   "exec": "/vendor/bin/thermal-engine-v2",
+   "args": "--minimode",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "oem_2907"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "bugreport",
+   "exec": "/system/bin/dumpstate",
+   "args": "-d -p -B -z \\",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.sensors-hal-2-0-multihal",
+   "exec": "/vendor/bin/hw/android.hardware.sensors@2.0-service.multihal",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wakelock",
+    "context_hub",
+    "input",
+    "uhid"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.sensors-hal-2-1-multihal",
+   "exec": "/vendor/bin/hw/android.hardware.sensors@2.1-service.multihal",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wakelock",
+    "context_hub",
+    "input",
+    "uhid"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.sensors-hal-multihal",
+   "exec": "/vendor/bin/hw/android.hardware.sensors-service.multihal",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wakelock",
+    "context_hub",
+    "input",
+    "uhid"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.rc"
+  },
+  {
+   "name": "vendor.qti.hardware.display.composer",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.display.composer-service",
+   "args": "",
+   "class": [
+    "hal",
+    "animation"
+   ],
+   "user": "system",
+   "group": [
+    "graphics",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "override"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.services.override.rc"
+  },
+  {
+   "name": "vendor.tcmd",
+   "exec": "/vendor/bin/mot_tcmd",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "vendor_tcmd",
+    "radio",
+    "vendor_pwric",
+    "input",
+    "system",
+    "log",
+    "camera",
+    "graphics",
+    "sdcard_r",
+    "sdcard_rw",
+    "audio",
+    "inet",
+    "bluetooth",
+    "wifi",
+    "compass",
+    "net_bt_admin",
+    "drmrpc",
+    "mount",
+    "net_raw",
+    "net_admin",
+    "media",
+    "shell",
+    "nfc",
+    "oem_2901",
+    "vendor_ssgtzd",
+    "vendor_dbvc",
+    "cache",
+    "media_rw",
+    "vendor_dtv",
+    "vendor_mod",
+    "uwb"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "vendor.tcmdhelp",
+   "exec": "/vendor/bin/tcmdhelp",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "system",
+    "oem_2901",
+    "root",
+    "vendor_pwric"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "vendor.ftmipcd",
+   "exec": "/vendor/bin/ftmipcd",
+   "args": "",
+   "class": [],
+   "user": "radio",
+   "group": [
+    "radio",
+    "net_raw",
+    "inet",
+    "oem_2901"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "vendor.uwb_app",
+   "exec": "/vendor/bin/uwb_app",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "system",
+    "oem_2901",
+    "net_raw",
+    "net_admin",
+    "shell",
+    "media_rw",
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "tcmd_system",
+   "exec": "/system_ext/bin/tcmd_system",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "vendor_prod_persist"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "mot_rkp_csr_tcmd",
+   "exec": "/vendor/bin/mot_rkp_csr_extraction.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "system",
+    "vendor_tcmd"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "vendor.diagdaemon",
+   "exec": "/vendor/bin/diag_socket_log",
+   "args": "-a ${vendor.mot.tcmd.diag_socket_ip} -c 1",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "log",
+    "diag",
+    "net_raw"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "vendor.wdsdaemon",
+   "exec": "/vendor/bin/wdsdaemon",
+   "args": "-us",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "vendor_tcmd",
+    "bluetooth",
+    "net_bt_admin",
+    "misc",
+    "oem_2901",
+    "net_bt"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "vendor.fm_wdsdaemon",
+   "exec": "/vendor/bin/wdsdaemon",
+   "args": "-ms",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "vendor_tcmd"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "vendor.mot.ftmd",
+   "exec": "/vendor/bin/ftmdaemon",
+   "args": "-n",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "oem_2901",
+    "bluetooth",
+    "net_bt_admin",
+    "misc",
+    "diag",
+    "net_bt"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.tcmd.rc"
+  },
+  {
+   "name": "vendor.mmi-usb-sh",
+   "exec": "/vendor/bin/init.mmi.usb.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "system",
+    "usb"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.usb.rc"
+  },
+  {
+   "name": "vendor.com_fastbootd",
+   "exec": "/vendor/bin/com_fastbootd",
+   "args": "",
+   "class": [],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.usb.rc"
+  },
+  {
+   "name": "vendor.wlan-getlogs",
+   "exec": "/vendor/bin/init.mmi.wlan-getlogs.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "log",
+   "group": [
+    "log",
+    "system",
+    "wifi"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.mmi.wlan.rc"
+  },
+  {
+   "name": "fastmmi",
+   "exec": "/system_ext/bin/mmi",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.mmid",
+   "exec": "/vendor/bin/mmid",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "mmi_diag",
+   "exec": "/system_ext/bin/mmi_diag",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "oem_2901"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc53",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 53",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc1",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 1",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc2",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 2",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc3",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 3",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc4",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 4",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc51",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 51",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc56",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 56",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc222",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 222",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc334",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 334",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc228",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 228",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc229",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 229",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc230",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 230",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc337",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 337",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc338",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 338",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc225",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 225",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc246",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 246",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc247",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 247",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc250",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 250",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc251",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 251",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc252",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 252",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc253",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 253",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc11",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 11 -file /data/vendor/audio/ftm_headset_mic_record.wav",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc101",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 101 -file /data/vendor/audio/ftm_mic1_record.wav",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc102",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 102 -file /data/vendor/audio/ftm_mic2_record.wav",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc103",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 103 -file /data/vendor/audio/ftm_mic3_record.wav",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc104",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 104 -file /data/vendor/audio/ftm_mic4_record.wav",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc20",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 20 -file /data/vendor/audio/ftm_mic5_record.wav",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "vendor.audio_tc21",
+   "exec": "/vendor/bin/mm-audio-ftm",
+   "args": "-tc 21 -file /data/vendor/audio/ftm_mic6_record.wav",
+   "class": [],
+   "user": "audio",
+   "group": [
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.factory.rc"
+  },
+  {
+   "name": "nqnfcinfo",
+   "exec": "/system/vendor/bin/nqnfcinfo",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "nfc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "iop",
+   "exec": "/system/vendor/bin/iop",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qcomsysd",
+   "exec": "/system/vendor/bin/qcom-system-daemon",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "diag",
+    "oem_2901"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.ssr_setup",
+   "exec": "/system/vendor/bin/ssr_setup",
+   "args": "",
+   "class": [],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.ss_ramdump",
+   "exec": "/system/vendor/bin/subsystem_ramdump",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "log",
+    "sdcard_rw",
+    "sdcard_r",
+    "diag",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qcom-c_core-sh",
+   "exec": "/vendor/bin/init.qcom.class_core.sh",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qcom-c_main-sh",
+   "exec": "/vendor/bin/init.class_main.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "irsc_util",
+   "exec": "/vendor/bin/irsc_util",
+   "args": "\"/vendor/etc/sec_config\"",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qmiproxy",
+   "exec": "/system/bin/qmiproxy",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "diag"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "wigignpt",
+   "exec": "/vendor/bin/wigignpt",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "wifi"
+   ],
+   "interfaces": [
+    "vendor.qti.hardware.wigig.netperftuner@1.0::INetPerfTuner default"
+   ],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.sensingdaemon",
+   "exec": "/vendor/bin/sensingdaemon",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "wifi"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "ptt_socket_app",
+   "exec": "/system/vendor/bin/ptt_socket_app",
+   "args": "-d",
+   "class": [
+    "main"
+   ],
+   "user": "wifi",
+   "group": [
+    "wifi",
+    "system",
+    "inet",
+    "net_admin"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "ptt_ffbm",
+   "exec": "/system/vendor/bin/ptt_socket_app",
+   "args": "-f -d",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "wifi_ftmd",
+   "exec": "/system/vendor/bin/wifi_ftmd",
+   "args": "",
+   "class": [],
+   "user": "system",
+   "group": [
+    "system",
+    "inet",
+    "net_admin"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "cnss-daemon",
+   "exec": "/system/vendor/bin/cnss-daemon",
+   "args": "-n -l",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "inet",
+    "net_admin",
+    "wifi"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "ssgqmigd",
+   "exec": "/vendor/bin/ssgqmigd",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "gps",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "mlid",
+   "exec": "/vendor/bin/mlid",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "gps",
+   "group": [
+    "gps"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qcom-sh",
+   "exec": "/vendor/bin/init.qcom.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "radio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qcom-post-boot",
+   "exec": "/vendor/bin/init.qcom.post_boot.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "wakelock",
+    "graphics"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qti-testscripts",
+   "exec": "/system/bin/sh",
+   "args": "/product/etc/init.qcom.testscripts.sh",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": "u:r:qti-testscripts:s0",
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "wifi-sdio-on",
+   "exec": "/vendor/bin/init.qcom.sdio.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "wifi",
+   "group": [
+    "wifi",
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "wifi-crda",
+   "exec": "/vendor/bin/init.crda.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qvop-daemon",
+   "exec": "/vendor/bin/qvop-daemon",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.atfwd",
+   "exec": "/vendor/bin/ATFWD-daemon",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "radio"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "hostapd_fst",
+   "exec": "/vendor/bin/hw/hostapd",
+   "args": "-dd -g /data/vendor/wifi/hostapd/global",
+   "class": [
+    "main"
+   ],
+   "user": "wifi",
+   "group": [
+    "wifi"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "battery_monitor",
+   "exec": "/system/bin/battery_monitor",
+   "args": "",
+   "class": [],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.ril-daemon2",
+   "exec": "/vendor/bin/hw/rild",
+   "args": "-c 2",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "cache",
+    "inet",
+    "misc",
+    "audio",
+    "sdcard_r",
+    "sdcard_rw",
+    "diag",
+    "oem_2901",
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.ril-daemon3",
+   "exec": "/vendor/bin/hw/rild",
+   "args": "-c 3",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "cache",
+    "inet",
+    "misc",
+    "audio",
+    "sdcard_r",
+    "sdcard_rw",
+    "diag",
+    "oem_2901",
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "profiler_daemon",
+   "exec": "/system/bin/profiler_daemon",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.ssr_diag",
+   "exec": "/system/vendor/bin/ssr_diag",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vm_bms",
+   "exec": "/vendor/bin/vm_bms",
+   "args": "",
+   "class": [],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.msm_irqbalance",
+   "exec": "/vendor/bin/msm_irqbalance",
+   "args": "-f /system/vendor/etc/msm_irqbalance.conf",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.msm_irqbal_lb",
+   "exec": "/vendor/bin/msm_irqbalance",
+   "args": "-f /system/vendor/etc/msm_irqbalance_little_big.conf",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.msm_irqbl_sdm630",
+   "exec": "/vendor/bin/msm_irqbalance",
+   "args": "-f /system/vendor/etc/msm_irqbalance_sdm630.conf",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.LKCore-dbg",
+   "exec": "/vendor/bin/LKCore",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "log",
+    "diag",
+    "net_raw"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.LKCore-rel",
+   "exec": "/vendor/bin/LKCore",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "log",
+    "diag"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "qseeproxydaemon",
+   "exec": "/system/vendor/bin/qseeproxydaemon",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "esepmdaemon",
+   "exec": "/system/vendor/bin/esepmdaemon",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "nfc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "poweroffhandler",
+   "exec": "/system/vendor/bin/poweroffhandler",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "media",
+   "group": [
+    "graphics",
+    "audio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.power_off_alarm",
+   "exec": "/vendor/bin/power_off_alarm",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "vendor.hbtp",
+   "exec": "/vendor/bin/hbtp_daemon",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "chre",
+   "exec": "/vendor/bin/chre",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "bugreport",
+   "exec": "/system/bin/dumpstate",
+   "args": "-d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qcom.rc"
+  },
+  {
+   "name": "memory-init-boot",
+   "exec": "/vendor/bin/sh",
+   "args": "/vendor/bin/init.kernel.init_boot-memory.sh",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qti.kernel.rc"
+  },
+  {
+   "name": "memory-post-boot",
+   "exec": "/vendor/bin/sh",
+   "args": "/vendor/bin/init.kernel.post_boot-memory.sh",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qti.kernel.rc"
+  },
+  {
+   "name": "kernel-boot",
+   "exec": "/vendor/bin/sh",
+   "args": "/vendor/bin/init.qti.kernel.sh",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qti.kernel.rc"
+  },
+  {
+   "name": "kernel-post-boot",
+   "exec": "/vendor/bin/sh",
+   "args": "/vendor/bin/init.kernel.post_boot.sh",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "wakelock",
+    "graphics"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qti.kernel.rc"
+  },
+  {
+   "name": "vendor.msm_irqbalance",
+   "exec": "/vendor/bin/msm_irqbalance",
+   "args": "-f /system/vendor/etc/msm_irqbalance.conf",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.qti.kernel.rc"
+  },
+  {
+   "name": "gki.modprobe",
+   "exec": "/vendor/bin/system_dlkm_modprobe.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": "u:r:vendor_modprobe:s0",
+   "rc": "init/hw/init.qti.kernel.rc"
+  },
+  {
+   "name": "vendor.modprobe",
+   "exec": "/vendor/bin/vendor_modprobe.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": "u:r:vendor_modprobe:s0",
+   "rc": "init/hw/init.qti.kernel.rc"
+  },
+  {
+   "name": "stflashtool",
+   "exec": "/vendor/bin/STFlashTool",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "nfc",
+   "group": [
+    "nfc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.stnfc.rc"
+  },
+  {
+   "name": "vendor.pd_mapper",
+   "exec": "/vendor/bin/pd-mapper",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.target.rc"
+  },
+  {
+   "name": "vendor.per_mgr",
+   "exec": "/vendor/bin/pm-service",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/hw/init.target.rc"
+  },
+  {
+   "name": "vendor.per_proxy",
+   "exec": "/vendor/bin/pm-proxy",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.target.rc"
+  },
+  {
+   "name": "vendor.cnss_diag",
+   "exec": "/system/vendor/bin/cnss_diag",
+   "args": "-q -f -t HELIUM",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wifi",
+    "inet",
+    "sdcard_rw",
+    "media_rw",
+    "diag"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/hw/init.target.rc"
+  },
+  {
+   "name": "vendor.ims-dataservice-daemon",
+   "exec": "/vendor/bin/ims-dataservice-daemon",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "inet",
+    "vendor_qti_diag",
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/ims-dataservice-daemon.rc"
+  },
+  {
+   "name": "vendor.ims_rtp_daemon",
+   "exec": "/vendor/bin/ims_rtp_daemon",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "vendor_qti_diag",
+    "inet",
+    "log",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/ims_rtp_daemon.rc"
+  },
+  {
+   "name": "vendor.imsdaemon",
+   "exec": "/vendor/bin/imsdaemon",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "wifi",
+    "inet",
+    "vendor_qti_diag",
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/imsdaemon.rc"
+  },
+  {
+   "name": "vendor.embmsslServer",
+   "exec": "/vendor/bin/embmsslServer",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "oem_2901",
+    "oem_2912"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.embmssl.IEmbms/default"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.embmssl_server.rc"
+  },
+  {
+   "name": "vendor.qcc-vendor",
+   "exec": "/system/vendor/bin/qcc-vendor",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "vendor_qtr",
+    "readproc",
+    "system",
+    "radio",
+    "vendor_rfs_shared",
+    "sdcard_rw",
+    "media_rw",
+    "sdcard_r"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.qccvndhal_aidl"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/init.qccvendor.rc"
+  },
+  {
+   "name": "vendor.qlm-service",
+   "exec": "/vendor/bin/qlm-service",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.qlm-service.rc"
+  },
+  {
+   "name": "vendor.qt-service",
+   "exec": "/vendor/bin/qt-service",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.qt-service.rc"
+  },
+  {
+   "name": "qti_display_boot",
+   "exec": "/vendor/bin/init.qti.display_boot.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/init.qti.display_boot.rc"
+  },
+  {
+   "name": "fm_dl",
+   "exec": "/vendor/bin/init.qti.fm.sh",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/init.qti.fm.rc"
+  },
+  {
+   "name": "qti-media",
+   "exec": "/vendor/bin/init.qti.media.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "media",
+   "group": [
+    "media"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/init.qti.media.rc"
+  },
+  {
+   "name": "vendor.spdaemon",
+   "exec": "/vendor/bin/spdaemon",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.spdaemon.rc"
+  },
+  {
+   "name": "vendor.sec_nvm",
+   "exec": "/vendor/bin/sec_nvm",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/init.spdaemon.rc"
+  },
+  {
+   "name": "time_daemon",
+   "exec": "/vendor/bin/time_daemon",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/init.time_daemon.rc"
+  },
+  {
+   "name": "wifi_qos_daemon",
+   "exec": "/vendor/bin/wifi_qos_daemon",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "wifi",
+   "group": [
+    "wifi",
+    "inet",
+    "net_admin",
+    "oem_2912",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/init.vendor.wlan.rc"
+  },
+  {
+   "name": "vendor.zui_power_off_alarm",
+   "exec": "/vendor/bin/zui_power_off_alarm",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/init.zuipoweroffalarm.rc"
+  },
+  {
+   "name": "thermal-engine",
+   "exec": "/vendor/bin/thermal-engine-v2",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "oem_2907"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/init_thermal-engine-v2.rc"
+  },
+  {
+   "name": "vendor.ipacm-diag",
+   "exec": "/system/vendor/bin/ipacm-diag",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "diag",
+    "oem_2901"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/ipacm-diag.rc"
+  },
+  {
+   "name": "vendor.ipacm",
+   "exec": "/system/vendor/bin/ipacm",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/ipacm.rc"
+  },
+  {
+   "name": "loc_launcher",
+   "exec": "/vendor/bin/loc_launcher",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "gps",
+   "group": [
+    "gps"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/loc-launcher.rc"
+  },
+  {
+   "name": "lowi-server",
+   "exec": "/vendor/bin/lowi-server",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "gps",
+   "group": [
+    "gps",
+    "wifi",
+    "inet",
+    "oem_2901",
+    "logd"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/lowi-server.rc"
+  },
+  {
+   "name": "vendor.qti.hardware.memtrack",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.memtrack-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "nobody",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/memtrack_qti.rc"
+  },
+  {
+   "name": "vendor.mot.fdr-hal",
+   "exec": "/vendor/bin/hw/motorola.hardware.fdr-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl motorola.hardware.fdr.IFdrControl/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.fdr.service.rc"
+  },
+  {
+   "name": "vendor.mot.health-hal-aidl",
+   "exec": "/vendor/bin/hw/motorola.hardware.health-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.health.service.rc"
+  },
+  {
+   "name": "vendor.mot.health-storage-hal-aidl",
+   "exec": "/vendor/bin/hw/motorola.hardware.health.storage-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl motorola.hardware.health.storage.IMotStorage/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.health.storage.service.rc"
+  },
+  {
+   "name": "vendor.moto_lpsensing",
+   "exec": "/vendor/bin/hw/motorola.hardware.lpsensing-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.lpsensing.service.rc"
+  },
+  {
+   "name": "vendor.mot.pccsec-hal",
+   "exec": "/vendor/bin/hw/motorola.hardware.pccsec-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "vendor_tcmd"
+   ],
+   "interfaces": [
+    "aidl motorola.hardware.pccsec.IPccSec/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.pccsec-service.rc"
+  },
+  {
+   "name": "vendor.mot.rpmb-hal-aidl",
+   "exec": "/vendor/bin/hw/motorola.hardware.rpmb-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.rpmb.service.rc"
+  },
+  {
+   "name": "vendor.moto_sensorext",
+   "exec": "/vendor/bin/hw/motorola.hardware.sensorext-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.sensorext.service.rc"
+  },
+  {
+   "name": "vendor.mot.powershare-hal",
+   "exec": "/vendor/bin/hw/motorola.hardware.wireless.powershare-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.wireless.powershare-service.rc"
+  },
+  {
+   "name": "vendor.mot.wlc-hal",
+   "exec": "/vendor/bin/hw/motorola.hardware.wireless.wlc-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motorola.hardware.wireless.wlc-service.rc"
+  },
+  {
+   "name": "vendor.motosxf",
+   "exec": "/vendor/bin/hw/motosxf",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/motosxf.rc"
+  },
+  {
+   "name": "st_nfc_aidl_service",
+   "exec": "/vendor/bin/hw/android.hardware.nfc-service-st",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "nfc",
+   "group": [
+    "nfc"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/nfc-service-st.rc"
+  },
+  {
+   "name": "vendor.nfc_hal_service",
+   "exec": "/vendor/bin/hw/android.hardware.nqnfc-service.nxp",
+   "args": "",
+   "class": [
+    "early_hal"
+   ],
+   "user": "nfc",
+   "group": [
+    "nfc",
+    "oem_2912"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/nfc2-service-nxp.rc"
+  },
+  {
+   "name": "vendor.nicmd",
+   "exec": "/system/vendor/bin/nicmd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/nicmd.rc"
+  },
+  {
+   "name": "vendor.port-bridge",
+   "exec": "/system/vendor/bin/port-bridge",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "system",
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/port-bridge.rc"
+  },
+  {
+   "name": "poweropt-service",
+   "exec": "/vendor/bin/poweropt-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "readproc",
+    "input"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/poweropt-service.rc"
+  },
+  {
+   "name": "vendor.qconfig",
+   "exec": "/vendor/bin/hw/qconfigservice",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "media",
+   "group": [
+    "camera"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.qconfig.IQConfig/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/qconfig.rc"
+  },
+  {
+   "name": "vendor.qcrild",
+   "exec": "/vendor/bin/hw/qcrilNrd",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "cache",
+    "inet",
+    "misc",
+    "audio",
+    "log",
+    "readproc",
+    "wakelock",
+    "oem_2901",
+    "oem_2912",
+    "wifi",
+    "diag",
+    "input",
+    "vendor_thermal"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/qcrilNrd.rc"
+  },
+  {
+   "name": "vendor.qcrild2",
+   "exec": "/vendor/bin/hw/qcrilNrd",
+   "args": "-c 2",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "cache",
+    "inet",
+    "misc",
+    "audio",
+    "log",
+    "readproc",
+    "wakelock",
+    "oem_2901",
+    "oem_2912",
+    "vendor_thermal"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/qcrilNrd.rc"
+  },
+  {
+   "name": "vendor.qcrild3",
+   "exec": "/vendor/bin/hw/qcrilNrd",
+   "args": "-c 3",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio",
+    "cache",
+    "inet",
+    "misc",
+    "audio",
+    "log",
+    "readproc",
+    "wakelock",
+    "oem_2901",
+    "oem_2912",
+    "vendor_thermal"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/qcrilNrd.rc"
+  },
+  {
+   "name": "vendor.qcrild_bootservice-sh",
+   "exec": "/vendor/bin/init.qcrild.sh",
+   "args": "\"boot\"",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/qcrilNrd.rc"
+  },
+  {
+   "name": "vendor.qcrild_service-sh",
+   "exec": "/vendor/bin/init.qcrild.sh",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "root"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/qcrilNrd.rc"
+  },
+  {
+   "name": "qdcmss",
+   "exec": "/vendor/bin/qdcmss",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "graphics"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/qdcmss.rc"
+  },
+  {
+   "name": "vendor.qesdk-mgr",
+   "exec": "/vendor/bin/qesdk-manager",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/qesdk-manager.rc"
+  },
+  {
+   "name": "vendor.qesdk-securitymgr",
+   "exec": "/vendor/bin/qesdk-secmanager",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/qesdk-secmanager.rc"
+  },
+  {
+   "name": "qfp-daemon",
+   "exec": "/vendor/bin/hw/qfp-daemon",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "drmrpc",
+    "input",
+    "wakelock"
+   ],
+   "interfaces": [
+    "aidl android.hardware.biometrics.fingerprint.IFingerprint/default",
+    "aidl vendor.qti.hardware.fingerprint.IQfpExtendedFingerprint/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/qfp-daemon.rc"
+  },
+  {
+   "name": "qguard",
+   "exec": "/vendor/bin/qguard",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "system",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/qguard.rc"
+  },
+  {
+   "name": "vendor.qmipriod",
+   "exec": "/system/vendor/bin/qmipriod",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/qmipriod.rc"
+  },
+  {
+   "name": "vendor.qms",
+   "exec": "/vendor/bin/qms",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "radio",
+    "wakelock",
+    "wifi",
+    "inet",
+    "net_admin"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/qms.rc"
+  },
+  {
+   "name": "vendor.qseecomd",
+   "exec": "/vendor/bin/qseecomd",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/qseecomd.rc"
+  },
+  {
+   "name": "qttestservice",
+   "exec": "/vendor/bin/qttestservice",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "root",
+   "group": [
+    "media"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/qttestservice.rc"
+  },
+  {
+   "name": "vendor.qwesd",
+   "exec": "/vendor/bin/qwesd",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/qwesd.rc"
+  },
+  {
+   "name": "vendor.shsusrd",
+   "exec": "/system/vendor/bin/shsusrd",
+   "args": "0x22819000 0x0A",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/shsusrd.rc"
+  },
+  {
+   "name": "vendor.qti.snapdragonServices",
+   "exec": "/vendor/bin/snapdragon_services",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.snapdragonServices.ISnapdragonServices/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/snapdragon_services.rc"
+  },
+  {
+   "name": "vendor.tlpd",
+   "exec": "/system/vendor/bin/tlpd",
+   "args": "boot",
+   "class": [
+    "main"
+   ],
+   "user": "radio",
+   "group": [
+    "radio"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/tlpd.rc"
+  },
+  {
+   "name": "vendor.trusteduilistener",
+   "exec": "/vendor/bin/trusteduilistener",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/trusteduilistener.rc"
+  },
+  {
+   "name": "vendor.tzlogd",
+   "exec": "/vendor/bin/tzlogd",
+   "args": "",
+   "class": [
+    "last_start"
+   ],
+   "user": "log",
+   "group": [
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/tzlogd.rc"
+  },
+  {
+   "name": "vendor.tzlogd-dump",
+   "exec": "/vendor/bin/tzlogd",
+   "args": "-d",
+   "class": [],
+   "user": "log",
+   "group": [
+    "log"
+   ],
+   "interfaces": [],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/tzlogd.rc"
+  },
+  {
+   "name": "vendor.usbcare",
+   "exec": "/vendor/bin/usbcare",
+   "args": "",
+   "class": [],
+   "user": "system",
+   "group": [
+    "usb"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": "u:r:hal_mot_vendor_usbcare:s0",
+   "rc": "init/usbcare.rc"
+  },
+  {
+   "name": "vendor-dolby-media-c2-hal",
+   "exec": "/vendor/bin/hw/vendor.dolby.media.c2-default-service-dax",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "mediacodec",
+   "group": [
+    "camera",
+    "mediadrm",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.dolby.media.c2-default-service-dax.rc"
+  },
+  {
+   "name": "vendor.dolby.media.c2-service-vision",
+   "exec": "/vendor/bin/hw/vendor.dolby.media.c2-service-vision",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "mediacodec",
+   "group": [
+    "camera",
+    "mediadrm",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.dolby.media.c2-service-vision.rc"
+  },
+  {
+   "name": "vendor.dpmd",
+   "exec": "/vendor/bin/vendor.dpmd",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "root",
+   "group": [
+    "system",
+    "readproc",
+    "inet",
+    "radio",
+    "wakelock",
+    "oem_2901"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.dpmd.rc"
+  },
+  {
+   "name": "vendor.qsap.mpamsvc",
+   "exec": "/vendor/bin/qsap_mpamsvc",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qsap.mpamsvc.rc"
+  },
+  {
+   "name": "vendor.qsap.qapeservice",
+   "exec": "/vendor/bin/qsap_qapeservice",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qsap.qapeservice.rc"
+  },
+  {
+   "name": "vendor.qsap.sensors",
+   "exec": "/vendor/bin/qsap_sensors",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wakelock"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qsap.sensors.rc"
+  },
+  {
+   "name": "MemHal-1-0",
+   "exec": "/vendor/bin/hw/vendor.qti.MemHal-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "readproc",
+    "oem_2907"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.MemHal.IMemHal/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.MemHal-service.rc"
+  },
+  {
+   "name": "vendor.adsprpcd",
+   "exec": "/vendor/bin/adsprpcd",
+   "args": "rootpd adsp",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "media"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.adsprpc-guestos-service.rc"
+  },
+  {
+   "name": "vendor.audioadsprpcd_audiopd",
+   "exec": "/vendor/bin/audioadsprpcd",
+   "args": "audiopd adsp",
+   "class": [
+    "main"
+   ],
+   "user": "media",
+   "group": [
+    "media"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.audio-adsprpc-service.rc"
+  },
+  {
+   "name": "vendor.camera-provider",
+   "exec": "/vendor/bin/hw/vendor.qti.camera.provider-service_64",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "cameraserver",
+   "group": [
+    "audio",
+    "camera",
+    "input",
+    "drmrpc",
+    "oem_2907",
+    "oem_2912",
+    "wakelock"
+   ],
+   "interfaces": [
+    "aidl android.hardware.camera.provider.ICameraProvider/vendor_qti/0",
+    "aidl vendor.qti.hardware.camera.offlinecamera.IOfflineCameraService/default",
+    "aidl vendor.qti.hardware.camera.aon.IAONService/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.camera.provider-service_64.rc"
+  },
+  {
+   "name": "vendor.cdsprpcd",
+   "exec": "/vendor/bin/cdsprpcd",
+   "args": "rootpd cdsp",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.cdsprpc-service.rc"
+  },
+  {
+   "name": "vendor.diag-router",
+   "exec": "/vendor/bin/diag-router",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.diag_userdebug.rc"
+  },
+  {
+   "name": "vendor.qti.hardware.alarm-service",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.alarm-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.alarm.IAlarm/default"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.alarm-service.rc"
+  },
+  {
+   "name": "vendor.c2pa",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.c2pa-aidl-service-qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.c2pa-aidl-service-qti.rc"
+  },
+  {
+   "name": "vendor.c2pa_optimized",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.c2pa-aidl-service-qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.c2pa.IC2PA/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.c2pa-aidl-service-qti.rc"
+  },
+  {
+   "name": "vendor.capabilityconfigstore",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.capabilityconfigstore-service.rc"
+  },
+  {
+   "name": "vendor.qti.hardware.display.allocator",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.display.allocator-service",
+   "args": "",
+   "class": [
+    "hal",
+    "animation"
+   ],
+   "user": "system",
+   "group": [
+    "graphics",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.display.allocator-service.rc"
+  },
+  {
+   "name": "vendor.qti.hardware.display.color-service",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.display.color-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.display.color.IDisplayColor/default",
+    "aidl vendor.qti.hardware.display.postproc.IDisplayPostproc/default"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.display.color-service.rc"
+  },
+  {
+   "name": "vendor.qti.hardware.display.composer",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.display.composer-service",
+   "args": "",
+   "class": [
+    "hal",
+    "animation"
+   ],
+   "user": "system",
+   "group": [
+    "graphics",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.display.composer-service.rc"
+  },
+  {
+   "name": "vendor.qti.hardware.display.demura",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.display.demura-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "graphics"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.display.demura.IDemuraFileFinder/default"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.display.demura-service.rc"
+  },
+  {
+   "name": "vendor.dspservice",
+   "exec": "/vendor/bin/dspservice",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wakelock",
+    "oem_2908"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.dsp.IDspService/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.dsp-service.rc"
+  },
+  {
+   "name": "vendor.qti.light",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.lights.service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.lights.service.rc"
+  },
+  {
+   "name": "minkipcbinder-service",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.minkipcbinder@1.0-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.minkipcbinder.IMinkServer/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.minkipcbinder@1.0-service.rc"
+  },
+  {
+   "name": "perf2-hal-1-0",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.perf2-hal-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "root",
+   "group": [
+    "root",
+    "system",
+    "readproc",
+    "oem_2907"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.perf2"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.perf2-hal-service.rc"
+  },
+  {
+   "name": "vendor.secureprocessor",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.secureprocessor",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.secureprocessor.rc"
+  },
+  {
+   "name": "vendor.secureprocessor_optimized",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.secureprocessor",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.secureprocessor.device.ISecureProcessor/qti-tee",
+    "aidl vendor.qti.hardware.secureprocessor.device.ISecureProcessor/qti-tvm"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.secureprocessor.rc"
+  },
+  {
+   "name": "vendor.qti.hardware.sensorscalibrate-service",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.sensorscalibrate.ISensorsCalibrate/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.sensorscalibrate-service.rc"
+  },
+  {
+   "name": "vendor.servicetrackeraidl",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.servicetrackeraidl-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.servicetrackeraidl.IServicetracker/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.servicetrackeraidl-service.rc"
+  },
+  {
+   "name": "vendor.soter",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.soter-service",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "drmrpc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.soter-service.rc"
+  },
+  {
+   "name": "vendor.trustedui",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.trustedui-aidl-service-qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.trustedui-aidl-service-qti.rc"
+  },
+  {
+   "name": "vendor.trustedui_optimized",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.trustedui-aidl-service-qti",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.trustedui.ITrustedUI/default",
+    "aidl vendor.qti.hardware.trustedui.ITrustedInput/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.trustedui-aidl-service-qti.rc"
+  },
+  {
+   "name": "vendor.qti.vibrator",
+   "exec": "/vendor/bin/hw/vendor.qti.hardware.vibrator.service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "input"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.vibrator.service.rc"
+  },
+  {
+   "name": "vendor.wifilearner",
+   "exec": "/system/vendor/bin/wifilearner",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "wifi",
+   "group": [
+    "wifi"
+   ],
+   "interfaces": [
+    "vendor.qti.hardware.wifi.wifilearner@1.0::IWifiStats wifiStats"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc"
+  },
+  {
+   "name": "vendor-qti-media-c2-hal-1-0",
+   "exec": "/vendor/bin/hw/vendor.qti.media.c2@1.0-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "mediacodec",
+   "group": [
+    "mediadrm",
+    "camera",
+    "drmrpc",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.media.c2@1.0-service.rc"
+  },
+  {
+   "name": "vendor-qti-media-c2audio-hal-1-0",
+   "exec": "/vendor/bin/hw/vendor.qti.media.c2audio@1.0-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "mediacodec",
+   "group": [
+    "mediadrm",
+    "camera",
+    "drmrpc",
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.media.c2audio@1.0-service.rc"
+  },
+  {
+   "name": "pasr-hal",
+   "exec": "/vendor/bin/hw/vendor.qti.memory.pasrmanager-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.memory.pasrmanager.IPasrManager/default"
+   ],
+   "flags": [
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.memory.pasrmanager-service.rc"
+  },
+  {
+   "name": "psiclient",
+   "exec": "/vendor/bin/hw/vendor.qti.psiclient@1.0-service",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.psiclient@1.0-service.rc"
+  },
+  {
+   "name": "vendor.qspa-service",
+   "exec": "/vendor/bin/vendor.qti.qspa-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.qspa-service.rc"
+  },
+  {
+   "name": "qspmhal",
+   "exec": "/vendor/bin/vendor.qti.qspmhal-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.qspmhal.IQspmhal/default"
+   ],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.qspmhal-service.rc"
+  },
+  {
+   "name": "vendor.qtvm.proxyclient-service",
+   "exec": "/vendor/bin/vendor.qti.qtvm.proxyclient-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.qti.qtvm.proxyclient-service.rc"
+  },
+  {
+   "name": "vendor.rmt_storage",
+   "exec": "/vendor/bin/rmt_storage",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.rmt_storage.rc"
+  },
+  {
+   "name": "syshealthmon-service",
+   "exec": "/vendor/bin/vendor.qti.syshealthmon-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.syshealthmon-service.rc"
+  },
+  {
+   "name": "vendor.tftp_server",
+   "exec": "/vendor/bin/tftp_server",
+   "args": "",
+   "class": [
+    "core"
+   ],
+   "user": "root",
+   "group": [],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.qti.tftp.rc"
+  },
+  {
+   "name": "vendor.sensors",
+   "exec": "/vendor/bin/sscrpcd",
+   "args": "sensorspd adsp",
+   "class": [
+    "early_hal"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "wakelock"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.sensors.sscrpcd.rc"
+  },
+  {
+   "name": "tsa_hdcp_service",
+   "exec": "/vendor/bin/tsa_hdcp_service",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "inet",
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.tsa.hdcp.IHDCPInterface/default"
+   ],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/vendor.tsa.hdcp-IHDCPInterface.rc"
+  },
+  {
+   "name": "zui-alarm-hal",
+   "exec": "/vendor/bin/hw/vendor.zuialarm.hardware.alarm-service",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "system",
+   "group": [
+    "system"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vendor.zuialarm.hardware.alarm-service.rc"
+  },
+  {
+   "name": "vndservicemanager",
+   "exec": "/vendor/bin/vndservicemanager",
+   "args": "/dev/vndbinder",
+   "class": [
+    "core"
+   ],
+   "user": "system",
+   "group": [
+    "system",
+    "readproc"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/vndservicemanager.rc"
+  },
+  {
+   "name": "vendor.vppservice",
+   "exec": "/vendor/bin/vppservice",
+   "args": "",
+   "class": [
+    "hal"
+   ],
+   "user": "media",
+   "group": [
+    "camera",
+    "system"
+   ],
+   "interfaces": [
+    "aidl vendor.qti.hardware.vpp.IVppService/default"
+   ],
+   "flags": [
+    "oneshot",
+    "disabled"
+   ],
+   "seclabel": null,
+   "rc": "init/vppservice.rc"
+  },
+  {
+   "name": "wfdvndservice",
+   "exec": "/vendor/bin/wfdvndservice",
+   "args": "",
+   "class": [
+    "main"
+   ],
+   "user": "system",
+   "group": [
+    "inet"
+   ],
+   "interfaces": [],
+   "flags": [
+    "disabled",
+    "oneshot"
+   ],
+   "seclabel": null,
+   "rc": "init/wfdvndservice.rc"
+  },
+  {
+   "name": "xtra-daemon",
+   "exec": "/vendor/bin/xtra-daemon",
+   "args": "",
+   "class": [
+    "late_start"
+   ],
+   "user": "gps",
+   "group": [
+    "inet",
+    "diag",
+    "gps",
+    "system",
+    "radio",
+    "logd"
+   ],
+   "interfaces": [],
+   "flags": [],
+   "seclabel": null,
+   "rc": "init/xtra-daemon.rc"
+  }
+ ],
+ "odm": [],
+ "vendor_dlkm": [],
+ "system_dlkm": []
+}

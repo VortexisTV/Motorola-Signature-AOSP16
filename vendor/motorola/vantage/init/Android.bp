@@ -1,0 +1,8 @@
+// init fragments of the vantage integration layer (hand-maintained).
+
+prebuilt_etc {
+    name: "init.vantage.media.rc",
+    src: "init.vantage.media.rc",
+    sub_dir: "init",
+    system_ext_specific: true,
+}

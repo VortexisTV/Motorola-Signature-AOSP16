@@ -1,0 +1,222 @@
+{
+ "title": "Camera validation: validate-camera",
+ "generated": "2026-10-11T02:51:21",
+ "context": {
+  "maps": "/system=/work/aosp/out/target/product/tdgsi_arm64_ab/system /system_ext=/work/aosp/out/target/product/tdgsi_arm64_ab/system/system_ext /product=/work/aosp/out/target/product/tdgsi_arm64_ab/system/product /apex=/work/aosp/out/target/product/tdgsi_arm64_ab/apex /vendor=/work/fw/W2WVS36.55-95-5-1/root/vendor /odm=/work/fw/W2WVS36.55-95-5-1/root/odm"
+ },
+ "counts": {
+  "FAIL": 0,
+  "WARNING": 3,
+  "UNKNOWN": 6,
+  "PASS": 10
+ },
+ "results": [
+  {
+   "id": "hal.provider",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "vendor declares android.hardware.camera.provider (aidl) V3 ['ICameraProvider/vendor_qti/0']",
+   "details": []
+  },
+  {
+   "id": "app.installed",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "com.motorola.camera5 10.0.56.61 installed under /product with its original certificate",
+   "details": [
+    "/work/aosp/out/target/product/tdgsi_arm64_ab/system/product/priv-app/MotCamera5/MotCamera5.apk",
+    "version 10.0.56.61",
+    "certificate be8804a55e9045a580d204979f6efb15c058731aa1021b78c046feab8ae76a26"
+   ]
+  },
+  {
+   "id": "app.required_libraries",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "required shared libraries present: ['com.motorola.motosignature']",
+   "details": []
+  },
+  {
+   "id": "app.optional_libraries",
+   "area": "camera",
+   "status": "WARNING",
+   "summary": "optional Motorola libraries absent by design: ['moto-settings', 'moto-core_services', 'moto-active-stylus']; features implemented through them are unavailable (see CAMERA_PORT.md section 3)",
+   "details": []
+  },
+  {
+   "id": "native.vendor_public",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "20 vendor processing libraries are on /vendor and in the vendor public-library list (loadable by the app)",
+   "details": [
+    "libOpenCL.so",
+    "libarc.ion.so",
+    "libarcsoft_dualcam_refocus_image.so",
+    "libarcsoft_dualcam_refocus_image_8845.so",
+    "libarcsoft_dualcam_refocus_preview.so",
+    "libarcsoft_dualcam_refocus_preview_8845.so",
+    "libarcsoft_portrait_distortion_correction.so",
+    "libarcsoft_qnnhtp.so",
+    "libarcsoft_stellartrack.so",
+    "libarcsoft_tf_sr.so",
+    "libarcsoft_turbo_fusion_raw_portrait_super_night.so",
+    "libarcsoft_turbo_fusion_raw_super_night.so",
+    "libarcsoft_turbo_hdr_raw.so",
+    "libarcsoft_turbo_hdr_raw_portrait.so",
+    "libarcsoft_turbo_motion_capture_raw.so",
+    "libcdsprpc.so",
+    "libenginepostproc.moto.so",
+    "libfastcvopt.so",
+    "libportrait_repair_qnn.so",
+    "libqti-perfd-client.so"
+   ]
+  },
+  {
+   "id": "native.vendor_private",
+   "area": "camera",
+   "status": "WARNING",
+   "summary": "17 vendor libraries named by the app exist but are not public; the app cannot load them (identical on stock, since /vendor is unchanged)",
+   "details": [
+    "libQnnHtp.so",
+    "libQnnHtpPrepare.so",
+    "libQnnSystem.so",
+    "libSNPE.so",
+    "libbase.so",
+    "libc++.so",
+    "libcutils.so",
+    "libdmabufheap.so",
+    "libhardware.so",
+    "libhidlbase.so",
+    "libion.so",
+    "liblzma.so",
+    "libprocessgroup.so",
+    "libunwindstack.so",
+    "libutils.so",
+    "libvmmem.so",
+    "vendor.qti.hardware.dsp@1.0.so"
+   ]
+  },
+  {
+   "id": "native.other_soc",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "52 libraries named by the app do not exist on this device (other SoC variants); optional by manifest",
+   "details": []
+  },
+  {
+   "id": "permissions.motorola",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "11 Motorola permissions are defined in the image by packages sharing the camera's certificate (granted by signature)",
+   "details": [
+    "com.motorola.camera.permission.COLOR_TONE_TRAINING_STATE <- com.motorola.camera5",
+    "com.motorola.camera.permission.CONTROL_CAMERA <- com.motorola.camera5",
+    "com.motorola.camera5.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION <- com.motorola.camera5",
+    "com.motorola.hardware.ACCESS_CLI <- com.motorola.motosignature.app",
+    "com.motorola.permission.ACCESS_APUSYS <- com.motorola.motosignature.app",
+    "com.motorola.permission.ACCESS_CHECKIN <- com.motorola.motosignature.app",
+    "com.motorola.permission.ACCESS_MOT_IMAGER <- com.motorola.motosignature.app",
+    "com.motorola.permission.CONTROL_DISPLAY_BRIGHTNESS <- com.motorola.motosignature.app",
+    "com.motorola.permission.GET_ZEN_MODE_CONFIG <- com.motorola.motosignature.app",
+    "com.motorola.permission.MANAGE_NOTIFICATIONS <- com.motorola.motosignature.app",
+    "com.motorola.permission.SET_ZEN_MODE_CONFIG <- com.motorola.motosignature.app"
+   ]
+  },
+  {
+   "id": "permissions.unavailable",
+   "area": "camera",
+   "status": "WARNING",
+   "summary": "6 requested permissions cannot be granted in this image (their definers are not ported or use another key)",
+   "details": [
+    "com.motorola.camera.ai.colortone.PERMISSION_ACCESS_PROVIDER",
+    "com.motorola.camera.permission.CAMERA_STATE",
+    "com.motorola.ccc.notification.READ_NOTIFICATIONS",
+    "com.motorola.imagertuning.content.ACCESS",
+    "com.motorola.permission.WRITE_SECURE_SETTINGS",
+    "com.motorola.permission.mobiledesktop.rdp"
+   ]
+  },
+  {
+   "id": "permissions.privapp",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "privileged allowlist under /product: ['android.permission.START_ACTIVITIES_FROM_BACKGROUND', 'android.permission.STOP_APP_SWITCHES', 'android.permission.WRITE_SECURE_SETTINGS']",
+   "details": []
+  },
+  {
+   "id": "permissions.hidden_api",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "com.motorola.camera5 is on the hidden-API allowlist (it is not platform-signed and uses non-SDK interfaces)",
+   "details": []
+  },
+  {
+   "id": "selinux.app_context",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "com.motorola.camera5 runs in moto_camera_app; moto_camera_app_202504 is mapped and referenced 12 times by the stock vendor policy",
+   "details": [
+    "user=_app isPrivApp=true seinfo=common2 domain=moto_camera_app name=com.motorola.camera5 type=app_data_file levelFrom=user",
+    "user=_app isPrivApp=true seinfo=common2 domain=moto_camera_app name=com.motorola.camera5:* type=app_data_file levelFrom=user"
+   ]
+  },
+  {
+   "id": "video.dolby_vision_inputs",
+   "area": "camera",
+   "status": "PASS",
+   "summary": "Dolby Vision recording: the app's feature flag and a vendor encoder for video/dolby-vision are present (the HAL vendor tag and the result need the device)",
+   "details": [
+    "app feature list for vantage names VIDEO_DOLBY_VISION: True",
+    "vendor Dolby Vision encoders: ['c2.dolby.encoder.hevc', 'c2.qti.dv.encoder']",
+    "c2.dolby.encoder.hevc (media_codecs_c2_dolby_vision.xml)",
+    "c2.qti.dv.encoder (media_codecs_canoe_sku1_vendor.xml)",
+    "c2.qti.dv.encoder (media_codecs_canoe_sku2_vendor.xml)",
+    "c2.qti.dv.encoder (media_codecs_canoe_v1_vendor.xml)",
+    "c2.qti.dv.encoder (media_codecs_canoe_v2_vendor.xml)",
+    "c2.qti.dv.encoder (media_codecs_canoe_v3_vendor.xml)"
+   ]
+  },
+  {
+   "id": "hw.launch_preview",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "application start and live preview: requires the device",
+   "details": []
+  },
+  {
+   "id": "hw.lenses",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "main, ultrawide, telephoto and front cameras (HAL camera list as seen by AOSP): requires the device",
+   "details": []
+  },
+  {
+   "id": "hw.still_modes",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "HDR, night, portrait, macro, pro and high-resolution capture: requires the device",
+   "details": []
+  },
+  {
+   "id": "hw.video",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "video recording, stabilisation, slow motion / high frame rate: requires the device",
+   "details": []
+  },
+  {
+   "id": "hw.dolby_vision",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "Dolby Vision recording: requires the device",
+   "details": []
+  },
+  {
+   "id": "hw.ai_processing",
+   "area": "hardware",
+   "status": "UNKNOWN",
+   "summary": "Motorola/ArcSoft/QNN processing quality compared with stock: requires the device",
+   "details": []
+  }
+ ]
+}

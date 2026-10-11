@@ -1,0 +1,16 @@
+# Stock rules for hal_telephony_client (rendered from CIL by sepolicy_slice.py; review before use)
+
+### from plat policy
+allow hal_telephony_client hal_telephony_server:binder { call transfer };
+allow hal_telephony_client hal_telephony_server:fd { use };
+allow hal_telephony_client hal_telephony_server:binder { transfer };
+allow hal_telephony_client hal_telephony_hwservice:hwservice_manager { find };
+allow hal_telephony_client hal_radio_service:service_manager { find };
+allow hal_telephony_server hal_telephony_client:binder { transfer };
+allow hal_telephony_server hal_telephony_client:binder { call transfer };
+allow hal_telephony_server hal_telephony_client:fd { use };
+
+### from vendor policy
+# (vendor side, applies via mapping) allow hal_telephony_client vendor_hal_telephony_service_202504:service_manager { find };
+# (vendor side, applies via mapping) allow hal_telephony_client vendor_hal_telephony_service2:service_manager { find };
+

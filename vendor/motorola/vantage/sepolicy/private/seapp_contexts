@@ -1,0 +1,4 @@
+# Mirrors the stock entries (system_ext_seapp_contexts / product_seapp_contexts).
+user=_app seinfo=platform name=org.codeaurora.ims isPrivApp=true domain=vendor_qtelephony type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=common2 domain=moto_camera_app name=com.motorola.camera5 type=app_data_file levelFrom=user
+user=_app isPrivApp=true seinfo=common2 domain=moto_camera_app name=com.motorola.camera5:* type=app_data_file levelFrom=user

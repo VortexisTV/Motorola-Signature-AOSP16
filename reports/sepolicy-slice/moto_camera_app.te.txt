@@ -1,0 +1,27 @@
+# Stock rules for moto_camera_app (rendered from CIL by sepolicy_slice.py; review before use)
+
+### from product policy
+typeattribute moto_camera_app appdomain;
+typeattribute moto_camera_app bluetoothdomain;
+typeattribute moto_camera_app coredomain;
+typeattribute moto_camera_app domain;
+typeattribute moto_camera_app moto_qcxdsp_domain;
+typeattribute moto_camera_app motoappdomain;
+typeattribute moto_camera_app netdomain;
+type_transition moto_camera_app tmpfs:file appdomain_tmpfs;
+allow moto_camera_app moto_camera_app_userfaultfd:anon_inode { ioctl read create };
+allow moto_camera_app appdomain_tmpfs:file { ioctl read write getattr map execute };
+allowxperm moto_camera_app appdomain_tmpfs:file ioctl { 0x7701-0x770b };
+type_transition moto_camera_app moto_camera_app:anon_inode moto_camera_app_userfaultfd "[userfaultfd]";
+
+### from vendor policy
+# typeattribute moto_camera_app domain;
+# typeattribute moto_camera_app hal_arcsoftpp_client;
+# typeattribute moto_camera_app hal_camera_client;
+# typeattribute moto_camera_app halclientdomain;
+# typeattribute moto_camera_app vendor_hal_dspmanager_client;
+# typeattribute moto_camera_app vendor_hal_perf_client;
+# (vendor side, applies via mapping) allow moto_camera_app_202504 mot_core_property_type:file { read getattr map open };
+# (vendor side, applies via mapping) allow moto_camera_app_202504 audio_config_prop_202504:file { read getattr map open };
+# (vendor side, applies via mapping) allow moto_camera_app_202504 vendor_xdsp_device:chr_file { ioctl read getattr lock map open watch watch_reads };
+

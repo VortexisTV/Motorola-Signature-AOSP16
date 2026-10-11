@@ -1,0 +1,485 @@
+{
+  "firmware_dir": "stockfw",
+  "flashfile_header": {
+    "phone_model": {
+      "model": "vantage_g"
+    },
+    "software_version": {
+      "version": "vantage_g-user 16 W2WVS36.55-95-5-1 160ef0-79cc28 release-keys MW-466M8845_DE90_22.2004.01.53.44R"
+    },
+    "subsidy_lock_config": {
+      "MD5": "d41d8cd98f00b204e9800998ecf8427e",
+      "name": "slcf_rev_d_default_v1.0.nvm"
+    },
+    "regulatory_config": {
+      "SHA1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "name": "regulatory_info_default.png"
+    },
+    "cid_template_config": {
+      "SHA1": "cfc1136c36955ba5ffe514efdf0037e95e47bef3",
+      "name": "cid_template.dat"
+    },
+    "cid_value": {
+      "value": "0x0032"
+    },
+    "apex_rescue": {
+      "enabled": "false"
+    },
+    "sparsing": {
+      "enabled": "true",
+      "max-sparse-size": "536870912"
+    },
+    "interfaces": {}
+  },
+  "files": [
+    {
+      "name": "BTFM.bin",
+      "size": 2003020,
+      "sha256": "d0cbc3fa3e7436108d4d81a9bbf7d9c9fba68914a1f5aff4ed2d7098e5df14ef",
+      "md5": "9810a10ec9f6d9492a41e029a94cb395",
+      "partition": "bluetooth",
+      "flashfile_md5": "9810a10ec9f6d9492a41e029a94cb395",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "VANTAGE_G_W2WVS36.55-95-5-1_subsidy-DEFAULT_regulatory-DEFAULT_cid50_CFC.info.txt",
+      "size": 926,
+      "sha256": "176db82b4b747a2e8bfcf41c4b4bbe2599cc3eee98c2013dfb5841bfc7b053ca",
+      "md5": "b0c52ba317b7ee2662164eafead8a7c5"
+    },
+    {
+      "name": "boot.img",
+      "size": 100663296,
+      "sha256": "d18809a3fcb433f26dc436bd4049ee8c5c030429f2a66d3bb69b1aeb1942dd17",
+      "md5": "3a82f14ba0429800ed11770c3fb70e92",
+      "partition": "boot",
+      "flashfile_md5": "3a82f14ba0429800ed11770c3fb70e92",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "bootloader.img",
+      "size": 84743936,
+      "sha256": "07cd9b0cabf5efbeddfd49c214a7d525d207a5d15d1f0fb685f55ff16dfc88f5",
+      "md5": "a8bf667ef38fee09a9f76f5325131588",
+      "partition": "bootloader",
+      "flashfile_md5": "a8bf667ef38fee09a9f76f5325131588",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "cid_template.dat",
+      "size": 44,
+      "sha256": "e0622885c2ee758d2e5db14a15113801672207142ac73a67fe53053d060b4898",
+      "md5": "fd086fc89b910d6b0dc51ff1925adb2c"
+    },
+    {
+      "name": "cmf_color_range_full_list.txt",
+      "size": 33,
+      "sha256": "fccf0315c6e665f7aed0307e4cf75a57ae99d809679ffe50692c4b5e2824af35",
+      "md5": "f182c76f7058254aa03a03598e5e3428"
+    },
+    {
+      "name": "dspso.bin",
+      "size": 77594624,
+      "sha256": "b57af2e00165ecec163f49b6cafee6c7edf9925dbddb4c08328acb215dcd087b",
+      "md5": "b6a22a7e0038890dddf346dadafda768",
+      "partition": "dsp",
+      "flashfile_md5": "b6a22a7e0038890dddf346dadafda768",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "dtbo.img",
+      "size": 75497472,
+      "sha256": "4a0c65d93e26da100536345daf19075df1c20ed1e3d764614a3118fe25b981e8",
+      "md5": "5f169b4d2a6db4f0721f35c883a44752",
+      "partition": "dtbo",
+      "flashfile_md5": "5f169b4d2a6db4f0721f35c883a44752",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "flashfile.xml",
+      "size": 6616,
+      "sha256": "9d63b729660be6571853172b8fdba38689882bfdb23502bba55f6abd4d5fc2b3",
+      "md5": "bf7bb8d36483da4ca7bf7ee3ebd0960a"
+    },
+    {
+      "name": "gpt.bin",
+      "size": 211712,
+      "sha256": "2259b77bf66453b9a03292189f95f4830cef3698045b9d7a2ee49399de2c7b90",
+      "md5": "faecf772d88d41c8d08ba9d8a0ac1ea0",
+      "partition": "partition",
+      "flashfile_md5": "faecf772d88d41c8d08ba9d8a0ac1ea0",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "init_boot.img",
+      "size": 8388608,
+      "sha256": "94a7d5d78659dd12b2a3a1aae627ff4bc82811764f2c3e82f4f01385e2d26160",
+      "md5": "76452dbf124040beed4591f3187482c5",
+      "partition": "init_boot",
+      "flashfile_md5": "76452dbf124040beed4591f3187482c5",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "logo.bin",
+      "size": 27512832,
+      "sha256": "06e96c5eb7ec3e943b9e2668e8bfc0978b919590a95d989e8cd9232fce031c5a",
+      "md5": "6825b79e4a264348e5669fee74cf1c22",
+      "partition": "logo",
+      "flashfile_md5": "6825b79e4a264348e5669fee74cf1c22",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "pvmfw.img",
+      "size": 1048576,
+      "sha256": "6db5fc983c90cce026032bb5936bae56fdc102cb42cf1ebbc2bcdd8ffcccfc2e",
+      "md5": "d88c0d68694fa5beb502f088540cb07b",
+      "partition": "pvmfw",
+      "flashfile_md5": "d88c0d68694fa5beb502f088540cb07b",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "radio.img",
+      "size": 222324480,
+      "sha256": "be460b8cab77b76ac1689dba95ef70426e8a70671e642cafef476dcb08f8cb76",
+      "md5": "dfbc5fd8ed3dd9459e9c8afa6eff386a",
+      "partition": "radio",
+      "flashfile_md5": "dfbc5fd8ed3dd9459e9c8afa6eff386a",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "recovery.img",
+      "size": 134217728,
+      "sha256": "cc6161a79a78870ed9d9a437041cd73cad20ba2cb4e4d6ec66d96fea98dad178",
+      "md5": "fde57f1b95f4c05966365c84645e3e53",
+      "partition": "recovery",
+      "flashfile_md5": "fde57f1b95f4c05966365c84645e3e53",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "regulatory_info_default.png",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "md5": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+      "name": "servicefile.xml",
+      "size": 6270,
+      "sha256": "f1dd06d62dc5ce82541e4231c59d3de8a989caee1053684fe6dee17cc1f6663f",
+      "md5": "225ea67df4a083985d1da8e05a3d02de"
+    },
+    {
+      "name": "signing-info.txt",
+      "size": 3347,
+      "sha256": "b9159df1665ab8199060ef3bddf57997aa7691798a95084a5dc4098251ef6ec6",
+      "md5": "0e3904d2d8767212b6e67ba29a0e347d"
+    },
+    {
+      "name": "slcf_rev_d_default_v1.0.nvm",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "md5": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+      "name": "super.img_sparsechunk.0",
+      "size": 492519640,
+      "sha256": "479be8833da6705e8bc9274dd34fc960b601e1c20325e126b3e887ba02f134b1",
+      "md5": "c6952fc238b0a47eab92c99a7db9f8c3",
+      "partition": "super",
+      "flashfile_md5": "c6952fc238b0a47eab92c99a7db9f8c3",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.1",
+      "size": 476745892,
+      "sha256": "5aba30bf15cd3bff4cae61782a19d2b38b12fa400401abdf219fdf6d992f634c",
+      "md5": "4d1f3929e59fea9a9ebffb1b8254636c",
+      "partition": "super",
+      "flashfile_md5": "4d1f3929e59fea9a9ebffb1b8254636c",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.2",
+      "size": 469762184,
+      "sha256": "0636c125eaea0e8f5f4db45333c7f86170b01da61fd2c11ad9b5a6721d10293f",
+      "md5": "b70add8917bffc8a95eb060739a27fb6",
+      "partition": "super",
+      "flashfile_md5": "b70add8917bffc8a95eb060739a27fb6",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.3",
+      "size": 469762184,
+      "sha256": "25d699c6545c0994f22b02b9d8b6b98454c7897322a27ff181e26ce8798a9590",
+      "md5": "78938ee37627e8fcf88c3341397b40e6",
+      "partition": "super",
+      "flashfile_md5": "78938ee37627e8fcf88c3341397b40e6",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.4",
+      "size": 469762184,
+      "sha256": "b511019a75402b8cc14e2bd7f24a350da29e69c9afe2dc3d40e01925e7b5cd8d",
+      "md5": "49063e93e9c91fb881fc0e252dd10adf",
+      "partition": "super",
+      "flashfile_md5": "49063e93e9c91fb881fc0e252dd10adf",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.5",
+      "size": 469762184,
+      "sha256": "3e3973bcaf0a6def32ec7203311f89e96969f74b68bd86784194c89090c36d9f",
+      "md5": "fd51fb12954dc5175da56e5f443982a9",
+      "partition": "super",
+      "flashfile_md5": "fd51fb12954dc5175da56e5f443982a9",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.6",
+      "size": 469762184,
+      "sha256": "7a03156f5dff4cd088c4f06f4640a7916086ed75fb72ce734b1d528e9e0452cc",
+      "md5": "70f058ce75e16e4024574ad17f60f4d1",
+      "partition": "super",
+      "flashfile_md5": "70f058ce75e16e4024574ad17f60f4d1",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.7",
+      "size": 469762184,
+      "sha256": "5cf312f6d6f7233172c8fa958003d42e7b2575a47738ed2e896fcf4f8d29a43e",
+      "md5": "039a27b1d1854881ee82833ac271aa29",
+      "partition": "super",
+      "flashfile_md5": "039a27b1d1854881ee82833ac271aa29",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.8",
+      "size": 469762184,
+      "sha256": "fb1b2ffd7faaf1f6ad7b92bd078d8532918f78826d14d80a59846c79e26e97f7",
+      "md5": "b25b341fbca68dee6d54bd523b70ff2a",
+      "partition": "super",
+      "flashfile_md5": "b25b341fbca68dee6d54bd523b70ff2a",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.9",
+      "size": 469762184,
+      "sha256": "af29f6525dacf8b0431e1ebfdce4c5a272335f6ff7ffe8abd04f21b345f5305e",
+      "md5": "134111a52539a11840e2bed3f5570ee8",
+      "partition": "super",
+      "flashfile_md5": "134111a52539a11840e2bed3f5570ee8",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.10",
+      "size": 469762184,
+      "sha256": "9c04dd5aecbc9fe1cc467a2376cdf565b65bbb4f46a7ea316331036560b6575a",
+      "md5": "20b24ce456b5b40fee5b291cbbbc0a61",
+      "partition": "super",
+      "flashfile_md5": "20b24ce456b5b40fee5b291cbbbc0a61",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.11",
+      "size": 469762184,
+      "sha256": "2e1288ebb14e8f81f12dcb04abfd4c8b4598e0846c7048d4b43137be9255e2b7",
+      "md5": "79c61c298ae9f31bc7a509a24120b5fc",
+      "partition": "super",
+      "flashfile_md5": "79c61c298ae9f31bc7a509a24120b5fc",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.12",
+      "size": 469762184,
+      "sha256": "705600180560a04cb6700135f9b2fc01a66e90d37e02852884efc33c115c6a98",
+      "md5": "d9cb561f57fe15df78dd75b7905e1aad",
+      "partition": "super",
+      "flashfile_md5": "d9cb561f57fe15df78dd75b7905e1aad",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.13",
+      "size": 469762184,
+      "sha256": "aedc55c760afa79e31a617d8d9aa0ccf4e0a17a34bc2363e8088f8e90e2333e8",
+      "md5": "771cfa8b95c71c38513b85f21f21457d",
+      "partition": "super",
+      "flashfile_md5": "771cfa8b95c71c38513b85f21f21457d",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.14",
+      "size": 469762184,
+      "sha256": "e6a7978e3a15fb31d75ae9c2cf5d9f7254a9d6c8a862071fc52d005d160dad9d",
+      "md5": "8231fbae26c14ae7a4a96e7d934f4d89",
+      "partition": "super",
+      "flashfile_md5": "8231fbae26c14ae7a4a96e7d934f4d89",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.15",
+      "size": 469762184,
+      "sha256": "dbd026584e7fe1eb710bb45346e21310b3e23c6011d04641031d5ad9ab997108",
+      "md5": "a5bdb47ff4e4ac0245b683a6b5ecdcc2",
+      "partition": "super",
+      "flashfile_md5": "a5bdb47ff4e4ac0245b683a6b5ecdcc2",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.16",
+      "size": 469762184,
+      "sha256": "3f9e9db2747f07c1bc442af476410e7757a89d5eda312e3d09aab8367702ebaa",
+      "md5": "84d46f2380683220fdf3ec1b4ce50eb0",
+      "partition": "super",
+      "flashfile_md5": "84d46f2380683220fdf3ec1b4ce50eb0",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.17",
+      "size": 469762184,
+      "sha256": "281cbb6ec55f948b0ea479092b4fbc261e1b694ef3ad16eb1fb43d9ceb85d4e8",
+      "md5": "28b0e5a335deddb5efdc20dd8384279d",
+      "partition": "super",
+      "flashfile_md5": "28b0e5a335deddb5efdc20dd8384279d",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.18",
+      "size": 469762184,
+      "sha256": "9fd2cbd37745dbe2eb25e1ceb68cb4ef39ad24bf1aba5b916fec8b1b72f73a26",
+      "md5": "fcb26a277abc37f4f48d3f714c7fc4b5",
+      "partition": "super",
+      "flashfile_md5": "fcb26a277abc37f4f48d3f714c7fc4b5",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.19",
+      "size": 498692284,
+      "sha256": "409fc4502d0e04a99796e14b5431583bc474589cc82bd81ffadada4e6e822f22",
+      "md5": "b9e88d97b3bf966c004caf2e4aac635b",
+      "partition": "super",
+      "flashfile_md5": "b9e88d97b3bf966c004caf2e4aac635b",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.20",
+      "size": 507384012,
+      "sha256": "1c576d179b9afd0caf617b645d299bc97b0f000095184df2e4e0671cd5ae94b8",
+      "md5": "aa9585783dbe150023e8c5136742629a",
+      "partition": "super",
+      "flashfile_md5": "aa9585783dbe150023e8c5136742629a",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.21",
+      "size": 483369200,
+      "sha256": "550a8f7a44d4f90550699c1e7c22bb099a4be222bc6d4163f04f47d4793e3815",
+      "md5": "86026e0be80570e6dc5db0dfb2bc0df5",
+      "partition": "super",
+      "flashfile_md5": "86026e0be80570e6dc5db0dfb2bc0df5",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.22",
+      "size": 469762184,
+      "sha256": "e3e00b386b02b26a90a0b93fdd400e432eae9330daf8d2913d8b17bcba028fda",
+      "md5": "b42d58101ffc618195dff33a15b0e286",
+      "partition": "super",
+      "flashfile_md5": "b42d58101ffc618195dff33a15b0e286",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.23",
+      "size": 499024060,
+      "sha256": "5eb79ff382ca8009749841e4e7129c77d7f5657f1a848e6f72d06dc8d16a51a2",
+      "md5": "6f0bffeb36f4da5de42160dd0211b289",
+      "partition": "super",
+      "flashfile_md5": "6f0bffeb36f4da5de42160dd0211b289",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.24",
+      "size": 469762184,
+      "sha256": "c562a62a165e188b0af4e831699835f09ac506f33cebb84fa444008f4b426009",
+      "md5": "5a7d619e2889379b63482aa66f2c71cb",
+      "partition": "super",
+      "flashfile_md5": "5a7d619e2889379b63482aa66f2c71cb",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.25",
+      "size": 497250468,
+      "sha256": "a7c68cc21a04efa7a701e1bd2c5433efd1188d7ef064d116156d2e71854cdd7a",
+      "md5": "a15448dac866f37b5714183a18bd913d",
+      "partition": "super",
+      "flashfile_md5": "a15448dac866f37b5714183a18bd913d",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.26",
+      "size": 469762184,
+      "sha256": "b765e52721e493805bcba37cf393cb7ebe0b6386aa2fba34fea23535e50a49ec",
+      "md5": "cec69e06d0978f424ad4314b97be3a90",
+      "partition": "super",
+      "flashfile_md5": "cec69e06d0978f424ad4314b97be3a90",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.27",
+      "size": 469762184,
+      "sha256": "07f95cb6b06e696830b72c459e31d89a7fe034eef0ae240f32fc948db0c80576",
+      "md5": "f8178487cc72280346412f35954629f3",
+      "partition": "super",
+      "flashfile_md5": "f8178487cc72280346412f35954629f3",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.28",
+      "size": 469762184,
+      "sha256": "eb35099f99a8e81375c5d5485a366143dd4d5a208554c2efb0f3bd18089bb325",
+      "md5": "2f69fcedf0ac72cb14adbb3fc1ae46c4",
+      "partition": "super",
+      "flashfile_md5": "2f69fcedf0ac72cb14adbb3fc1ae46c4",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "super.img_sparsechunk.29",
+      "size": 520933604,
+      "sha256": "17380fff41c990c00b780d9e08d3185c2cef4068431fef0d0707a9cb01c34573",
+      "md5": "68520b8ab8b03d0657dd91b67674b6d0",
+      "partition": "super",
+      "flashfile_md5": "68520b8ab8b03d0657dd91b67674b6d0",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "vbmeta.img",
+      "size": 8192,
+      "sha256": "a83df2d8ac1430a4ab3371fc5394b067d49f065a55755f3517493b3e9c0342ab",
+      "md5": "0b3931d61e00970441a494ee836e9c19",
+      "partition": "vbmeta",
+      "flashfile_md5": "0b3931d61e00970441a494ee836e9c19",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "vbmeta_system.img",
+      "size": 4096,
+      "sha256": "bbcb6e0f12e4b7fa5496b87e70aeea8371c4c9f60f74130102b6b57ce63e9852",
+      "md5": "98ce5031bf9bbfe22e08a216f7abe83b",
+      "partition": "vbmeta_system",
+      "flashfile_md5": "98ce5031bf9bbfe22e08a216f7abe83b",
+      "md5_matches_flashfile": true
+    },
+    {
+      "name": "vendor_boot.img",
+      "size": 100663296,
+      "sha256": "e09d1dd52587c7e9964775c1d610332f8e01bf09c54b8c9c40364100088b206d",
+      "md5": "1f0d53d49e94040039867575ccb57046",
+      "partition": "vendor_boot",
+      "flashfile_md5": "1f0d53d49e94040039867575ccb57046",
+      "md5_matches_flashfile": true
+    }
+  ],
+  "flashfile_entries": 44,
+  "md5_verified": 44,
+  "md5_mismatch": 0,
+  "missing_from_disk": [],
+  "status": "PASS"
+}

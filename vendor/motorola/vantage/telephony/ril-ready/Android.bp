@@ -1,0 +1,14 @@
+// Tells the Qualcomm RIL that Android telephony is ready, so that it releases incoming SMS.
+// On stock the Qualcomm telephony service (QtiTelephony.apk) does this (see README.md).
+android_app {
+    name: "VantageRilReady",
+    srcs: ["src/**/*.java"],
+    // android.os.ServiceManager, Binder.markVintfStability and the radio power state are not
+    // in the SDK.
+    platform_apis: true,
+    certificate: "platform",
+    system_ext_specific: true,
+    optimize: {
+        enabled: false,
+    },
+}

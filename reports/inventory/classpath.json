@@ -1,0 +1,176 @@
+{
+ "system": [
+  {
+   "path": "/system/framework/framework.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/framework.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/framework-graphics.jar",
+   "classpath": "BOOTCLASSPATH",
+   "min_sdk_version": "36",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/framework-graphics.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "min_sdk_version": "36",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/framework-location.jar",
+   "classpath": "BOOTCLASSPATH",
+   "min_sdk_version": "36",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/framework-location.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "min_sdk_version": "36",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/ext.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/ext.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/telephony-common.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/telephony-common.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/voip-common.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/voip-common.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/ims-common.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/ims-common.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/tcmiface.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/tcmiface.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/qcom.fmradio.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/qcom.fmradio.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/QPerformance.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/QPerformance.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/UxPerformance.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/UxPerformance.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/WfdCommon.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/WfdCommon.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/framework-ondeviceintelligence-platform.jar",
+   "classpath": "BOOTCLASSPATH",
+   "min_sdk_version": "36",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/framework-ondeviceintelligence-platform.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "min_sdk_version": "36",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system_ext/framework/payjoy-api.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system_ext/framework/payjoy-api.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/apex/com.android.i18n/javalib/core-icu4j.jar",
+   "classpath": "BOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/apex/com.android.i18n/javalib/core-icu4j.jar",
+   "classpath": "DEX2OATBOOTCLASSPATH",
+   "fragment": "bootclasspath.pb"
+  },
+  {
+   "path": "/system/framework/com.android.location.provider.jar",
+   "classpath": "SYSTEMSERVERCLASSPATH",
+   "fragment": "systemserverclasspath.pb"
+  },
+  {
+   "path": "/system/framework/services.jar",
+   "classpath": "SYSTEMSERVERCLASSPATH",
+   "fragment": "systemserverclasspath.pb"
+  }
+ ],
+ "system_ext": [],
+ "product": [],
+ "vendor": [],
+ "odm": [],
+ "vendor_dlkm": [],
+ "system_dlkm": []
+}

@@ -1,0 +1,34 @@
+{
+ "binary": "/work/fw/W2WVS36.55-95-5-1/boot/init_boot/rootfs-ramdisk/init",
+ "sha256": "51375f80661afd32950041cd839c0c5a933333628af28c0a3f9b19bbcbffd1b8",
+ "instructions": 535798,
+ "results": [
+  {
+   "status": "PASS",
+   "check": "init.unlock_state",
+   "summary": "the only function that reads androidboot.verifiedbootstate (0x4adfd0) returns true exactly for the value 'orange'",
+   "evidence": [
+    "immediates 0x6e61726f ('oran') and 0x6567 ('ge'), length compare with 6 in 0x4adfd0..0x4ae0d8"
+   ]
+  },
+  {
+   "status": "PASS",
+   "check": "init.spl_rollback",
+   "summary": "the stock function that logs 'Image rollback detected' (0x37f868) calls the unlock-state function 2 time(s) and branches on the result; the 'Allowing rollbacked standalone image when the device is unlocked' message is in the same function: the comparison is enforced when locked and allowed when the state is 'orange'",
+   "evidence": [
+    "0x37fb54: bl unlock_state ; 0x37fb58: tbz w0, #0x0, 0x37ff94",
+    "0x37ff8c: bl unlock_state ; 0x37ff90: tbnz w0, #0x0, 0x37fb5c",
+    "other callers of the unlock-state function: 0x4a852c"
+   ]
+  },
+  {
+   "status": "PASS",
+   "check": "init.skip_mount",
+   "summary": "the stock first-stage mount routine (0x3800c8) calls the function that reads skip_mount.cfg (0x3a7d54) from the mounted system image and drops the matching fstab entries",
+   "evidence": [
+    "call at 0x380ce0",
+    "all callers: 0x380ce0, 0x3a7394, 0x3a9658"
+   ]
+  }
+ ]
+}

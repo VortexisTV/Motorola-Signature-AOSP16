@@ -1,0 +1,29 @@
+# WSL build distro disk and swap
+/wsl/
+
+# Exported build artifacts (images, checksums)
+/out/
+
+# Scratch space, converted logs, extracted firmware pointers
+/work/
+
+# Stock proprietary binaries are never committed (see proprietary-files.txt + hashes instead)
+/vendor/motorola/vantage/proprietary/
+*.img
+*.apk
+*.so
+*.jar
+*.apex
+*.capex
+*.mbn
+*.bin
+
+# Python
+__pycache__/
+*.pyc
+
+# Large generated inventories: regenerate with scripts/analyze_firmware.py
+/reports/inventory/files.json
+/reports/inventory/elf.json
+/reports/inventory/packages.json
+/Screenshot_*.png

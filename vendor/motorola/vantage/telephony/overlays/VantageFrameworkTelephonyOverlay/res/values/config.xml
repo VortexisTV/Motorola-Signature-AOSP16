@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IWLAN (Wi-Fi calling) transport: stock /product/overlay/MotoFrameworkResOverlayQcomCommon.apk.
+         The implementing app (vendor.qti.iwlan) lives on the stock /vendor partition. -->
+    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
+    <bool name="config_enhanced_iwlan_handover_check">false</bool>
+
+    <!-- eUICC: stock framework-res__vantage_g__auto_generated_rro_product.apk -->
+    <string-array name="config_telephonyEuiccDeviceCapabilities" translatable="false">
+        <item>gsm,9</item>
+        <item>utran,9</item>
+        <item>eutran,18</item>
+        <item>nfc,17</item>
+    </string-array>
+    <integer-array name="non_removable_euicc_slots">
+        <item>1</item>
+    </integer-array>
+</resources>

@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "VantageFrameworkTelephonyOverlay",
+    product_specific: true,
+    sdk_version: "current",
+}

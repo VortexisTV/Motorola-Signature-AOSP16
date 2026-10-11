@@ -1,0 +1,16 @@
+# Camcorder profiles: read the same file as stock.
+#
+# The vendor image carries several /vendor/etc/media_profiles*.xml and picks one at boot:
+# init.qti.media.sh derives a variant from the chip (on this phone "_canoe_sku3") and the
+# vendor rc files publish it as ro.media.xml_variant.codecs. The stock libmedia builds the
+# profile file name from that property ("/vendor/etc/media_profiles" + variant + ".xml").
+# AOSP's libmedia uses a property of its own, ro.media.xml_variant.profiles, which nothing in
+# the vendor image sets, and falls back to media_profiles_V1_0.xml. That file describes two
+# cameras; the Motorola Camera asks for the profiles of a third one in video mode, gets none
+# and stops with a NullPointerException (third DSU session, 2026-10-10).
+#
+# android.media.CamcorderProfile is a preloaded class, so the table is read once, in zygote.
+# The vendor sets its property in post-fs-data or when the script finishes, both before
+# zygote preloads, the same ordering stock depends on.
+on property:ro.media.xml_variant.codecs=*
+    setprop ro.media.xml_variant.profiles ${ro.media.xml_variant.codecs}

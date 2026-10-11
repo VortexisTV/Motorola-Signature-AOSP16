@@ -1,0 +1,267 @@
+{
+ "subjects": [
+  {
+   "subject": "/system/lib64/vendor.qti.diaghal-V1-ndk.so",
+   "needed": [
+    "libbinder_ndk.so",
+    "android.hardware.common-V2-ndk.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 71
+  },
+  {
+   "subject": "/system_ext/lib64/lib-imsvideocodec.so",
+   "needed": [
+    "lib-imsvtutils.so",
+    "lib-imsvtextutils.so",
+    "libcutils.so",
+    "libutils.so",
+    "liblog.so",
+    "libdiag_system.so",
+    "libgui.so",
+    "libandroid.so",
+    "libnativewindow.so",
+    "libmediandk.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 97
+  },
+  {
+   "subject": "/system_ext/lib64/lib-imsvt.so",
+   "needed": [
+    "lib-imsvideocodec.so",
+    "libmediandk.so",
+    "libnativewindow.so",
+    "libion.so",
+    "libdmabufheap.so",
+    "lib-imsvtutils.so",
+    "libandroid.so",
+    "libhidlbase.so",
+    "vendor.qti.imsrtpservice@3.0.so",
+    "vendor.qti.imsrtpservice@3.1.so",
+    "libbinder.so",
+    "libbinder_ndk.so",
+    "vendor.qti.ImsRtpService-V2-ndk.so",
+    "libdiag_system.so",
+    "libcutils.so",
+    "libutils.so",
+    "liblog.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 202
+  },
+  {
+   "subject": "/system_ext/lib64/lib-imsvtextutils.so",
+   "needed": [
+    "libutils.so",
+    "libcutils.so",
+    "liblog.so",
+    "libdiag_system.so",
+    "lib-imsvtutils.so",
+    "libGLESv2.so",
+    "libEGL.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 11
+  },
+  {
+   "subject": "/system_ext/lib64/lib-imsvtutils.so",
+   "needed": [
+    "libutils.so",
+    "libcutils.so",
+    "liblog.so",
+    "libdiag_system.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 45
+  },
+  {
+   "subject": "/system_ext/lib64/libdiag_system.so",
+   "needed": [
+    "vendor.qti.diaghal@1.0.so",
+    "libhidlbase.so",
+    "liblog.so",
+    "libutils.so",
+    "android.hidl.allocator@1.0.so",
+    "android.hidl.memory@1.0.so",
+    "libhidlmemory.so",
+    "libc.so",
+    "libcutils.so",
+    "libbinder_ndk.so",
+    "vendor.qti.diaghal-V1-ndk.so",
+    "libc++.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 181
+  },
+  {
+   "subject": "/system_ext/lib64/libimscamera_jni.so",
+   "needed": [
+    "libnativehelper.so",
+    "libcutils.so",
+    "libutils.so",
+    "liblog.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 13
+  },
+  {
+   "subject": "/system_ext/lib64/libimsmedia_jni.so",
+   "needed": [
+    "libnativehelper.so",
+    "libcutils.so",
+    "libutils.so",
+    "libgui.so",
+    "libbinder.so",
+    "liblog.so",
+    "libandroid.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 22
+  },
+  {
+   "subject": "/system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so",
+   "needed": [
+    "libbinder_ndk.so",
+    "android.hardware.common-V2-ndk.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 83
+  },
+  {
+   "subject": "/system_ext/lib64/vendor.qti.diaghal@1.0.so",
+   "needed": [
+    "libhidlbase.so",
+    "liblog.so",
+    "libutils.so",
+    "libcutils.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 157
+  },
+  {
+   "subject": "/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so",
+   "needed": [
+    "libhidlbase.so",
+    "liblog.so",
+    "libutils.so",
+    "libcutils.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 171
+  },
+  {
+   "subject": "/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so",
+   "needed": [
+    "vendor.qti.imsrtpservice@3.0.so",
+    "libhidlbase.so",
+    "liblog.so",
+    "libutils.so",
+    "libcutils.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 223
+  },
+  {
+   "subject": "/system_ext/lib64/libaudiohalvendorextn.so",
+   "needed": [
+    "av-audio-types-aidl-ndk.so",
+    "libbinder_ndk.so",
+    "libbase.so",
+    "qti-audio-types-aidl-V1-ndk.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 73
+  },
+  {
+   "subject": "/system_ext/lib64/qti-audio-types-aidl-V1-ndk.so",
+   "needed": [
+    "libbinder_ndk.so",
+    "libc++.so",
+    "libc.so",
+    "libm.so",
+    "libdl.so"
+   ],
+   "missing_libraries": [],
+   "unresolved_new": [],
+   "unresolved_also_on_stock": [],
+   "undefined_total": 15
+  }
+ ]
+}

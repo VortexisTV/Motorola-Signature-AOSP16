@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vantage.telephony.rilready"
+    android:sharedUserId="android.uid.system">
+
+    <!-- System UID: the stock vendor policy lets system_app find the RIL's OEM hook service
+         (vendor_hal_telephony_service2) and call rild; no policy is added for this app.
+         Persistent and direct-boot aware: the signal has to be sent on every boot, before
+         the first unlock, and again whenever the RIL or the modem restarts. No UI. -->
+    <application
+        android:name=".RilReadyApp"
+        android:label="RIL telephony-ready signal"
+        android:persistent="true"
+        android:directBootAware="true"
+        android:defaultToDeviceProtectedStorage="true"
+        android:allowBackup="false">
+
+        <!-- The persistent flag starts the process on a system image. The receiver only
+             makes sure the process also exists where that flag is not honoured. -->
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="false"
+            android:directBootAware="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

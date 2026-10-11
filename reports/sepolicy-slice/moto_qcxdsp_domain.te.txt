@@ -1,0 +1,2 @@
+# Stock rules for moto_qcxdsp_domain (rendered from CIL by sepolicy_slice.py; review before use)
+

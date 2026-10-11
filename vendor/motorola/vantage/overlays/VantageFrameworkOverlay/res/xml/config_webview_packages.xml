@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 16 uses the first availableByDefault provider as THE default and does not fall
+     back to another one. TrebleDroid's list starts with Google WebView, which a vanilla build
+     does not contain: "No WebView installed" (first DSU boot, 2026-10-10). This is AOSP's own
+     list: the WebView that is in the image. -->
+<webviewproviders>
+    <webviewprovider description="Android WebView" packageName="com.android.webview" availableByDefault="true">
+    </webviewprovider>
+</webviewproviders>

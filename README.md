@@ -68,6 +68,64 @@ Names that differ from the classic vendor-tree layout:
 - `target-system-libs.txt` lists the libraries the unmodified AOSP image provides; the
   resolver uses it to decide which native dependencies of a stock binary must be ported.
 
+## Install `system.img` using Fastboot
+
+Place `system.img` and the matching stock `vbmeta.img` in the directory containing the Platform Tools, or run the commands from the directory containing those images with Platform Tools in your `PATH`.
+
+### 1. Enter the bootloader
+
+```bash
+adb reboot bootloader
+fastboot devices
+```
+
+Confirm that your phone is listed.
+
+### 2. Check the OTA snapshot state
+
+```bash
+fastboot getvar snapshot-update-status
+```
+
+The status should be `none`. **Do not continue if a snapshot merge/update is in progress.**
+
+### 3. Flash `vbmeta` with verification disabled
+
+```bash
+fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img
+```
+
+This changes verified-boot behavior and requires the device's bootloader to be unlocked.
+
+### 4. Enter FastbootD
+
+```bash
+fastboot reboot fastboot
+```
+
+Wait for **FastbootD** (userspace fastboot) to appear. The `system` partition is a dynamic logical partition and should be flashed from FastbootD.
+
+### 5. Flash the system image
+
+```bash
+fastboot flash system system.img
+```
+
+Wait for a successful result. **If flashing fails, stop; do not proceed to reboot as if installation succeeded.**
+
+### 6. Wipe user data and reboot
+
+```bash
+fastboot -w
+fastboot reboot
+```
+
+> [!CAUTION]
+> `fastboot -w` performs a factory reset and **deletes user data**.
+
+The first boot may take longer than usual.
+
+
 ## Documents
 
 - [BUILDING.md](BUILDING.md) — environment, source sync, build commands and results

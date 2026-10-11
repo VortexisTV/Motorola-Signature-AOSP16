@@ -81,7 +81,6 @@ Names that differ from the classic vendor-tree layout:
 - [TESTING.md](TESTING.md) — automated checks and the on-device acceptance test
 - [DSU_READINESS.md](DSU_READINESS.md) — what was verified before the first DSU boot (image, security patch
   level handling of the stock `init`, image composition, one-shot mode), and what cannot be
-- [CHANGELOG.md](CHANGELOG.md) — what changed and why
 
 ## Ground rules followed here
 
